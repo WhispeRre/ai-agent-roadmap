@@ -1,0 +1,32 @@
+# Build output (mdBook)
+book/
+
+# Temporary build directories
+build-en/
+
+# IDE
+.idea/
+.vscode/
+
+# 工具缓存
+.codebuddy/
+.workbuddy/
+
+nano_skill/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+zhihu_blog/
+
+scripts
+scripts/
+# macOS
+.DS_Store
+
+# Claude Code
+CLAUDE.md

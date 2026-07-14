@@ -1,0 +1,13 @@
+<svg width="980" height="520" viewBox="0 0 980 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="980" height="520" rx="28" fill="#F8FBFF"/>
+  <text x="490" y="52" text-anchor="middle" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="28" font-weight="700" fill="#243B64">不同任务的 token 消耗阶梯</text>
+  <g font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" text-anchor="middle" font-size="17" font-weight="700">
+    <rect x="360" y="100" width="260" height="48" rx="14" fill="#FFE1E1"/><text x="490" y="131" fill="#914044">Agent 自动执行几十步</text>
+    <rect x="320" y="160" width="340" height="48" rx="14" fill="#FFE8C2"/><text x="490" y="191" fill="#8A641A">阅读整个代码库</text>
+    <rect x="280" y="220" width="420" height="48" rx="14" fill="#FFF3D7"/><text x="490" y="251" fill="#8A641A">分析几十页 PDF</text>
+    <rect x="240" y="280" width="500" height="48" rx="14" fill="#E7F0FF"/><text x="490" y="311" fill="#385FA8">总结一篇长文章</text>
+    <rect x="200" y="340" width="580" height="48" rx="14" fill="#EAF7EF"/><text x="490" y="371" fill="#2D7A46">写一篇短文</text>
+    <rect x="160" y="400" width="660" height="48" rx="14" fill="#F1F5FA"/><text x="490" y="431" fill="#5E6D82">简单问答</text>
+  </g>
+  <text x="490" y="486" text-anchor="middle" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600" fill="#5E6D82">越长的输入、越长的输出、越多的自动循环，成本越需要关注</text>
+</svg>

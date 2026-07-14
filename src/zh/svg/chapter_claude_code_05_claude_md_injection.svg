@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="560" height="280">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="560" height="280" rx="14" fill="#f0f4f8"/>
+  <text x="280" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">CLAUDE.md 注入机制</text>
+
+  <!-- System Prompt -->
+  <rect x="40" y="48" width="480" height="52" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="280" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e40af">System Prompt（静态，跨会话不变）</text>
+  <text x="280" y="88" text-anchor="middle" font-size="11" fill="#3b82f6">✅ 被 Prompt Cache 缓存，节省 90% API 成本</text>
+
+  <line x1="280" y1="100" x2="280" y2="120" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 用户消息 -->
+  <rect x="40" y="123" width="480" height="130" rx="8" fill="#f0f4f8" stroke="#6c757d" stroke-width="1.5"/>
+  <text x="280" y="143" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">用户消息（动态，每次构造）</text>
+
+  <!-- claude_memory 标签 -->
+  <rect x="60" y="152" width="440" height="60" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="280" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">&lt;claude_memory&gt; 标签</text>
+  <text x="280" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#16a34a">✅ CLAUDE.md 的内容 ← 注入在这里！</text>
+  <text x="280" y="205" text-anchor="middle" font-size="10" fill="#15803d">包装成 XML 标签注入到用户消息中，不影响 System Prompt 缓存</text>
+
+  <!-- 用户实际输入 -->
+  <rect x="60" y="218" width="440" height="28" rx="6" fill="#e2e3e5" stroke="#6c757d" stroke-width="1"/>
+  <text x="280" y="237" text-anchor="middle" font-size="11" fill="#495057">用户实际输入的内容</text>
+
+  <!-- 说明 -->
+  <rect x="40" y="260" width="480" height="14" rx="4" fill="#fff3cd"/>
+  <text x="280" y="271" text-anchor="middle" font-size="10" fill="#856404">💡 CLAUDE.md 放在用户消息而非 System Prompt，是为了保护 Prompt Cache 稳定性</text>
+</svg>

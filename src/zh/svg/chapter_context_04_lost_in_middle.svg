@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="curveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e74c3c"/>
+      <stop offset="50%" style="stop-color:#f39c12"/>
+      <stop offset="100%" style="stop-color:#27ae60"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="400" fill="url(#bgGrad)" rx="12"/>
+  
+  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1a365d">Lost in the Middle：LLM 注意力分布（U 形曲线）</text>
+  <text x="450" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#718096">LLM 对上下文开头和结尾的注意力显著高于中间部分</text>
+  
+  <!-- Chart area -->
+  <rect x="100" y="75" width="700" height="230" rx="8" fill="white" filter="url(#shadow)"/>
+  
+  <!-- Y axis -->
+  <line x1="140" y1="90" x2="140" y2="285" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="130" y="100" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="#a0aec0">高</text>
+  <text x="130" y="285" text-anchor="end" font-family="system-ui, sans-serif" font-size="9" fill="#a0aec0">低</text>
+  <text x="80" y="192" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#718096" transform="rotate(-90, 80, 192)">注意力强度</text>
+  
+  <!-- X axis -->
+  <line x1="140" y1="285" x2="770" y2="285" stroke="#cbd5e0" stroke-width="1"/>
+  <text x="455" y="305" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#718096">上下文位置（从开头到结尾）</text>
+  
+  <!-- U-shape curve (approximated with path) -->
+  <path d="M 150 110 
+           C 180 115, 210 140, 240 200 
+           C 270 250, 300 265, 350 270 
+           C 400 272, 450 273, 500 272 
+           C 550 270, 600 265, 650 250 
+           C 680 230, 710 180, 740 130
+           L 760 105" 
+        fill="none" stroke="url(#curveGrad)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Fill under curve -->
+  <path d="M 150 110 
+           C 180 115, 210 140, 240 200 
+           C 270 250, 300 265, 350 270 
+           C 400 272, 450 273, 500 272 
+           C 550 270, 600 265, 650 250 
+           C 680 230, 710 180, 740 130
+           L 760 105
+           L 760 285 L 150 285 Z" 
+        fill="url(#curveGrad)" opacity="0.08"/>
+  
+  <!-- Zone labels -->
+  <!-- High attention zone - left -->
+  <rect x="150" y="88" width="100" height="20" rx="4" fill="#e74c3c" opacity="0.15"/>
+  <text x="200" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">高注意力</text>
+  
+  <!-- Low attention zone - middle -->
+  <rect x="370" y="248" width="160" height="20" rx="4" fill="#f39c12" opacity="0.15"/>
+  <text x="450" y="262" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#f39c12">注意力低谷</text>
+  
+  <!-- High attention zone - right -->
+  <rect x="660" y="88" width="100" height="20" rx="4" fill="#27ae60" opacity="0.15"/>
+  <text x="710" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#27ae60">最高注意力</text>
+  
+  <!-- Bottom: layout recommendation -->
+  <rect x="60" y="325" width="780" height="60" rx="10" fill="white" filter="url(#shadow)"/>
+  <text x="450" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1a365d">最优上下文布局策略</text>
+  
+  <!-- Left zone -->
+  <rect x="80" y="353" width="200" height="22" rx="4" fill="#fce4ec"/>
+  <text x="180" y="368" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#e74c3c">📌 开头：System Prompt + 任务状态</text>
+  
+  <!-- Middle zone -->
+  <rect x="295" y="353" width="260" height="22" rx="4" fill="#fff8e1"/>
+  <text x="425" y="368" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#f39c12">📂 中间：历史摘要 + 检索文档 + 旧工具结果</text>
+  
+  <!-- Right zone -->
+  <rect x="570" y="353" width="250" height="22" rx="4" fill="#e8f5e9"/>
+  <text x="695" y="368" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#27ae60">🎯 结尾：最近对话 + 用户消息</text>
+</svg>

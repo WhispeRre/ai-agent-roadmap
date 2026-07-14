@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ReAct 推理循环 — Thought → Action → Observation</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    margin: 28px 0 6px;
+    font-size: 26px;
+    background: linear-gradient(135deg, #34d399, #60a5fa, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+  }
+  .subtitle { color: #94a3b8; font-size: 13px; margin-bottom: 18px; }
+
+  /* ── 对比模式切换 ── */
+  .mode-tabs {
+    display: flex;
+    gap: 4px;
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 14px;
+  }
+  .mode-tab {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    color: #94a3b8;
+    transition: all 0.2s;
+  }
+  .mode-tab.active {
+    background: #334155;
+    color: #f1f5f9;
+  }
+
+  .controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .btn {
+    padding: 7px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: linear-gradient(135deg, #10b981, #3b82f6); color: white; }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 15px rgba(16,185,129,0.3); }
+  .btn-secondary { background: #334155; color: #e2e8f0; }
+  .btn-secondary:hover { background: #475569; }
+
+  /* ── 问题展示 ── */
+  .question-box {
+    width: 780px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .question-box .q-icon { font-size: 24px; }
+  .question-box .q-text { font-size: 15px; color: #f1f5f9; }
+  .question-box .q-type { font-size: 11px; color: #94a3b8; margin-top: 2px; }
+
+  /* ── 主面板（分两栏对比） ── */
+  .main-area {
+    display: flex;
+    gap: 16px;
+    width: 780px;
+  }
+  .panel {
+    flex: 1;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .panel.single { flex: none; width: 100%; }
+  .panel-header {
+    padding: 10px 16px;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-header .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  .panel-react .panel-header { background: linear-gradient(135deg, #064e3b, #065f46); }
+  .panel-react .panel-header .dot { background: #34d399; }
+  .panel-cot .panel-header { background: linear-gradient(135deg, #1e1b4b, #312e81); }
+  .panel-cot .panel-header .dot { background: #818cf8; }
+  .panel-act .panel-header { background: linear-gradient(135deg, #7c2d12, #9a3412); }
+  .panel-act .panel-header .dot { background: #fb923c; }
+
+  .panel-body {
+    padding: 12px 16px;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 450px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  /* ── 步骤块 ── */
+  .step-block {
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border-left: 3px solid transparent;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+  }
+  .step-block.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .step-block.highlight {
+    background: rgba(255,255,255,0.05);
+  }
+
+  .step-block .step-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+
+  /* 不同类型 */
+  .step-thought  { border-left-color: #34d399; }
+  .step-thought .step-label { color: #34d399; }
+  .step-action   { border-left-color: #60a5fa; }
+  .step-action .step-label { color: #60a5fa; }
+  .step-observation { border-left-color: #fbbf24; }
+  .step-observation .step-label { color: #fbbf24; }
+  .step-answer   { border-left-color: #f472b6; }
+  .step-answer .step-label { color: #f472b6; }
+  .step-cot      { border-left-color: #818cf8; }
+  .step-cot .step-label { color: #818cf8; }
+  .step-blind    { border-left-color: #fb923c; }
+  .step-blind .step-label { color: #fb923c; }
+  .step-error    { border-left-color: #ef4444; }
+  .step-error .step-label { color: #ef4444; }
+
+  .step-block .code {
+    font-family: 'SF Mono', Menlo, monospace;
+    background: #0f172a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #a5b4fc;
+    display: inline-block;
+    margin-top: 2px;
+  }
+
+  /* ── 结果对比 ── */
+  .result-bar {
+    width: 780px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 16px;
+  }
+  .result-card {
+    flex: 1;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 12px 16px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .result-card.show { opacity: 1; }
+  .result-card .r-label { font-size: 12px; color: #94a3b8; }
+  .result-card .r-value { font-size: 20px; font-weight: 700; margin-top: 4px; }
+  .result-card .r-detail { font-size: 11px; color: #64748b; margin-top: 4px; }
+  .r-correct { color: #34d399; }
+  .r-wrong { color: #ef4444; }
+  .r-partial { color: #fbbf24; }
+
+  /* ── 进度指示 ── */
+  .progress-bar {
+    width: 780px;
+    height: 4px;
+    background: #334155;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #34d399, #3b82f6);
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+</style>
+</head>
+<body>
+
+<h1>🔗 ReAct：推理 + 行动 = 更可靠的 Agent</h1>
+<p class="subtitle">对比演示：ReAct vs 纯思考(CoT) vs 纯行动(Act-only)</p>
+
+<div class="mode-tabs">
+  <button class="mode-tab active" data-mode="compare">三方对比</button>
+  <button class="mode-tab" data-mode="react-only">ReAct 详细</button>
+</div>
+
+<div class="controls">
+  <button class="btn btn-primary" id="btnStart">▶ 开始演示</button>
+  <button class="btn btn-secondary" id="btnReset">↻ 重置</button>
+  <button class="btn btn-secondary" id="btnStep">⏭ 逐步</button>
+</div>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="question-box">
+  <span class="q-icon">❓</span>
+  <div>
+    <div class="q-text">科罗拉多造山运动延伸到的东部地区，其海拔范围是多少？</div>
+    <div class="q-type">多跳问答 (Multi-hop QA) — 需要多步检索才能回答</div>
+  </div>
+</div>
+
+<div class="main-area" id="mainArea">
+  <!-- 三栏对比模式 -->
+  <div class="panel panel-react" id="panelReact">
+    <div class="panel-header"><span class="dot"></span>ReAct（推理+行动）</div>
+    <div class="panel-body" id="bodyReact"></div>
+  </div>
+  <div class="panel panel-cot" id="panelCot">
+    <div class="panel-header"><span class="dot"></span>纯 CoT（只思考）</div>
+    <div class="panel-body" id="bodyCot"></div>
+  </div>
+  <div class="panel panel-act" id="panelAct">
+    <div class="panel-header"><span class="dot"></span>Act-only（只行动）</div>
+    <div class="panel-body" id="bodyAct"></div>
+  </div>
+</div>
+
+<div class="result-bar" id="resultBar">
+  <div class="result-card" id="resReact">
+    <div class="r-label">ReAct</div>
+    <div class="r-value r-correct">✅ 正确</div>
+    <div class="r-detail">1,800 ~ 7,000 英尺</div>
+  </div>
+  <div class="result-card" id="resCot">
+    <div class="r-label">纯 CoT</div>
+    <div class="r-value r-wrong">❌ 幻觉</div>
+    <div class="r-detail">编造了不存在的数据</div>
+  </div>
+  <div class="result-card" id="resAct">
+    <div class="r-label">Act-only</div>
+    <div class="r-value r-partial">⚠️ 低效</div>
+    <div class="r-detail">搜了 5 次才找到，浪费 Token</div>
+  </div>
+</div>
+
+<script>
+const reactSteps = [
+  { type: 'thought', label: 'Thought 1',
+    text: '我需要先搞清楚"科罗拉多造山运动延伸到的东部地区"是哪里。让我搜索一下科罗拉多造山运动。' },
+  { type: 'action', label: 'Action 1',
+    text: '搜索', code: 'search["科罗拉多造山运动"]' },
+  { type: 'observation', label: 'Observation 1',
+    text: '科罗拉多造山运动是一次造山事件，形成了落基山脉的主体，其影响区域从北部延伸到了<strong>高平原</strong>（High Plains）地区。' },
+  { type: 'thought', label: 'Thought 2',
+    text: '所以东部延伸区域是"高平原"。现在我需要查高平原的海拔范围。' },
+  { type: 'action', label: 'Action 2',
+    text: '搜索', code: 'search["高平原 海拔"]' },
+  { type: 'observation', label: 'Observation 2',
+    text: '高平原（High Plains）海拔约 <strong>1,800 至 7,000 英尺</strong>（550-2,130 米）。' },
+  { type: 'thought', label: 'Thought 3',
+    text: '找到了！高平原的海拔范围是 1,800 到 7,000 英尺。可以给出最终答案了。' },
+  { type: 'answer', label: '最终答案',
+    text: '科罗拉多造山运动延伸到的东部地区是高平原，其海拔范围约为 <strong>1,800 ~ 7,000 英尺</strong>。' }
+];
+
+const cotSteps = [
+  { type: 'cot', label: 'Step 1',
+    text: '科罗拉多造山运动发生在白垩纪晚期到古近纪早期...' },
+  { type: 'cot', label: 'Step 2',
+    text: '它形成了落基山脉，影响范围可能延伸到了大平原地区...' },
+  { type: 'cot', label: 'Step 3',
+    text: '大平原的海拔大约是... 嗯... 我记得是 2,000 到 6,000 英尺左右？' },
+  { type: 'error', label: '⚠️ 问题',
+    text: '模型凭记忆猜测，无法验证数据。实际上混淆了"大平原"和"高平原"，数值也不准确。' },
+  { type: 'answer', label: '(错误) 答案',
+    text: '<span style="text-decoration:line-through;">大平原海拔约 2,000 ~ 6,000 英尺</span> ← 幻觉！区域名称和数值都不对。' }
+];
+
+const actSteps = [
+  { type: 'blind', label: 'Action 1',
+    text: '搜索', code: 'search["科罗拉多 东部 海拔"]' },
+  { type: 'observation', label: 'Observation 1',
+    text: '科罗拉多州东部平原海拔约 3,500-6,000 英尺... （不相关，这是州的海拔而非造山运动的影响区域）' },
+  { type: 'blind', label: 'Action 2',
+    text: '搜索', code: 'search["造山运动 海拔范围"]' },
+  { type: 'observation', label: 'Observation 2',
+    text: '返回了多种造山运动的介绍，信息混杂... （没有针对性）' },
+  { type: 'blind', label: 'Action 3',
+    text: '搜索', code: 'search["科罗拉多造山运动 延伸范围"]' },
+  { type: 'observation', label: 'Observation 3',
+    text: '科罗拉多造山运动延伸到高平原地区。' },
+  { type: 'blind', label: 'Action 4',
+    text: '搜索', code: 'search["高平原 海拔"]' },
+  { type: 'observation', label: 'Observation 4',
+    text: '高平原海拔约 1,800 ~ 7,000 英尺。' },
+  { type: 'answer', label: '答案',
+    text: '1,800 ~ 7,000 英尺 ✓（最终正确，但用了 4 次搜索，没有推理直接碰运气）' }
+];
+
+// ── DOM ──
+const bodyReact = document.getElementById('bodyReact');
+const bodyCot   = document.getElementById('bodyCot');
+const bodyAct   = document.getElementById('bodyAct');
+const progressFill = document.getElementById('progressFill');
+
+let running = false;
+let stepMode = false;
+let stepResolve = null;
+let currentMode = 'compare';
+
+// ── 模式切换 ──
+document.querySelectorAll('.mode-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    currentMode = tab.dataset.mode;
+    reset();
+
+    const panels = [document.getElementById('panelCot'), document.getElementById('panelAct')];
+    if (currentMode === 'react-only') {
+      panels.forEach(p => p.style.display = 'none');
+      document.getElementById('panelReact').classList.add('single');
+    } else {
+      panels.forEach(p => p.style.display = '');
+      document.getElementById('panelReact').classList.remove('single');
+    }
+  });
+});
+
+function createStepEl(step) {
+  const el = document.createElement('div');
+  el.className = `step-block step-${step.type}`;
+  let html = `<div class="step-label">${step.label}</div><div>${step.text}</div>`;
+  if (step.code) html += `<div class="code">${step.code}</div>`;
+  el.innerHTML = html;
+  return el;
+}
+
+function delay(ms) {
+  return new Promise(r => {
+    if (stepMode) {
+      stepResolve = r;
+    } else {
+      setTimeout(r, ms);
+    }
+  });
+}
+
+async function animatePanel(body, steps, color) {
+  for (let i = 0; i < steps.length; i++) {
+    const el = createStepEl(steps[i]);
+    body.appendChild(el);
+    await delay(100);
+    el.classList.add('show');
+    if (i > 0) {
+      const prev = body.children[i - 1];
+      if (prev) prev.classList.remove('highlight');
+    }
+    el.classList.add('highlight');
+    body.scrollTop = body.scrollHeight;
+    await delay(1200);
+  }
+}
+
+async function runCompare() {
+  const maxLen = Math.max(reactSteps.length, cotSteps.length, actSteps.length);
+  for (let i = 0; i < maxLen; i++) {
+    if (!running) return;
+    progressFill.style.width = `${((i + 1) / maxLen) * 100}%`;
+
+    const promises = [];
+    if (i < reactSteps.length) {
+      const el = createStepEl(reactSteps[i]);
+      bodyReact.appendChild(el);
+      requestAnimationFrame(() => el.classList.add('show', 'highlight'));
+      if (bodyReact.children.length > 1) bodyReact.children[bodyReact.children.length - 2].classList.remove('highlight');
+      bodyReact.scrollTop = bodyReact.scrollHeight;
+    }
+    if (i < cotSteps.length) {
+      const el = createStepEl(cotSteps[i]);
+      bodyCot.appendChild(el);
+      requestAnimationFrame(() => el.classList.add('show', 'highlight'));
+      if (bodyCot.children.length > 1) bodyCot.children[bodyCot.children.length - 2].classList.remove('highlight');
+      bodyCot.scrollTop = bodyCot.scrollHeight;
+    }
+    if (i < actSteps.length) {
+      const el = createStepEl(actSteps[i]);
+      bodyAct.appendChild(el);
+      requestAnimationFrame(() => el.classList.add('show', 'highlight'));
+      if (bodyAct.children.length > 1) bodyAct.children[bodyAct.children.length - 2].classList.remove('highlight');
+      bodyAct.scrollTop = bodyAct.scrollHeight;
+    }
+    await delay(1500);
+  }
+
+  // 显示结果
+  document.querySelectorAll('.result-card').forEach(c => c.classList.add('show'));
+}
+
+async function runReactOnly() {
+  for (let i = 0; i < reactSteps.length; i++) {
+    if (!running) return;
+    progressFill.style.width = `${((i + 1) / reactSteps.length) * 100}%`;
+    const el = createStepEl(reactSteps[i]);
+    bodyReact.appendChild(el);
+    await delay(100);
+    el.classList.add('show', 'highlight');
+    if (bodyReact.children.length > 1) bodyReact.children[bodyReact.children.length - 2].classList.remove('highlight');
+    bodyReact.scrollTop = bodyReact.scrollHeight;
+    await delay(1800);
+  }
+  document.getElementById('resReact').classList.add('show');
+}
+
+function reset() {
+  running = false;
+  stepMode = false;
+  progressFill.style.width = '0%';
+  [bodyReact, bodyCot, bodyAct].forEach(b => b.innerHTML = '');
+  document.querySelectorAll('.result-card').forEach(c => c.classList.remove('show'));
+}
+
+document.getElementById('btnStart').onclick = () => {
+  if (running) return;
+  reset();
+  running = true;
+  stepMode = false;
+  if (currentMode === 'compare') runCompare();
+  else runReactOnly();
+};
+
+document.getElementById('btnReset').onclick = reset;
+
+document.getElementById('btnStep').onclick = () => {
+  if (!running) {
+    reset();
+    running = true;
+    stepMode = true;
+    if (currentMode === 'compare') runCompare();
+    else runReactOnly();
+  } else if (stepMode && stepResolve) {
+    const r = stepResolve;
+    stepResolve = null;
+    r();
+  }
+};
+</script>
+</body>
+</html>

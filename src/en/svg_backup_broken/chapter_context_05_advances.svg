@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="440" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">ContextEngineeringFront沿技术全景（2025—2026）</text>
+
+  <!-- 四大Front沿方向 -->
+  <!-- 方向1：M级窗口 -->
+  <rect x="15" y="52" width="185" height="175" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="107" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">M级Context Window</text>
+  <text x="28" y="96" font-size="10.5" fill="#444">4K→128K→1M→10M tokens</text>
+  <line x1="28" y1="104" x2="190" y2="104" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4"/>
+  <text x="28" y="120" font-size="10.5" fill="#444">• Claude 4.6: 1M 标准定价</text>
+  <text x="28" y="136" font-size="10.5" fill="#444">• Gemini 3.1: 1M Multimodal</text>
+  <text x="28" y="152" font-size="10.5" fill="#444">• GPT-5.4: 272K/1M Extension</text>
+  <text x="28" y="168" font-size="10.5" fill="#444">• Llama 4 Scout: 10M</text>
+  <rect x="28" y="182" width="160" height="20" rx="4" fill="#e74c3c" opacity="0.15"/>
+  <text x="108" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#e74c3c">质量 ＞ 数量</text>
+  <text x="108" y="218" text-anchor="middle" font-size="9" fill="#888">窗口变大≠问题解决</text>
+
+  <!-- 方向2：Anthropic 方法论 -->
+  <rect x="210" y="52" width="185" height="175" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="302" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">Anthropic 方法论</text>
+  <text x="223" y="96" font-size="10.5" fill="#444">System化的ContextEngineering指南</text>
+  <line x1="223" y1="104" x2="385" y2="104" stroke="#3498db" stroke-width="1" stroke-dasharray="4"/>
+  <text x="223" y="120" font-size="10.5" fill="#444">• JIT 即时ContextPolicy</text>
+  <text x="223" y="136" font-size="10.5" fill="#444">• 结构化Prompt设计原则</text>
+  <text x="223" y="152" font-size="10.5" fill="#444">• Tools定义Best Practices</text>
+  <text x="223" y="168" font-size="10.5" fill="#444">• 子代理Architecture模式</text>
+  <rect x="223" y="182" width="160" height="20" rx="4" fill="#3498db" opacity="0.15"/>
+  <text x="303" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#3498db">最小高信号 token 集</text>
+  <text x="303" y="218" text-anchor="middle" font-size="9" fill="#888">做最简单有效的事情</text>
+
+  <!-- 方向3：ACE 自演化 -->
+  <rect x="405" y="52" width="185" height="175" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="497" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">ACE 自演化Framework</text>
+  <text x="418" y="96" font-size="10.5" fill="#444">Context自我Evolution（ICLR 2026）</text>
+  <line x1="418" y1="104" x2="580" y2="104" stroke="#27ae60" stroke-width="1" stroke-dasharray="4"/>
+  <text x="418" y="120" font-size="10.5" fill="#444">• 演变的战术手册</text>
+  <text x="418" y="136" font-size="10.5" fill="#444">• Generation→Reflection→策展Loop</text>
+  <text x="418" y="152" font-size="10.5" fill="#444">• 结构化增量Update</text>
+  <text x="418" y="168" font-size="10.5" fill="#444">• 自然反馈驱动改进</text>
+  <rect x="418" y="182" width="160" height="20" rx="4" fill="#27ae60" opacity="0.15"/>
+  <text x="498" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#27ae60">无需Fine-tuning即可自我改进</text>
+  <text x="498" y="218" text-anchor="middle" font-size="9" fill="#888">Agent Task +10.6%</text>
+
+  <!-- 方向4：底LayerOptimization -->
+  <rect x="600" y="52" width="185" height="175" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="692" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">KV-Cache &amp; Caching</text>
+  <text x="613" y="96" font-size="10.5" fill="#444">底LayerInference Optimization技术</text>
+  <line x1="613" y1="104" x2="775" y2="104" stroke="#e67e22" stroke-width="1" stroke-dasharray="4"/>
+  <text x="613" y="120" font-size="10.5" fill="#444">• MLA：KV 压缩至 5%</text>
+  <text x="613" y="136" font-size="10.5" fill="#444">• ChunkKV 语义块压缩</text>
+  <text x="613" y="152" font-size="10.5" fill="#444">• RocketKV 两阶段加速</text>
+  <text x="613" y="168" font-size="10.5" fill="#444">• Prompt Caching 降本</text>
+  <rect x="613" y="182" width="160" height="20" rx="4" fill="#e67e22" opacity="0.15"/>
+  <text x="693" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#e67e22">Cache Hit省 50%~90%</text>
+  <text x="693" y="218" text-anchor="middle" font-size="9" fill="#888">更长更快更省</text>
+
+  <!-- 生产级模式 -->
+  <rect x="15" y="240" width="770" height="58" rx="8" fill="#8e44ad" opacity="0.10" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">三大生产级Context Management模式</text>
+  <text x="145" y="284" text-anchor="middle" font-size="11" fill="#555">📐 分LayerContextArchitecture</text>
+  <text x="400" y="284" text-anchor="middle" font-size="11" fill="#555">🗜️ Context Compression (Compaction)</text>
+  <text x="660" y="284" text-anchor="middle" font-size="11" fill="#555">🔧 动态ToolsContext</text>
+
+  <!-- Cutting-Edge Research方向 -->
+  <rect x="15" y="312" width="770" height="58" rx="8" fill="#16a085" opacity="0.10" stroke="#16a085" stroke-width="1.5"/>
+  <text x="400" y="334" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a085">Cutting-Edge Research方向</text>
+  <text x="118" y="356" text-anchor="middle" font-size="11" fill="#555">🔍 Retrieval增强Context</text>
+  <text x="318" y="356" text-anchor="middle" font-size="11" fill="#555">📋 结构化ContextProtocol</text>
+  <text x="518" y="356" text-anchor="middle" font-size="11" fill="#555">🤝 多 Agent Context共享</text>
+  <text x="700" y="356" text-anchor="middle" font-size="11" fill="#555">📊 Context质量Evaluation</text>
+
+  <!-- Bottom核心洞察 -->
+  <rect x="15" y="385" width="370" height="42" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="405" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">🎯 核心洞察</text>
+  <text x="200" y="420" text-anchor="middle" font-size="10" fill="#666">Context质量 ＞ Context数量，小Model+好Context ≈ LLM</text>
+
+  <rect x="400" y="385" width="385" height="42" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="592" y="405" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">📅 时间线</text>
+  <text x="592" y="420" text-anchor="middle" font-size="10" fill="#666">2025.6 Karpathy → 2025.9 Anthropic → 2025.10 ACE → 2026 标配化</text>
+
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" width="640" height="340">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3498db"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <rect width="640" height="340" rx="14" fill="#f0f4f8"/>
+  <text x="320" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Sub-agents ParallelTaskExecution</text>
+
+  <!-- 主 Agent -->
+  <rect x="240" y="45" width="160" height="52" rx="10" fill="#2c3e50"/>
+  <text x="320" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🧠 主 Agent</text>
+  <text x="320" y="86" text-anchor="middle" font-size="11" fill="#bdc3c7">Team Lead / Coordinator</text>
+
+  <!-- Parallel派遣箭头 -->
+  <line x1="320" y1="97" x2="320" y2="115" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="320" y1="115" x2="100" y2="115" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="320" y1="115" x2="540" y2="115" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="100" y1="115" x2="100" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="220" y1="115" x2="220" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="320" y1="115" x2="320" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="420" y1="115" x2="420" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="540" y1="115" x2="540" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="320" y="110" text-anchor="middle" font-size="11" fill="#3498db" font-weight="bold">Parallel派遣</text>
+
+  <!-- 子 Agent A -->
+  <rect x="40" y="140" width="120" height="60" rx="8" fill="#3498db"/>
+  <text x="100" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent A</text>
+  <text x="100" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">独立Context</text>
+  <text x="100" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">ReviewFront端变更</text>
+
+  <!-- 子 Agent B -->
+  <rect x="160" y="140" width="120" height="60" rx="8" fill="#3498db"/>
+  <text x="220" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent B</text>
+  <text x="220" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">独立Context</text>
+  <text x="220" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">ReviewBack端变更</text>
+
+  <!-- 子 Agent C -->
+  <rect x="260" y="140" width="120" height="60" rx="8" fill="#3498db"/>
+  <text x="320" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent C</text>
+  <text x="320" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">独立Context</text>
+  <text x="320" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">ReviewDatabase迁移</text>
+
+  <!-- 子 Agent D -->
+  <rect x="360" y="140" width="120" height="60" rx="8" fill="#3498db"/>
+  <text x="420" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent D</text>
+  <text x="420" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">独立Context</text>
+  <text x="420" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">Review API Layer</text>
+
+  <!-- 子 Agent E -->
+  <rect x="480" y="140" width="120" height="60" rx="8" fill="#3498db"/>
+  <text x="540" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent E</text>
+  <text x="540" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">独立Context</text>
+  <text x="540" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">ReviewTesting文件</text>
+
+  <!-- 返回Result箭头 -->
+  <line x1="100" y1="200" x2="100" y2="225" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="220" y1="200" x2="220" y2="225" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="320" y1="200" x2="320" y2="225" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="420" y1="200" x2="420" y2="225" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="540" y1="200" x2="540" y2="225" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <text x="320" y="222" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">返回Result</text>
+
+  <!-- 汇总 -->
+  <line x1="100" y1="228" x2="100" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="540" y1="228" x2="540" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="100" y1="248" x2="540" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="320" y1="248" x2="320" y2="268" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="180" y="270" width="280" height="44" rx="10" fill="#27ae60"/>
+  <text x="320" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="white">📋 主 Agent 汇总</text>
+  <text x="320" y="306" text-anchor="middle" font-size="11" fill="#d5f5e3">Generation最终Report · 时间缩短约 60%</text>
+</svg>

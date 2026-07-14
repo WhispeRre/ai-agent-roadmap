@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <rect width="800" height="440" fill="#f8f9fa" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#2c3e50">Agent MemorySystemThree-Layer Architecture</text>
+  
+  <!-- Working Memory -->
+  <rect x="280" y="55" width="240" height="100" rx="10" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">Working Memory（Scratchpad）</text>
+  <text x="400" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• whenFrontTask的Reasoning Step</text>
+  <text x="400" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• Middle计算Result</text>
+  <text x="400" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">⚡ 临时存in，TaskCompleteBack清空</text>
+  
+  <!-- Short-term Memory -->
+  <rect x="160" y="180" width="480" height="110" rx="10" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="400" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Short-Term Memory（Dialogue历史）</text>
+  <text x="220" y="226" font-family="Arial, sans-serif" font-size="11" fill="#555">• whenFront会话的Message History</text>
+  <text x="220" y="244" font-family="Arial, sans-serif" font-size="11" fill="#555">• Sliding Window（最近 N 轮）</text>
+  <text x="220" y="262" font-family="Arial, sans-serif" font-size="11" fill="#555">• Summarization压缩（节省 Token）</text>
+  <text x="480" y="226" font-family="Arial, sans-serif" font-size="11" fill="#555">• 容量受 Context Window Limit</text>
+  <text x="480" y="244" font-family="Arial, sans-serif" font-size="11" fill="#555">• 会话EndBack消失</text>
+  <text x="480" y="262" font-family="Arial, sans-serif" font-size="11" fill="#555">🔵 whenFront会话持续存in</text>
+  
+  <!-- Long-term Memory -->
+  <rect x="40" y="315" width="720" height="105" rx="10" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Long-Term Memory（Vector Database）</text>
+  <text x="80" y="362" font-family="Arial, sans-serif" font-size="11" fill="#555">• User偏好andPersonal Information</text>
+  <text x="80" y="380" font-family="Arial, sans-serif" font-size="11" fill="#555">• 历史DialogueSummarization</text>
+  <text x="80" y="398" font-family="Arial, sans-serif" font-size="11" fill="#555">• UserDocumentandKnowledge Base</text>
+  <text x="300" y="362" font-family="Arial, sans-serif" font-size="11" fill="#555">• 重要DecisionandConclusion</text>
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="11" fill="#555">• Semantic Search（VectorSimilarity）</text>
+  <text x="300" y="398" font-family="Arial, sans-serif" font-size="11" fill="#555">• 持久Storage（跨会话）</text>
+  <text x="560" y="362" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">• ChromaDB / Pinecone</text>
+  <text x="560" y="380" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">• FAISS / Qdrant</text>
+  <text x="560" y="398" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">💾 永久保存</text>
+  
+  <!-- Arrows showing layer relationship -->
+  <path d="M 400 156 L 400 177" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#darr)"/>
+  <path d="M 400 291 L 400 312" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#darr)"/>
+  
+  <!-- Labels on arrows -->
+  <text x="415" y="170" font-family="Arial, sans-serif" font-size="10" fill="#999">重要Info向Bottom沉淀</text>
+  <text x="415" y="305" font-family="Arial, sans-serif" font-size="10" fill="#999">Semantic Search向Top提取</text>
+  
+  <defs>
+    <marker id="darr" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+</svg>

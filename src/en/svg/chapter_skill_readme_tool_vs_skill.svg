@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="700" height="340" fill="#f0f4f8" rx="14"/>
+  <text x="350" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Tool vs Skill Concept Comparison</text>
+
+  <!-- Tool Area -->
+  <rect x="30" y="50" width="300" height="260" rx="12" fill="#3498db" opacity="0.08" stroke="#3498db" stroke-width="2"/>
+  <text x="180" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#3498db">🔧 Tool</text>
+  <text x="180" y="105" text-anchor="middle" font-size="12" fill="#555">A single, standalone operation</text>
+
+  <rect x="55" y="125" width="250" height="32" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="180" y="146" text-anchor="middle" font-size="12" fill="#2c3e50">search_web("weather") → search a webpage</text>
+
+  <rect x="55" y="167" width="250" height="32" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="180" y="188" text-anchor="middle" font-size="12" fill="#2c3e50">read_file("data.csv") → read a file</text>
+
+  <rect x="55" y="209" width="250" height="32" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="180" y="230" text-anchor="middle" font-size="12" fill="#2c3e50">execute_sql("SELECT ...") → run one SQL</text>
+
+  <!-- Skill Area -->
+  <rect x="370" y="50" width="300" height="260" rx="12" fill="#e67e22" opacity="0.08" stroke="#e67e22" stroke-width="2"/>
+  <text x="520" y="78" text-anchor="middle" font-size="15" font-weight="bold" fill="#e67e22">🧠 Skill</text>
+  <text x="520" y="105" text-anchor="middle" font-size="12" fill="#555">Full capability to solve a class of problems</text>
+
+  <rect x="395" y="120" width="250" height="175" rx="6" fill="#e67e22" opacity="0.1"/>
+  <text x="520" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">"Data Analysis Skill"</text>
+  <text x="410" y="170" font-size="11" fill="#555">• Knows when to query DB vs. read files</text>
+  <text x="410" y="190" font-size="11" fill="#555">• Knows how to clean and transform data</text>
+  <text x="410" y="210" font-size="11" fill="#555">• Knows how to choose the right visualization</text>
+  <text x="410" y="230" font-size="11" fill="#555">• Knows how to generate readable reports</text>
+  <text x="410" y="250" font-size="11" fill="#555">• Knows how to handle anomalous data</text>
+  <text x="410" y="275" font-size="11" fill="#888" font-style="italic">= Tools + Knowledge + Process + Experience</text>
+</svg>

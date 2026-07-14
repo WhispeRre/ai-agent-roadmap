@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <filter id="shadow4">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="400" fill="#f0f4f8" rx="16"/>
+  
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a365d" font-family="system-ui">MCP vs A2A vs ANP 三Protocol Comparison</text>
+  
+  <!-- MCP -->
+  <rect x="30" y="55" width="270" height="300" rx="14" fill="#ebf8ff" stroke="#4299e1" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="30" y="55" width="270" height="45" rx="14" fill="#4299e1"/>
+  <text x="165" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🔌 MCP</text>
+  
+  <text x="50" y="125" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">定位</text>
+  <text x="50" y="142" font-size="11" fill="#4a5568" font-family="system-ui">Agent ↔ Tools的Connection标准</text>
+  
+  <text x="50" y="168" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">类比</text>
+  <text x="50" y="185" font-size="11" fill="#4a5568" font-family="system-ui">USB Interface标准</text>
+  
+  <text x="50" y="211" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">核心机制</text>
+  <text x="50" y="228" font-size="11" fill="#4a5568" font-family="system-ui">JSON-RPC · Tools发现</text>
+  <text x="50" y="245" font-size="11" fill="#4a5568" font-family="system-ui">Request-Response模式</text>
+  
+  <text x="50" y="271" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">成熟度</text>
+  <text x="50" y="288" font-size="13" fill="#2b6cb0" font-family="system-ui">⭐⭐⭐⭐ 生产可用</text>
+  
+  <rect x="50" y="305" width="230" height="30" rx="8" fill="#bee3f8"/>
+  <text x="165" y="325" text-anchor="middle" font-size="11" fill="#2b6cb0" font-family="system-ui">Anthropic 主导 · 生态最大</text>
+  
+  <!-- A2A -->
+  <rect x="315" y="55" width="270" height="300" rx="14" fill="#f0fff4" stroke="#48bb78" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="315" y="55" width="270" height="45" rx="14" fill="#48bb78"/>
+  <text x="450" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🤝 A2A</text>
+  
+  <text x="335" y="125" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">定位</text>
+  <text x="335" y="142" font-size="11" fill="#4a5568" font-family="system-ui">Agent ↔ Agent 的Collaboration标准</text>
+  
+  <text x="335" y="168" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">类比</text>
+  <text x="335" y="185" font-size="11" fill="#4a5568" font-family="system-ui">即时通讯Protocol</text>
+  
+  <text x="335" y="211" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">核心机制</text>
+  <text x="335" y="228" font-size="11" fill="#4a5568" font-family="system-ui">Agent Card · Task委派</text>
+  <text x="335" y="245" font-size="11" fill="#4a5568" font-family="system-ui">Stream式反馈 · StateSync</text>
+  
+  <text x="335" y="271" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">成熟度</text>
+  <text x="335" y="288" font-size="13" fill="#276749" font-family="system-ui">⭐⭐⭐ 逐步成熟</text>
+  
+  <rect x="335" y="305" width="230" height="30" rx="8" fill="#c6f6d5"/>
+  <text x="450" y="325" text-anchor="middle" font-size="11" fill="#276749" font-family="system-ui">Google 主导 · 多 Agent Collaboration</text>
+  
+  <!-- ANP -->
+  <rect x="600" y="55" width="270" height="300" rx="14" fill="#faf5ff" stroke="#9f7aea" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="600" y="55" width="270" height="45" rx="14" fill="#9f7aea"/>
+  <text x="735" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🌐 ANP</text>
+  
+  <text x="620" y="125" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">定位</text>
+  <text x="620" y="142" font-size="11" fill="#4a5568" font-family="system-ui">大规模 Agent 组网Infrastructure</text>
+  
+  <text x="620" y="168" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">类比</text>
+  <text x="620" y="185" font-size="11" fill="#4a5568" font-family="system-ui">互联网 DNS + HTTPS</text>
+  
+  <text x="620" y="211" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">核心机制</text>
+  <text x="620" y="228" font-size="11" fill="#4a5568" font-family="system-ui">DID 身份 · Decentralization发现</text>
+  <text x="620" y="245" font-size="11" fill="#4a5568" font-family="system-ui">EncryptionCommunication · 智能Routing</text>
+  
+  <text x="620" y="271" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">成熟度</text>
+  <text x="620" y="288" font-size="13" fill="#6b46c1" font-family="system-ui">⭐⭐ 早期阶段</text>
+  
+  <rect x="620" y="305" width="230" height="30" rx="8" fill="#e9d8fd"/>
+  <text x="735" y="325" text-anchor="middle" font-size="11" fill="#6b46c1" font-family="system-ui">社区驱动 · 面向未来</text>
+  
+  <!-- Bottom关系说明 -->
+  <rect x="100" y="365" width="700" height="25" rx="8" fill="#1a365d"/>
+  <text x="450" y="382" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" font-family="system-ui">互补关系: ANP(组网发现) → A2A(TaskCollaboration) → MCP(Tool Call) — 三LayerProtocol栈，各司其职</text>
+</svg>

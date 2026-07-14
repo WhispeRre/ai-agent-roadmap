@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 310" width="560" height="310">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="560" height="310" fill="#f8f9fa" rx="12"/>
+  <text x="280" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">当代 Agent 三大范式</text>
+
+  <!-- Paradigm 1 -->
+  <rect x="20" y="48" width="160" height="130" rx="10" fill="#3498db" opacity="0.1" stroke="#3498db" stroke-width="2"/>
+  <text x="100" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">🔧 范式1</text>
+  <text x="100" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">单 Agent + 工具</text>
+  <line x1="35" y1="94" x2="165" y2="94" stroke="#3498db" stroke-width="0.5" opacity="0.3"/>
+  <text x="100" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">用户 → [LLM + Tools] → 结果</text>
+  <line x1="35" y1="126" x2="165" y2="126" stroke="#3498db" stroke-width="0.5" opacity="0.2"/>
+  <text x="100" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">ChatGPT with Plugins</text>
+  <text x="100" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Claude with Tools</text>
+  <text x="100" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">（最基础）</text>
+
+  <!-- Paradigm 2 -->
+  <rect x="200" y="48" width="160" height="130" rx="10" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="2"/>
+  <text x="280" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">🤝 范式2</text>
+  <text x="280" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">多 Agent 协作</text>
+  <line x1="215" y1="94" x2="345" y2="94" stroke="#9b59b6" stroke-width="0.5" opacity="0.3"/>
+  <text x="280" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Supervisor Agent</text>
+  <text x="280" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">├→ Research Agent</text>
+  <text x="280" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">├→ Coding Agent</text>
+  <text x="280" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">└→ Review Agent</text>
+  <text x="280" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9b59b6">（处理复杂任务）</text>
+
+  <!-- Paradigm 3 -->
+  <rect x="380" y="48" width="160" height="130" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="460" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">🌐 范式3</text>
+  <text x="460" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">Agent 网络</text>
+  <line x1="395" y1="94" x2="525" y2="94" stroke="#27ae60" stroke-width="0.5" opacity="0.3"/>
+  <text x="460" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">[Agent A] ↔ [Agent B]</text>
+  <text x="460" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">↕　　　　　　↕</text>
+  <text x="460" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">[Agent C] ↔ [Agent D]</text>
+  <text x="460" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">MCP / A2A / ANP</text>
+  <text x="460" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="0" fill="#27ae60"></text>
+
+  <!-- Arrow progression -->
+  <path d="M 182 113 L 198 113" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 362 113 L 378 113" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Representatives -->
+  <rect x="20" y="195" width="160" height="24" rx="6" fill="#3498db" opacity="0.08"/>
+  <text x="100" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">ChatGPT · Claude · Gemini</text>
+
+  <rect x="200" y="195" width="160" height="24" rx="6" fill="#9b59b6" opacity="0.08"/>
+  <text x="280" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9b59b6">CrewAI · AutoGen · Swarm</text>
+
+  <rect x="380" y="195" width="160" height="24" rx="6" fill="#27ae60" opacity="0.08"/>
+  <text x="460" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Agent 互联网（发展中）</text>
+
+  <!-- Evolution note -->
+  <rect x="60" y="238" width="440" height="60" rx="8" fill="#4dabf7" opacity="0.06" stroke="#4dabf7" stroke-width="1"/>
+  <text x="280" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">演进方向</text>
+  <text x="280" y="276" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">单体自主 → 团队协作 → 开放网络互联</text>
+  <text x="280" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">复杂度递增，但每种范式都有其最适合的应用场景</text>
+</svg>

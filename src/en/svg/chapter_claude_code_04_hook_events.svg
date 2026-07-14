@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="720" height="380" rx="14" fill="#f0f4f8"/>
+  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Hook Event Timing and Purpose</text>
+
+  <!---->
+  <line x1="40" y1="65" x2="680" y2="65" stroke="#2c3e50" stroke-width="2.5"/>
+
+  <!--6 Hook-->
+  <!--PreToolUse-->
+  <circle cx="100" cy="65" r="10" fill="#e74c3c"/>
+  <line x1="100" y1="75" x2="100" y2="100" stroke="#e74c3c" stroke-width="1.5"/>
+  <rect x="30" y="103" width="140" height="110" rx="8" fill="#fce8e8" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="100" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">PreToolUse</text>
+  <text x="100" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">Before Tool Execution</text>
+  <text x="100" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Allow</text>
+  <text x="100" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 2 = Block</text>
+  <text x="100" y="182" text-anchor="middle" font-size="10" fill="#e74c3c" font-weight="bold">Security Audit</text>
+  <text x="100" y="196" text-anchor="middle" font-size="10" fill="#e74c3c" font-weight="bold">Block Dangerous Commands</text>
+
+  <!--PostToolUse-->
+  <circle cx="220" cy="65" r="10" fill="#3498db"/>
+  <line x1="220" y1="75" x2="220" y2="100" stroke="#3498db" stroke-width="1.5"/>
+  <rect x="150" y="103" width="140" height="110" rx="8" fill="#eaf4fb" stroke="#3498db" stroke-width="1.5"/>
+  <text x="220" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#2980b9">PostToolUse</text>
+  <text x="220" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">After Tool Execution</text>
+  <text x="220" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Normal</text>
+  <text x="220" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Cannot Rollback</text>
+  <text x="220" y="182" text-anchor="middle" font-size="10" fill="#3498db" font-weight="bold">Code Formatting</text>
+  <text x="220" y="196" text-anchor="middle" font-size="10" fill="#3498db" font-weight="bold">Auto Run Tests</text>
+
+  <!--SessionStart-->
+  <circle cx="340" cy="65" r="10" fill="#27ae60"/>
+  <line x1="340" y1="75" x2="340" y2="100" stroke="#27ae60" stroke-width="1.5"/>
+  <rect x="270" y="103" width="140" height="110" rx="8" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="340" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">SessionStart</text>
+  <text x="340" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">On Session Create/Restore</text>
+  <text x="340" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Continue</text>
+  <text x="340" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 2 = Abort</text>
+  <text x="340" y="182" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold">Inject Dynamic Context</text>
+  <text x="340" y="196" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold">Environment Check</text>
+
+  <!--SessionEnd-->
+  <circle cx="460" cy="65" r="10" fill="#9b59b6"/>
+  <line x1="460" y1="75" x2="460" y2="100" stroke="#9b59b6" stroke-width="1.5"/>
+  <rect x="390" y="103" width="140" height="110" rx="8" fill="#e8daef" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="460" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#7d3c98">SessionEnd</text>
+  <text x="460" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">On Normal Session End</text>
+  <text x="460" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Continue</text>
+  <text x="460" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 2 = Block</text>
+  <text x="460" y="182" text-anchor="middle" font-size="10" fill="#9b59b6" font-weight="bold">Save Session Summary</text>
+  <text x="460" y="196" text-anchor="middle" font-size="10" fill="#9b59b6" font-weight="bold">Clean Temp Files</text>
+
+  <!--Stop-->
+  <circle cx="570" cy="65" r="10" fill="#e67e22"/>
+  <line x1="570" y1="75" x2="570" y2="100" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="500" y="103" width="140" height="110" rx="8" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="570" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#ca6f1e">Stop</text>
+  <text x="570" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">When Claude Stops Responding</text>
+  <text x="570" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Allow Stop</text>
+  <text x="570" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 2 = Block Stop</text>
+  <text x="570" y="182" text-anchor="middle" font-size="10" fill="#e67e22" font-weight="bold">Task Complete Notification</text>
+
+  <!--PreCompact-->
+  <circle cx="660" cy="65" r="10" fill="#f39c12"/>
+  <line x1="660" y1="75" x2="660" y2="100" stroke="#f39c12" stroke-width="1.5"/>
+  <rect x="590" y="103" width="120" height="110" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="650" y="122" text-anchor="middle" font-size="11" font-weight="bold" fill="#9a7d0a">PreCompact</text>
+  <text x="650" y="138" text-anchor="middle" font-size="10" fill="#7f8c8d">Before Context Compression</text>
+  <text x="650" y="153" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 0 = Continue</text>
+  <text x="650" y="167" text-anchor="middle" font-size="10" fill="#7f8c8d">Exit Code 2 = Block</text>
+  <text x="650" y="182" text-anchor="middle" font-size="10" fill="#f39c12" font-weight="bold">Write Key State</text>
+  <text x="650" y="196" text-anchor="middle" font-size="10" fill="#f39c12" font-weight="bold">to CLAUDE.md</text>
+
+  <!---->
+  <rect x="30" y="230" width="660" height="36" rx="8" fill="#e8f4fd" stroke="#3498db" stroke-width="1"/>
+  <text x="360" y="253" text-anchor="middle" font-size="12" fill="#2980b9">💡 PreToolUse is the Most Powerful Hook: Only Event That Can Block Operations (Exit Code 2)</text>
+
+  <!---->
+  <text x="40" y="300" font-size="12" fill="#2c3e50" font-weight="bold">Hook Scripts Receive Tool Call JSON via stdin, Control Behavior via Exit Code</text>
+  <rect x="40" y="315" width="14" height="14" rx="3" fill="#e74c3c"/>
+  <text x="60" y="327" font-size="11" fill="#7f8c8d">Blockable Operation</text>
+  <rect x="150" y="315" width="14" height="14" rx="3" fill="#3498db"/>
+  <text x="170" y="327" font-size="11" fill="#7f8c8d">Auxiliary Action (Non-blocking)</text>
+  <rect x="310" y="315" width="14" height="14" rx="3" fill="#27ae60"/>
+  <text x="330" y="327" font-size="11" fill="#7f8c8d">Session Lifecycle</text>
+</svg>

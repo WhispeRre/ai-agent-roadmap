@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="440" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Context Engineering Frontiers (2025–2026)</text>
+
+  <!-- Direction 1: Million-scale window -->
+  <rect x="15" y="52" width="185" height="175" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="107" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">Million-scale Context Windows</text>
+  <text x="28" y="96" font-size="10.5" fill="#444">4K→128K→1M→10M tokens</text>
+  <line x1="28" y1="104" x2="190" y2="104" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4"/>
+  <text x="28" y="120" font-size="10.5" fill="#444">• Claude 4.6: 1M standard pricing</text>
+  <text x="28" y="136" font-size="10.5" fill="#444">• Gemini 3.1: 1M multimodal</text>
+  <text x="28" y="152" font-size="10.5" fill="#444">• GPT-5.4: 272K/1M extended</text>
+  <text x="28" y="168" font-size="10.5" fill="#444">• Llama 4 Scout: 10M</text>
+  <rect x="28" y="182" width="160" height="20" rx="4" fill="#e74c3c" opacity="0.15"/>
+  <text x="108" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#e74c3c">Quality &gt; Quantity</text>
+  <text x="108" y="218" text-anchor="middle" font-size="9" fill="#888">Bigger window ≠ problem solved</text>
+
+  <!-- Direction 2: Anthropic Methodology -->
+  <rect x="210" y="52" width="185" height="175" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="302" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">Anthropic Methodology</text>
+  <text x="223" y="96" font-size="10.5" fill="#444">Systematic context engineering guide</text>
+  <line x1="223" y1="104" x2="385" y2="104" stroke="#3498db" stroke-width="1" stroke-dasharray="4"/>
+  <text x="223" y="120" font-size="10.5" fill="#444">• JIT just-in-time context strategy</text>
+  <text x="223" y="136" font-size="10.5" fill="#444">• Structured prompt design principles</text>
+  <text x="223" y="152" font-size="10.5" fill="#444">• Tool definition best practices</text>
+  <text x="223" y="168" font-size="10.5" fill="#444">• Sub-agent architecture patterns</text>
+  <rect x="223" y="182" width="160" height="20" rx="4" fill="#3498db" opacity="0.15"/>
+  <text x="303" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#3498db">Minimal high-signal token set</text>
+  <text x="303" y="218" text-anchor="middle" font-size="9" fill="#888">Do the simplest effective thing</text>
+
+  <!-- Direction 3: ACE Self-Evolution -->
+  <rect x="405" y="52" width="185" height="175" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="497" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">ACE Self-Evolution Framework</text>
+  <text x="418" y="96" font-size="10.5" fill="#444">Context self-evolution (ICLR 2026)</text>
+  <line x1="418" y1="104" x2="580" y2="104" stroke="#27ae60" stroke-width="1" stroke-dasharray="4"/>
+  <text x="418" y="120" font-size="10.5" fill="#444">• Evolving tactical playbooks</text>
+  <text x="418" y="136" font-size="10.5" fill="#444">• Generate → Reflect → Curate loop</text>
+  <text x="418" y="152" font-size="10.5" fill="#444">• Structured incremental updates</text>
+  <text x="418" y="168" font-size="10.5" fill="#444">• Natural feedback-driven improvement</text>
+  <rect x="418" y="182" width="160" height="20" rx="4" fill="#27ae60" opacity="0.15"/>
+  <text x="498" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#27ae60">Self-improve without fine-tuning</text>
+  <text x="498" y="218" text-anchor="middle" font-size="9" fill="#888">Agent tasks +10.6%</text>
+
+  <!-- Direction 4: KV-Cache & Caching -->
+  <rect x="600" y="52" width="185" height="175" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="692" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">KV-Cache &amp; Caching</text>
+  <text x="613" y="96" font-size="10.5" fill="#444">Low-level inference optimization</text>
+  <line x1="613" y1="104" x2="775" y2="104" stroke="#e67e22" stroke-width="1" stroke-dasharray="4"/>
+  <text x="613" y="120" font-size="10.5" fill="#444">• MLA: KV compressed to 5%</text>
+  <text x="613" y="136" font-size="10.5" fill="#444">• ChunkKV semantic block compress</text>
+  <text x="613" y="152" font-size="10.5" fill="#444">• RocketKV two-stage acceleration</text>
+  <text x="613" y="168" font-size="10.5" fill="#444">• Prompt Caching cost reduction</text>
+  <rect x="613" y="182" width="160" height="20" rx="4" fill="#e67e22" opacity="0.15"/>
+  <text x="693" y="196" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#e67e22">Cache hit saves 50%~90%</text>
+  <text x="693" y="218" text-anchor="middle" font-size="9" fill="#888">Longer, faster, cheaper</text>
+
+  <!-- Production-grade patterns -->
+  <rect x="15" y="240" width="770" height="58" rx="8" fill="#8e44ad" opacity="0.10" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">Three Production-Grade Context Management Patterns</text>
+  <text x="145" y="284" text-anchor="middle" font-size="11" fill="#555">📐 Layered context architecture</text>
+  <text x="400" y="284" text-anchor="middle" font-size="11" fill="#555">🗜️ Context Compaction</text>
+  <text x="660" y="284" text-anchor="middle" font-size="11" fill="#555">🔧 Dynamic tool context</text>
+
+  <!-- Research directions -->
+  <rect x="15" y="312" width="770" height="58" rx="8" fill="#16a085" opacity="0.10" stroke="#16a085" stroke-width="1.5"/>
+  <text x="400" y="334" text-anchor="middle" font-size="13" font-weight="bold" fill="#16a085">Frontier Research Directions</text>
+  <text x="118" y="356" text-anchor="middle" font-size="11" fill="#555">🔍 Retrieval-augmented context</text>
+  <text x="318" y="356" text-anchor="middle" font-size="11" fill="#555">📋 Structured context protocol</text>
+  <text x="518" y="356" text-anchor="middle" font-size="11" fill="#555">🤝 Multi-agent context sharing</text>
+  <text x="700" y="356" text-anchor="middle" font-size="11" fill="#555">📊 Context quality evaluation</text>
+
+  <!-- Bottom core insight -->
+  <rect x="15" y="385" width="370" height="42" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="200" y="405" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">🎯 Core Insight</text>
+  <text x="200" y="420" text-anchor="middle" font-size="10" fill="#666">Context quality &gt; quantity; small model + good context ≈ large model</text>
+
+  <rect x="400" y="385" width="385" height="42" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="592" y="405" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">📅 Timeline</text>
+  <text x="592" y="420" text-anchor="middle" font-size="10" fill="#666">2025.6 Karpathy → 2025.9 Anthropic → 2025.10 ACE → 2026 mainstream</text>
+</svg>

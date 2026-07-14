@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="440" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Agent Permission Control and Sandbox Isolation Architecture</text>
+
+  <!-- Three defense layers -->
+  <!-- Outer layer: Network isolation -->
+  <rect x="30" y="55" width="740" height="370" rx="12" fill="#e74c3c" opacity="0.06" stroke="#e74c3c" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="400" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">🛡 Layer 1: Network and Environment Isolation</text>
+  <text x="400" y="96" text-anchor="middle" font-size="10" fill="#777">Docker containers / Network policies / Resource quota limits</text>
+
+  <!-- Middle layer: Permission system -->
+  <rect x="60" y="110" width="680" height="200" rx="10" fill="#e67e22" opacity="0.08" stroke="#e67e22" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="400" y="133" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">🔐 Layer 2: Permission Control System</text>
+
+  <!-- Permission types -->
+  <rect x="90" y="145" width="150" height="70" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="165" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">File Permissions</text>
+  <text x="165" y="183" text-anchor="middle" font-size="10" fill="#555">READ_FILE</text>
+  <text x="165" y="198" text-anchor="middle" font-size="10" fill="#555">WRITE_FILE</text>
+
+  <rect x="260" y="145" width="150" height="70" rx="8" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="335" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">Execute Permissions</text>
+  <text x="335" y="183" text-anchor="middle" font-size="10" fill="#555">EXECUTE_CODE</text>
+  <text x="335" y="198" text-anchor="middle" font-size="10" fill="#555">RUN_SHELL</text>
+
+  <rect x="430" y="145" width="150" height="70" rx="8" fill="white" stroke="#3498db" stroke-width="1.5"/>
+  <text x="505" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">Network Permissions</text>
+  <text x="505" y="183" text-anchor="middle" font-size="10" fill="#555">HTTP_REQUEST</text>
+  <text x="505" y="198" text-anchor="middle" font-size="10" fill="#555">DATABASE_ACCESS</text>
+
+  <rect x="600" y="145" width="120" height="70" rx="8" fill="white" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="660" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">Admin Permissions</text>
+  <text x="660" y="183" text-anchor="middle" font-size="10" fill="#555">ADMIN</text>
+  <text x="660" y="198" text-anchor="middle" font-size="10" fill="#555">GRANT_PERM</text>
+
+  <!-- Preset roles -->
+  <rect x="90" y="230" width="190" height="65" rx="8" fill="#e8f8e8" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="185" y="250" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">👁 Read-Only Agent</text>
+  <text x="185" y="268" text-anchor="middle" font-size="10" fill="#555">READ_FILE | HTTP_REQUEST</text>
+  <text x="185" y="283" text-anchor="middle" font-size="9" fill="#888">Information retrieval, Q&amp;A scenarios</text>
+
+  <rect x="300" y="230" width="190" height="65" rx="8" fill="#e8f4fd" stroke="#3498db" stroke-width="1.5"/>
+  <text x="395" y="250" text-anchor="middle" font-size="11" font-weight="bold" fill="#3498db">✍️ Standard Agent</text>
+  <text x="395" y="268" text-anchor="middle" font-size="10" fill="#555">Read/write files + network requests</text>
+  <text x="395" y="283" text-anchor="middle" font-size="9" fill="#888">General development assistant</text>
+
+  <rect x="510" y="230" width="210" height="65" rx="8" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="615" y="250" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">⚡ High-Privilege Agent</text>
+  <text x="615" y="268" text-anchor="middle" font-size="10" fill="#555">Full permissions (requires approval)</text>
+  <text x="615" y="283" text-anchor="middle" font-size="9" fill="#888">Operations automation scenarios</text>
+
+  <!-- Inner layer: Audit -->
+  <rect x="60" y="325" width="680" height="85" rx="10" fill="#27ae60" opacity="0.08" stroke="#27ae60" stroke-width="2"/>
+  <text x="400" y="348" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">📋 Layer 3: Operation Audit and Fallback Protection</text>
+
+  <rect x="90" y="360" width="180" height="38" rx="6" fill="white" stroke="#27ae60" stroke-width="1"/>
+  <text x="180" y="384" text-anchor="middle" font-size="10" fill="#555">🔍 All operations logged</text>
+
+  <rect x="290" y="360" width="200" height="38" rx="6" fill="white" stroke="#27ae60" stroke-width="1"/>
+  <text x="390" y="384" text-anchor="middle" font-size="10" fill="#555">⏱ Timeout auto-terminate + retry limit</text>
+
+  <rect x="510" y="360" width="210" height="38" rx="6" fill="white" stroke="#27ae60" stroke-width="1"/>
+  <text x="615" y="384" text-anchor="middle" font-size="10" fill="#555">🚨 Sensitive ops require human approval</text>
+</svg>

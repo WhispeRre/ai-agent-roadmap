@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="680" height="420" rx="14" fill="#f0f4f8"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Claude Code 六层分层架构</text>
+
+  <!-- L1 入口层 -->
+  <rect x="40" y="45" width="600" height="52" rx="8" fill="#2c3e50"/>
+  <text x="340" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="white">第一层：入口层 Entry Layer</text>
+  <text x="340" y="83" text-anchor="middle" font-size="11" fill="#bdc3c7">main.tsx 启动 / setup.ts 初始化 · 四个入口：CLI / 初始化 / MCP Server / SDK</text>
+  <line x1="340" y1="97" x2="340" y2="112" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- L2 展示层 -->
+  <rect x="40" y="115" width="600" height="52" rx="8" fill="#3498db"/>
+  <text x="340" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="white">第二层：展示层 UI Layer</text>
+  <text x="340" y="153" text-anchor="middle" font-size="11" fill="#d6eaf8">React + Ink 构建终端 UI · 5005 行组件 · 实时流式渲染 / 进度指示 / 交互式确认</text>
+  <line x1="340" y1="167" x2="340" y2="182" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- L3 核心引擎 -->
+  <rect x="40" y="185" width="600" height="52" rx="8" fill="#9b59b6"/>
+  <text x="340" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="white">第三层：核心引擎 QueryEngine（~46,000 行）</text>
+  <text x="340" y="223" text-anchor="middle" font-size="11" fill="#e8daef">LLM 对话管理 / Prompt 缓存 / 流式处理 / 上下文压缩</text>
+  <line x1="340" y1="237" x2="340" y2="252" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- L4 执行层 -->
+  <rect x="40" y="255" width="600" height="52" rx="8" fill="#e67e22"/>
+  <text x="340" y="275" text-anchor="middle" font-size="13" font-weight="bold" fill="white">第四层：执行层 Execution Layer</text>
+  <text x="340" y="293" text-anchor="middle" font-size="11" fill="#fdebd0">Tool System（52 个内置工具）· Command System（/init /compact 等）</text>
+  <line x1="340" y1="307" x2="340" y2="322" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- L5 协作层 -->
+  <rect x="40" y="325" width="600" height="52" rx="8" fill="#27ae60"/>
+  <text x="340" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="white">第五层：协作层 Collaboration Layer</text>
+  <text x="340" y="363" text-anchor="middle" font-size="11" fill="#d5f5e3">Multi-Agent 系统（子 Agent / Teammate 协作）· CCR 远程桥接</text>
+  <line x1="340" y1="377" x2="340" y2="392" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- L6 管理层 -->
+  <rect x="40" y="395" width="600" height="16" rx="8" fill="#e74c3c"/>
+  <text x="340" y="407" text-anchor="middle" font-size="11" font-weight="bold" fill="white">第六层：管理层 — 权限 / 配置 / 会话状态 / 遥测 / 费用 / 安全沙箱</text>
+</svg>

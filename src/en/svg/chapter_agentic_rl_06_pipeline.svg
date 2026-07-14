@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="tp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#e67e22"/>
+    </marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Complete Agentic-RL Training Pipeline</text>
+
+  <!-- Four phases -->
+  <rect x="30" y="60" width="170" height="110" rx="10" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="115" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">① Data Preparation</text>
+  <text x="115" y="108" text-anchor="middle" font-size="10" fill="#555">GSM8K dataset</text>
+  <text x="115" y="126" text-anchor="middle" font-size="10" fill="#555">Format as conversation template</text>
+  <text x="115" y="144" text-anchor="middle" font-size="10" fill="#555">Inject tool call format</text>
+  <text x="115" y="162" text-anchor="middle" font-size="9" fill="#3498db">8,500 math problems</text>
+
+  <line x1="200" y1="115" x2="218" y2="115" stroke="#e67e22" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#tp)"/>
+
+  <rect x="220" y="60" width="170" height="110" rx="10" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="305" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">② SFT Training</text>
+  <text x="305" y="108" text-anchor="middle" font-size="10" fill="#555">Qwen2.5-1.5B-Instruct</text>
+  <text x="305" y="126" text-anchor="middle" font-size="10" fill="#555">LoRA r=64, α=128</text>
+  <text x="305" y="144" text-anchor="middle" font-size="10" fill="#555">Learn tool call format</text>
+  <text x="305" y="162" text-anchor="middle" font-size="9" fill="#8e44ad">3 epochs, lr=2e-4</text>
+
+  <line x1="390" y1="115" x2="408" y2="115" stroke="#e67e22" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#tp)"/>
+
+  <rect x="410" y="60" width="170" height="110" rx="10" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="495" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">③ GRPO Training</text>
+  <text x="495" y="108" text-anchor="middle" font-size="10" fill="#555">Group Relative PO</text>
+  <text x="495" y="126" text-anchor="middle" font-size="10" fill="#555">Format + Correctness reward</text>
+  <text x="495" y="144" text-anchor="middle" font-size="10" fill="#555">Tool use reward</text>
+  <text x="495" y="162" text-anchor="middle" font-size="9" fill="#e74c3c">No Critic model needed</text>
+
+  <line x1="580" y1="115" x2="598" y2="115" stroke="#e67e22" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#tp)"/>
+
+  <rect x="600" y="60" width="170" height="110" rx="10" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="685" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">④ Evaluation</text>
+  <text x="685" y="108" text-anchor="middle" font-size="10" fill="#555">GSM8K accuracy</text>
+  <text x="685" y="126" text-anchor="middle" font-size="10" fill="#555">Tool call success rate</text>
+  <text x="685" y="144" text-anchor="middle" font-size="10" fill="#555">Reasoning quality comparison</text>
+  <text x="685" y="162" text-anchor="middle" font-size="9" fill="#27ae60">Base vs SFT vs GRPO</text>
+
+  <!-- Reward function design -->
+  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">GRPO Multi-dimensional Reward Function Design</text>
+
+  <rect x="30" y="218" width="175" height="140" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="117" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">Correctness Reward</text>
+  <text x="117" y="262" text-anchor="middle" font-size="10" fill="#555">Answer exactly matches → +1.0</text>
+  <text x="117" y="280" text-anchor="middle" font-size="10" fill="#555">Answer wrong → +0.0</text>
+  <text x="117" y="300" text-anchor="middle" font-size="10" fill="#555">Numeric tolerance 1e-5</text>
+  <rect x="40" y="318" width="155" height="25" rx="4" fill="#fce4e4"/>
+  <text x="117" y="336" text-anchor="middle" font-size="9" fill="#e74c3c">Weight: Core signal</text>
+
+  <rect x="220" y="218" width="175" height="140" rx="8" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="307" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">Format Reward</text>
+  <text x="307" y="262" text-anchor="middle" font-size="10" fill="#555">Has think tag → +0.2</text>
+  <text x="307" y="280" text-anchor="middle" font-size="10" fill="#555">Has answer tag → +0.1</text>
+  <text x="307" y="300" text-anchor="middle" font-size="10" fill="#555">Complete XML format → +0.1</text>
+  <rect x="230" y="318" width="155" height="25" rx="4" fill="#fdf2e9"/>
+  <text x="307" y="336" text-anchor="middle" font-size="9" fill="#e67e22">Encourage structured reasoning</text>
+
+  <rect x="410" y="218" width="175" height="140" rx="8" fill="white" stroke="#3498db" stroke-width="1.5"/>
+  <text x="497" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">Tool Use Reward</text>
+  <text x="497" y="262" text-anchor="middle" font-size="10" fill="#555">Correct tool call → +0.3</text>
+  <text x="497" y="280" text-anchor="middle" font-size="10" fill="#555">Correct param format → +0.1</text>
+  <text x="497" y="300" text-anchor="middle" font-size="10" fill="#555">Correct result usage → +0.1</text>
+  <rect x="420" y="318" width="155" height="25" rx="4" fill="#e8f4fd"/>
+  <text x="497" y="336" text-anchor="middle" font-size="9" fill="#3498db">Encourage learning to use tools</text>
+
+  <rect x="600" y="218" width="170" height="140" rx="8" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="685" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">KL Penalty</text>
+  <text x="685" y="262" text-anchor="middle" font-size="10" fill="#555">β = 0.04 (initial)</text>
+  <text x="685" y="280" text-anchor="middle" font-size="10" fill="#555">Constrain policy drift</text>
+  <text x="685" y="300" text-anchor="middle" font-size="10" fill="#555">Prevent mode collapse</text>
+  <rect x="610" y="318" width="150" height="25" rx="4" fill="#e8f8e8"/>
+  <text x="685" y="336" text-anchor="middle" font-size="9" fill="#27ae60">Stable training</text>
+</svg>

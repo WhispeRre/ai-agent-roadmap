@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="700" height="200" fill="#f0f4f8" rx="14"/>
+  <text x="350" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Skill Composition and Task Assignment</text>
+
+  <!-- User request -->
+  <rect x="200" y="48" width="300" height="32" rx="8" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="350" y="69" text-anchor="middle" font-size="12" fill="#2c3e50">User: "Help me analyze a competitor's market strategy"</text>
+
+  <line x1="350" y1="80" x2="350" y2="100" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr1)"/>
+
+  <!-- Coordinator Agent -->
+  <rect x="230" y="102" width="240" height="30" rx="8" fill="#2c3e50"/>
+  <text x="350" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="white">🤖 Coordinator Agent: needs three skills</text>
+
+  <!-- Three branches -->
+  <line x1="350" y1="132" x2="350" y2="142" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="120" y1="142" x2="580" y2="142" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="120" y1="142" x2="120" y2="155" stroke="#3498db" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <line x1="350" y1="142" x2="350" y2="155" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <line x1="580" y1="142" x2="580" y2="155" stroke="#9b59b6" stroke-width="1.5" marker-end="url(#arr1)"/>
+
+  <rect x="40" y="157" width="160" height="32" rx="8" fill="#3498db"/>
+  <text x="120" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="white">🌐 Web Scraping Skill → Web Agent</text>
+
+  <rect x="270" y="157" width="160" height="32" rx="8" fill="#27ae60"/>
+  <text x="350" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="white">📊 Data Analysis Skill → Data Agent</text>
+
+  <rect x="500" y="157" width="170" height="32" rx="8" fill="#9b59b6"/>
+  <text x="585" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="white">✍️ Report Writing Skill → Writer Agent</text>
+</svg>

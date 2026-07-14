@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <filter id="shadow4">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="400" fill="#f0f4f8" rx="16"/>
+
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a365d" font-family="system-ui">MCP vs A2A vs ANP — Three-Protocol Comparison</text>
+
+  <!-- MCP -->
+  <rect x="30" y="55" width="270" height="300" rx="14" fill="#ebf8ff" stroke="#4299e1" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="30" y="55" width="270" height="45" rx="14" fill="#4299e1"/>
+  <text x="165" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🔌 MCP</text>
+
+  <text x="50" y="125" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">Role</text>
+  <text x="50" y="142" font-size="11" fill="#4a5568" font-family="system-ui">Agent ↔ Tool connectivity standard</text>
+
+  <text x="50" y="168" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">Analogy</text>
+  <text x="50" y="185" font-size="11" fill="#4a5568" font-family="system-ui">USB interface standard</text>
+
+  <text x="50" y="211" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">Core mechanism</text>
+  <text x="50" y="228" font-size="11" fill="#4a5568" font-family="system-ui">JSON-RPC · Tool discovery</text>
+  <text x="50" y="245" font-size="11" fill="#4a5568" font-family="system-ui">Request-response pattern</text>
+
+  <text x="50" y="271" font-size="12" font-weight="bold" fill="#2b6cb0" font-family="system-ui">Maturity</text>
+  <text x="50" y="288" font-size="13" fill="#2b6cb0" font-family="system-ui">⭐⭐⭐⭐ Production-ready</text>
+
+  <rect x="50" y="305" width="230" height="30" rx="8" fill="#bee3f8"/>
+  <text x="165" y="325" text-anchor="middle" font-size="11" fill="#2b6cb0" font-family="system-ui">Led by Anthropic · Largest ecosystem</text>
+
+  <!-- A2A -->
+  <rect x="315" y="55" width="270" height="300" rx="14" fill="#f0fff4" stroke="#48bb78" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="315" y="55" width="270" height="45" rx="14" fill="#48bb78"/>
+  <text x="450" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🤝 A2A</text>
+
+  <text x="335" y="125" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">Role</text>
+  <text x="335" y="142" font-size="11" fill="#4a5568" font-family="system-ui">Agent ↔ Agent collaboration standard</text>
+
+  <text x="335" y="168" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">Analogy</text>
+  <text x="335" y="185" font-size="11" fill="#4a5568" font-family="system-ui">Instant messaging protocol</text>
+
+  <text x="335" y="211" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">Core mechanism</text>
+  <text x="335" y="228" font-size="11" fill="#4a5568" font-family="system-ui">Agent Card · Task delegation</text>
+  <text x="335" y="245" font-size="11" fill="#4a5568" font-family="system-ui">Streaming feedback · State sync</text>
+
+  <text x="335" y="271" font-size="12" font-weight="bold" fill="#276749" font-family="system-ui">Maturity</text>
+  <text x="335" y="288" font-size="13" fill="#276749" font-family="system-ui">⭐⭐⭐ Maturing</text>
+
+  <rect x="335" y="305" width="230" height="30" rx="8" fill="#c6f6d5"/>
+  <text x="450" y="325" text-anchor="middle" font-size="11" fill="#276749" font-family="system-ui">Led by Google · Multi-agent collaboration</text>
+
+  <!-- ANP -->
+  <rect x="600" y="55" width="270" height="300" rx="14" fill="#faf5ff" stroke="#9f7aea" stroke-width="1.5" filter="url(#shadow4)"/>
+  <rect x="600" y="55" width="270" height="45" rx="14" fill="#9f7aea"/>
+  <text x="735" y="83" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff" font-family="system-ui">🌐 ANP</text>
+
+  <text x="620" y="125" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">Role</text>
+  <text x="620" y="142" font-size="11" fill="#4a5568" font-family="system-ui">Large-scale agent network infrastructure</text>
+
+  <text x="620" y="168" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">Analogy</text>
+  <text x="620" y="185" font-size="11" fill="#4a5568" font-family="system-ui">Internet DNS + HTTPS</text>
+
+  <text x="620" y="211" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">Core mechanism</text>
+  <text x="620" y="228" font-size="11" fill="#4a5568" font-family="system-ui">DID identity · Decentralized discovery</text>
+  <text x="620" y="245" font-size="11" fill="#4a5568" font-family="system-ui">Encrypted communication · Smart routing</text>
+
+  <text x="620" y="271" font-size="12" font-weight="bold" fill="#6b46c1" font-family="system-ui">Maturity</text>
+  <text x="620" y="288" font-size="13" fill="#6b46c1" font-family="system-ui">⭐⭐ Early stage</text>
+
+  <rect x="620" y="305" width="230" height="30" rx="8" fill="#e9d8fd"/>
+  <text x="735" y="325" text-anchor="middle" font-size="11" fill="#6b46c1" font-family="system-ui">Community-driven · Future-oriented</text>
+
+  <!-- Bottom relationship summary -->
+  <rect x="100" y="365" width="700" height="25" rx="8" fill="#1a365d"/>
+  <text x="450" y="382" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff" font-family="system-ui">Complementary: ANP (network discovery) → A2A (task collaboration) → MCP (tool invocation) — three-layer stack, each with a distinct role</text>
+</svg>

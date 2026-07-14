@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <rect width="560" height="400" fill="#f8f9fa" rx="12"/>
+  <text x="280" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">多 Agent Collaboration的四大维度</text>
+
+  <!-- Dimension 1: Communication -->
+  <rect x="20" y="48" width="250" height="150" rx="10" fill="#3498db" opacity="0.1" stroke="#3498db" stroke-width="2"/>
+  <text x="145" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">📡 1. Communication机制</text>
+  <line x1="35" y1="78" x2="255" y2="78" stroke="#3498db" stroke-width="0.5" opacity="0.3"/>
+  <text x="40" y="98" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 自然语言Communication（ChatDev）</text>
+  <text x="40" y="116" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 结构化Message Passing（MetaGPT）</text>
+  <text x="40" y="134" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 共享State空间（LangGraph）</text>
+  <text x="40" y="152" font-family="Arial, sans-serif" font-size="10" fill="#555">└── StandardizationProtocol（A2A, MCP）</text>
+
+  <!-- Dimension 2: Coordination -->
+  <rect x="290" y="48" width="250" height="150" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="415" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">🤝 2. CoordinationPolicy</text>
+  <line x1="305" y1="78" x2="525" y2="78" stroke="#27ae60" stroke-width="0.5" opacity="0.3"/>
+  <text x="310" y="98" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 集Center式（Orchestrator 模式）</text>
+  <text x="310" y="116" font-family="Arial, sans-serif" font-size="10" fill="#555">├── Decentralization（对等协商）</text>
+  <text x="310" y="134" font-family="Arial, sans-serif" font-size="10" fill="#555">├── Layer次化（Manager-Worker）</text>
+  <text x="310" y="152" font-family="Arial, sans-serif" font-size="10" fill="#555">└── Hybrid式（动态切换）</text>
+
+  <!-- Dimension 3: Roles -->
+  <rect x="20" y="215" width="250" height="130" rx="10" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="2"/>
+  <text x="145" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">🎭 3. Role设计</text>
+  <line x1="35" y1="245" x2="255" y2="245" stroke="#9b59b6" stroke-width="0.5" opacity="0.3"/>
+  <text x="40" y="265" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 静态Role（预定义Expert）</text>
+  <text x="40" y="283" font-family="Arial, sans-serif" font-size="10" fill="#555">├── 动态Role（根据Task自适应）</text>
+  <text x="40" y="301" font-family="Arial, sans-serif" font-size="10" fill="#555">└── 涌现Role（TrainingCenter自发形成）</text>
+
+  <!-- Dimension 4: Evaluation -->
+  <rect x="290" y="215" width="250" height="130" rx="10" fill="#f39c12" opacity="0.1" stroke="#f39c12" stroke-width="2"/>
+  <text x="415" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">📊 4. Evaluation方法</text>
+  <line x1="305" y1="245" x2="525" y2="245" stroke="#f39c12" stroke-width="0.5" opacity="0.3"/>
+  <text x="310" y="265" font-family="Arial, sans-serif" font-size="10" fill="#555">├── TaskComplete率</text>
+  <text x="310" y="283" font-family="Arial, sans-serif" font-size="10" fill="#555">├── Collaboration效率（CommunicationEpoch）</text>
+  <text x="310" y="301" font-family="Arial, sans-serif" font-size="10" fill="#555">├── Extensibility（Agent 数量增长）</text>
+  <text x="310" y="319" font-family="Arial, sans-serif" font-size="10" fill="#555">└── 鲁棒性（FailedResume能力）</text>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="360" width="400" height="28" rx="8" fill="#4dabf7" opacity="0.15" stroke="#4dabf7" stroke-width="1"/>
+  <text x="280" y="379" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">💡 关键发现：3-5 个 Agent 效果最好，超过 7 个BackCoordinationCost急剧Top升</text>
+</svg>

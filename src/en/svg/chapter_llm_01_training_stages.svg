@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 160" width="760" height="160">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="760" height="160" fill="#f8f9fa" rx="12"/>
+  <text x="380" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2c3e50">From Pre-training to Conversation: Three Training Stages</text>
+
+  <!-- Stage 1 -->
+  <rect x="30" y="45" width="210" height="100" rx="12" fill="#e3f2fd" stroke="#3498db" stroke-width="2"/>
+  <text x="135" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2980b9">📚 Stage 1: Pre-training</text>
+  <text x="135" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Data: Trillion Tokens of massive text</text>
+  <text x="135" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Task: Predict next word</text>
+  <text x="135" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Result: Language understanding + world knowledge</text>
+  <text x="135" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Pre-training</text>
+
+  <!-- Arrow -->
+  <path d="M 243 95 L 268 95" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2 -->
+  <rect x="271" y="45" width="210" height="100" rx="12" fill="#fff3e0" stroke="#f39c12" stroke-width="2"/>
+  <text x="376" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">🎯 Stage 2: Instruction Fine-tuning</text>
+  <text x="376" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Data: Human-labeled instruction-response pairs</text>
+  <text x="376" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Task: Learn to "follow instructions"</text>
+  <text x="376" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Result: Able to follow human instructions</text>
+  <text x="376" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Instruction Fine-tuning</text>
+
+  <!-- Arrow -->
+  <path d="M 484 95 L 509 95" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3 -->
+  <rect x="512" y="45" width="218" height="100" rx="12" fill="#e8f5e9" stroke="#27ae60" stroke-width="2"/>
+  <text x="621" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">👍 Stage 3: RLHF</text>
+  <text x="621" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Data: Human ranking preferences for outputs</text>
+  <text x="621" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Task: Make responses match human expectations</text>
+  <text x="621" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Result: Safer, more helpful, harmless</text>
+  <text x="621" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Reinforcement Learning from Human Feedback</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <filter id="shadow3">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="400" fill="#f0f4f8" rx="16"/>
+  
+  <!-- 标题 -->
+  <text x="450" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a365d" font-family="system-ui">Agent 评估基准全景图</text>
+  
+  <!-- 工具调用 -->
+  <rect x="30" y="60" width="165" height="130" rx="14" fill="#ebf8ff" stroke="#4299e1" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="113" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b6cb0" font-family="system-ui">🔧 工具调用</text>
+  <rect x="45" y="95" width="135" height="28" rx="8" fill="#fff" stroke="#4299e1" stroke-width="0.8"/>
+  <text x="113" y="114" text-anchor="middle" font-size="11" fill="#2b6cb0" font-family="system-ui">BFCL (AST匹配)</text>
+  <rect x="45" y="128" width="135" height="28" rx="8" fill="#fff" stroke="#4299e1" stroke-width="0.8"/>
+  <text x="113" y="147" text-anchor="middle" font-size="11" fill="#2b6cb0" font-family="system-ui">ToolBench</text>
+  <rect x="45" y="161" width="135" height="22" rx="8" fill="#bee3f8"/>
+  <text x="113" y="177" text-anchor="middle" font-size="9" fill="#2b6cb0" font-family="system-ui">API-Bank</text>
+  
+  <!-- 通用推理 -->
+  <rect x="210" y="60" width="165" height="130" rx="14" fill="#fefcbf" stroke="#d69e2e" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="293" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#975a16" font-family="system-ui">🧠 通用推理</text>
+  <rect x="225" y="95" width="135" height="28" rx="8" fill="#fff" stroke="#d69e2e" stroke-width="0.8"/>
+  <text x="293" y="114" text-anchor="middle" font-size="11" fill="#975a16" font-family="system-ui">GAIA (准精确匹配)</text>
+  <rect x="225" y="128" width="135" height="28" rx="8" fill="#fff" stroke="#d69e2e" stroke-width="0.8"/>
+  <text x="293" y="147" text-anchor="middle" font-size="11" fill="#975a16" font-family="system-ui">MMLU / GSM8K</text>
+  <rect x="225" y="161" width="135" height="22" rx="8" fill="#fefce8"/>
+  <text x="293" y="177" text-anchor="middle" font-size="9" fill="#975a16" font-family="system-ui">ARC / HellaSwag</text>
+  
+  <!-- 综合 Agent -->
+  <rect x="390" y="60" width="165" height="130" rx="14" fill="#f0fff4" stroke="#48bb78" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="473" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#276749" font-family="system-ui">🤖 综合 Agent</text>
+  <rect x="405" y="95" width="135" height="28" rx="8" fill="#fff" stroke="#48bb78" stroke-width="0.8"/>
+  <text x="473" y="114" text-anchor="middle" font-size="11" fill="#276749" font-family="system-ui">AgentBench (8领域)</text>
+  <rect x="405" y="128" width="135" height="28" rx="8" fill="#fff" stroke="#48bb78" stroke-width="0.8"/>
+  <text x="473" y="147" text-anchor="middle" font-size="11" fill="#276749" font-family="system-ui">τ-Bench</text>
+  <rect x="405" y="161" width="135" height="22" rx="8" fill="#c6f6d5"/>
+  <text x="473" y="177" text-anchor="middle" font-size="9" fill="#276749" font-family="system-ui">OS/DB/Web/Game</text>
+  
+  <!-- Web 操作 -->
+  <rect x="570" y="60" width="165" height="130" rx="14" fill="#faf5ff" stroke="#9f7aea" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="653" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b46c1" font-family="system-ui">🌐 Web 操作</text>
+  <rect x="585" y="95" width="135" height="28" rx="8" fill="#fff" stroke="#9f7aea" stroke-width="0.8"/>
+  <text x="653" y="114" text-anchor="middle" font-size="11" fill="#6b46c1" font-family="system-ui">WebArena (真实网站)</text>
+  <rect x="585" y="128" width="135" height="28" rx="8" fill="#fff" stroke="#9f7aea" stroke-width="0.8"/>
+  <text x="653" y="147" text-anchor="middle" font-size="11" fill="#6b46c1" font-family="system-ui">Mind2Web</text>
+  <rect x="585" y="161" width="135" height="22" rx="8" fill="#e9d8fd"/>
+  <text x="653" y="177" text-anchor="middle" font-size="9" fill="#6b46c1" font-family="system-ui">VisualWebArena</text>
+  
+  <!-- 软件工程 -->
+  <rect x="750" y="60" width="130" height="130" rx="14" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5" filter="url(#shadow3)"/>
+  <text x="815" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#c53030" font-family="system-ui">💻 软件工程</text>
+  <rect x="758" y="95" width="115" height="28" rx="8" fill="#fff" stroke="#fc8181" stroke-width="0.8"/>
+  <text x="815" y="114" text-anchor="middle" font-size="11" fill="#c53030" font-family="system-ui">SWE-bench</text>
+  <rect x="758" y="128" width="115" height="28" rx="8" fill="#fff" stroke="#fc8181" stroke-width="0.8"/>
+  <text x="815" y="147" text-anchor="middle" font-size="11" fill="#c53030" font-family="system-ui">HumanEval</text>
+  <rect x="758" y="161" width="115" height="22" rx="8" fill="#fed7d7"/>
+  <text x="815" y="177" text-anchor="middle" font-size="9" fill="#c53030" font-family="system-ui">MBPP</text>
+  
+  <!-- 评估方法行 -->
+  <text x="450" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a365d" font-family="system-ui">评估方法</text>
+  
+  <rect x="60" y="240" width="200" height="60" rx="12" fill="#fff" stroke="#4a5568" stroke-width="1" filter="url(#shadow3)"/>
+  <text x="160" y="263" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3748" font-family="system-ui">📏 规则评估</text>
+  <text x="160" y="283" text-anchor="middle" font-size="10" fill="#718096" font-family="system-ui">精确匹配 / AST匹配 / 正则</text>
+  
+  <rect x="290" y="240" width="200" height="60" rx="12" fill="#fff" stroke="#4a5568" stroke-width="1" filter="url(#shadow3)"/>
+  <text x="390" y="263" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3748" font-family="system-ui">🤖 LLM-as-Judge</text>
+  <text x="390" y="283" text-anchor="middle" font-size="10" fill="#718096" font-family="system-ui">打分 / 两两比较 / Win Rate</text>
+  
+  <rect x="520" y="240" width="200" height="60" rx="12" fill="#fff" stroke="#4a5568" stroke-width="1" filter="url(#shadow3)"/>
+  <text x="620" y="263" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3748" font-family="system-ui">👤 人工验证</text>
+  <text x="620" y="283" text-anchor="middle" font-size="10" fill="#718096" font-family="system-ui">专家评审 / A/B测试 / Gradio</text>
+  
+  <!-- 推荐组合 -->
+  <rect x="100" y="325" width="700" height="50" rx="12" fill="#1a365d" filter="url(#shadow3)"/>
+  <text x="450" y="348" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff" font-family="system-ui">✅ 推荐组合：规则快速筛选 → LLM Judge 批量评估 → 人工抽检关键案例</text>
+  <text x="450" y="366" text-anchor="middle" font-size="10" fill="#a0aec0" font-family="system-ui">三层递进评估体系，兼顾效率与准确性</text>
+  
+  <text x="450" y="393" text-anchor="middle" font-size="10" fill="#718096" font-family="system-ui">图 15-1  Agent 评估基准与方法全景图</text>
+</svg>

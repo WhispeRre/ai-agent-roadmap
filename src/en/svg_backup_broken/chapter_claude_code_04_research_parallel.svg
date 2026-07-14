@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="600" height="320">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3498db"/>
+    </marker>
+  </defs>
+  <rect width="600" height="320" rx="14" fill="#f0f4f8"/>
+  <text x="300" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">复杂研究TaskParallel拆分</text>
+
+  <!-- 主 Agent -->
+  <rect x="200" y="45" width="200" height="52" rx="10" fill="#2c3e50"/>
+  <text x="300" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="white">🧠 主 Agent</text>
+  <text x="300" y="86" text-anchor="middle" font-size="11" fill="#bdc3c7">调研Distributed Transaction方案</text>
+
+  <!-- 分叉 -->
+  <line x1="300" y1="97" x2="300" y2="115" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="100" y1="115" x2="500" y2="115" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="100" y1="115" x2="100" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="300" y1="115" x2="300" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <line x1="500" y1="115" x2="500" y2="138" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+  <text x="300" y="112" text-anchor="middle" font-size="11" fill="#3498db" font-weight="bold">Parallel</text>
+
+  <!-- 子 Agent 1 -->
+  <rect x="20" y="140" width="160" height="80" rx="8" fill="#3498db"/>
+  <text x="100" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent 1</text>
+  <text x="100" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">深度调研 Saga 模式</text>
+  <text x="100" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">实现原理、Pros and Cons</text>
+  <text x="100" y="206" text-anchor="middle" font-size="10" fill="#d6eaf8">Use Cases</text>
+
+  <!-- 子 Agent 2 -->
+  <rect x="220" y="140" width="160" height="80" rx="8" fill="#3498db"/>
+  <text x="300" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent 2</text>
+  <text x="300" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">深度调研 TCC 模式</text>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">实现原理、Pros and Cons</text>
+  <text x="300" y="206" text-anchor="middle" font-size="10" fill="#d6eaf8">Use Cases</text>
+
+  <!-- 子 Agent 3 -->
+  <rect x="420" y="140" width="160" height="80" rx="8" fill="#3498db"/>
+  <text x="500" y="162" text-anchor="middle" font-size="11" font-weight="bold" fill="white">子 Agent 3</text>
+  <text x="500" y="178" text-anchor="middle" font-size="10" fill="#d6eaf8">深度调研 2PC Protocol</text>
+  <text x="500" y="192" text-anchor="middle" font-size="10" fill="#d6eaf8">实现原理、Pros and Cons</text>
+  <text x="500" y="206" text-anchor="middle" font-size="10" fill="#d6eaf8">Use Cases</text>
+
+  <!-- 汇总 -->
+  <line x1="100" y1="220" x2="100" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="300" y1="220" x2="300" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="500" y1="220" x2="500" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="100" y1="248" x2="500" y2="248" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="300" y1="248" x2="300" y2="268" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="140" y="270" width="320" height="36" rx="10" fill="#27ae60"/>
+  <text x="300" y="288" text-anchor="middle" font-size="12" font-weight="bold" fill="white">📊 主 Agent 汇总对比</text>
+  <text x="300" y="302" text-anchor="middle" font-size="10" fill="#d5f5e3">结合Project特点给出选型建议</text>
+</svg>

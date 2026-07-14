@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 180" width="720" height="180">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="720" height="180" rx="14" fill="#f0f4f8"/>
+  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Three-Level Context Compression</text>
+
+  <!--Stage1 0-40%-->
+  <rect x="20" y="50" width="155" height="100" rx="10" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="97" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#155724">0 ~ 40%</text>
+  <text x="97" y="93" text-anchor="middle" font-size="13" fill="#155724">✅ Normal Operation</text>
+  <text x="97" y="110" text-anchor="middle" font-size="11" fill="#155724">Best Reasoning Quality</text>
+  <text x="97" y="128" text-anchor="middle" font-size="10" fill="#7f8c8d">No Intervention Needed</text>
+
+  <line x1="175" y1="100" x2="195" y2="100" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Stage2 40-70% microcompact-->
+  <rect x="198" y="50" width="155" height="100" rx="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="275" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">40 ~ 70%</text>
+  <text x="275" y="93" text-anchor="middle" font-size="12" fill="#856404">⚡ microcompact</text>
+  <text x="275" y="110" text-anchor="middle" font-size="11" fill="#856404">Light Compression, Auto-triggered</text>
+  <text x="275" y="128" text-anchor="middle" font-size="10" fill="#7f8c8d">Keep Recent Conversations + Key Decisions</text>
+  <text x="275" y="142" text-anchor="middle" font-size="10" fill="#7f8c8d">Nearly Invisible to User</text>
+
+  <line x1="353" y1="100" x2="373" y2="100" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Stage3 70-85% autocompact-->
+  <rect x="376" y="50" width="155" height="100" rx="10" fill="#ffe0b2" stroke="#ff9800" stroke-width="2"/>
+  <text x="453" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">70 ~ 85%</text>
+  <text x="453" y="93" text-anchor="middle" font-size="12" fill="#e65100">⚡⚡ autocompact</text>
+  <text x="453" y="110" text-anchor="middle" font-size="11" fill="#e65100">Deep Compression, Auto-triggered</text>
+  <text x="453" y="128" text-anchor="middle" font-size="10" fill="#7f8c8d">Equivalent to /compact</text>
+  <text x="453" y="142" text-anchor="middle" font-size="10" fill="#7f8c8d">Keep Core State Summary</text>
+
+  <line x1="531" y1="100" x2="551" y2="100" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Stage4 85%+   /clear-->
+  <rect x="554" y="50" width="148" height="100" rx="10" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="628" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#721c24">85%+</text>
+  <text x="628" y="93" text-anchor="middle" font-size="12" fill="#721c24">⚡⚡⚡ Recommend /clear</text>
+  <text x="628" y="110" text-anchor="middle" font-size="11" fill="#721c24">Full Reset</text>
+  <text x="628" y="128" text-anchor="middle" font-size="10" fill="#7f8c8d">Keep Only CLAUDE.md</text>
+  <text x="628" y="142" text-anchor="middle" font-size="10" fill="#7f8c8d">Use When Switching Tasks</text>
+</svg>

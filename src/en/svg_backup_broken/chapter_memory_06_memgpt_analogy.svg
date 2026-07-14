@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 300" font-family="Arial, sans-serif">
+  <!-- 背景 -->
+  <rect width="580" height="300" rx="12" fill="#f8f9fa"/>
+
+  <!-- 标题 -->
+  <text x="290" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">🧠 MemGPT 核心类比：ManipulationSystem ↔ LLM Agent</text>
+
+  <!-- Left列：计算机ManipulationSystem -->
+  <rect x="30" y="55" width="245" height="230" rx="10" fill="#3498db" fill-opacity="0.1" stroke="#3498db" stroke-width="2"/>
+  <text x="152" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">🖥️ 计算机ManipulationSystem</text>
+
+  <rect x="50" y="92" width="205" height="32" rx="8" fill="#3498db" fill-opacity="0.2" stroke="#3498db" stroke-width="1.5"/>
+  <text x="152" y="113" text-anchor="middle" font-size="12" fill="#2c3e50">CPU 寄存器</text>
+
+  <rect x="50" y="132" width="205" height="32" rx="8" fill="#3498db" fill-opacity="0.2" stroke="#3498db" stroke-width="1.5"/>
+  <text x="152" y="153" text-anchor="middle" font-size="12" fill="#2c3e50">主Inner存 (RAM)</text>
+
+  <rect x="50" y="172" width="205" height="32" rx="8" fill="#3498db" fill-opacity="0.2" stroke="#3498db" stroke-width="1.5"/>
+  <text x="152" y="193" text-anchor="middle" font-size="12" fill="#2c3e50">硬盘 / SSD</text>
+
+  <rect x="50" y="212" width="205" height="32" rx="8" fill="#3498db" fill-opacity="0.2" stroke="#3498db" stroke-width="1.5"/>
+  <text x="152" y="233" text-anchor="middle" font-size="12" fill="#2c3e50">缺页Interrupt</text>
+
+  <rect x="50" y="252" width="205" height="28" rx="8" fill="#3498db" fill-opacity="0.2" stroke="#3498db" stroke-width="1.5"/>
+  <text x="152" y="271" text-anchor="middle" font-size="12" fill="#2c3e50">页面置换 / 虚拟Inner存</text>
+
+  <!-- Middle箭头列 -->
+  <text x="290" y="113" text-anchor="middle" font-size="16" fill="#f39c12">↔</text>
+  <text x="290" y="153" text-anchor="middle" font-size="16" fill="#f39c12">↔</text>
+  <text x="290" y="193" text-anchor="middle" font-size="16" fill="#f39c12">↔</text>
+  <text x="290" y="233" text-anchor="middle" font-size="16" fill="#f39c12">↔</text>
+  <text x="290" y="271" text-anchor="middle" font-size="16" fill="#f39c12">↔</text>
+
+  <!-- Right列：LLM Agent (MemGPT) -->
+  <rect x="305" y="55" width="245" height="230" rx="10" fill="#27ae60" fill-opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="427" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">🤖 LLM Agent (MemGPT)</text>
+
+  <rect x="325" y="92" width="205" height="32" rx="8" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="427" y="113" text-anchor="middle" font-size="12" fill="#2c3e50">LLM 的注意力焦点</text>
+
+  <rect x="325" y="132" width="205" height="32" rx="8" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="427" y="153" text-anchor="middle" font-size="12" fill="#2c3e50">Context Window (Context)</text>
+
+  <rect x="325" y="172" width="205" height="32" rx="8" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="427" y="193" text-anchor="middle" font-size="12" fill="#2c3e50">Outer部Storage (DB/文件)</text>
+
+  <rect x="325" y="212" width="205" height="32" rx="8" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="427" y="233" text-anchor="middle" font-size="12" fill="#2c3e50">Info不inContext→换入</text>
+
+  <rect x="325" y="252" width="205" height="28" rx="8" fill="#27ae60" fill-opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="427" y="271" text-anchor="middle" font-size="12" fill="#2c3e50">Memory换入换出 / "无限"Memory</text>
+</svg>

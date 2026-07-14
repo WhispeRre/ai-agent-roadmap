@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 220" width="700" height="220">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="700" height="220" rx="14" fill="#f8f9fa"/>
+  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Office Automation Agent Example</text>
+
+  <!--5 [CN] -->
+  <rect x="20" y="50" width="124" height="140" rx="10" fill="white" stroke="#3498db" stroke-width="1.5"/>
+  <text x="82" y="78" text-anchor="middle" font-size="22">📧</text>
+  <text x="82" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Email Processing</text>
+  <text x="82" y="118" text-anchor="middle" font-size="10" fill="#7f8c8d">Sort by priority</text>
+  <text x="82" y="132" text-anchor="middle" font-size="10" fill="#7f8c8d">Urgent email summary</text>
+  <text x="82" y="146" text-anchor="middle" font-size="10" fill="#7f8c8d">Auto-reply draft</text>
+
+  <rect x="158" y="50" width="124" height="140" rx="10" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="220" y="78" text-anchor="middle" font-size="22">📅</text>
+  <text x="220" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Schedule Management</text>
+  <text x="220" y="118" text-anchor="middle" font-size="10" fill="#7f8c8d">Smart meeting scheduling</text>
+  <text x="220" y="132" text-anchor="middle" font-size="10" fill="#7f8c8d">Avoid conflicts</text>
+  <text x="220" y="146" text-anchor="middle" font-size="10" fill="#7f8c8d">Send invite notifications</text>
+
+  <rect x="296" y="50" width="124" height="140" rx="10" fill="white" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="358" y="78" text-anchor="middle" font-size="22">📝</text>
+  <text x="358" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Document Processing</text>
+  <text x="358" y="118" text-anchor="middle" font-size="10" fill="#7f8c8d">Meeting notes organization</text>
+  <text x="358" y="132" text-anchor="middle" font-size="10" fill="#7f8c8d">Extract action items</text>
+  <text x="358" y="146" text-anchor="middle" font-size="10" fill="#7f8c8d">Assign to owner</text>
+
+  <rect x="434" y="50" width="124" height="140" rx="10" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="496" y="78" text-anchor="middle" font-size="22">📊</text>
+  <text x="496" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Report Generation</text>
+  <text x="496" y="118" text-anchor="middle" font-size="10" fill="#7f8c8d">Auto data aggregation</text>
+  <text x="496" y="132" text-anchor="middle" font-size="10" fill="#7f8c8d">Generate visual charts</text>
+  <text x="496" y="146" text-anchor="middle" font-size="10" fill="#7f8c8d">One-click weekly report</text>
+
+  <rect x="572" y="50" width="108" height="140" rx="10" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="626" y="78" text-anchor="middle" font-size="22">🔍</text>
+  <text x="626" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Information Retrieval</text>
+  <text x="626" y="118" text-anchor="middle" font-size="10" fill="#7f8c8d">Search company docs</text>
+  <text x="626" y="132" text-anchor="middle" font-size="10" fill="#7f8c8d">Quick policy lookup</text>
+  <text x="626" y="146" text-anchor="middle" font-size="10" fill="#7f8c8d">Knowledge base Q&A</text>
+
+  <!-- BottomDescription -->
+  <text x="350" y="205" text-anchor="middle" font-size="11" fill="#95a5a6">💡 Agent chains these tasks for end-to-end office automation</text>
+</svg>

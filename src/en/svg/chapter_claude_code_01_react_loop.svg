@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" width="480" height="560">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <rect width="480" height="560" rx="14" fill="#f0f4f8"/>
+  <text x="240" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Claude Code Execution Flow (ReAct Loop)</text>
+
+  <!--User Instruction-->
+  <rect x="160" y="50" width="160" height="40" rx="20" fill="#2c3e50"/>
+  <text x="240" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="white">User Instruction</text>
+  <line x1="240" y1="90" x2="240" y2="115" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Understand Intent-->
+  <rect x="120" y="118" width="240" height="44" rx="10" fill="#3498db"/>
+  <text x="240" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Understand Intent</text>
+  <text x="240" y="155" text-anchor="middle" font-size="11" fill="#d6eaf8">Define Task Goal</text>
+  <line x1="240" y1="162" x2="240" y2="187" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Explore Context-->
+  <rect x="120" y="190" width="240" height="44" rx="10" fill="#3498db"/>
+  <text x="240" y="212" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Explore Context</text>
+  <text x="240" y="227" text-anchor="middle" font-size="11" fill="#d6eaf8">Read Code, Docs, Run Commands</text>
+  <line x1="240" y1="234" x2="240" y2="259" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Create Execution Plan-->
+  <rect x="120" y="262" width="240" height="40" rx="10" fill="#9b59b6"/>
+  <text x="240" y="287" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Create Execution Plan</text>
+  <line x1="240" y1="302" x2="240" y2="327" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Call Tool-->
+  <rect x="120" y="330" width="240" height="40" rx="10" fill="#e67e22"/>
+  <text x="240" y="355" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Call Tool</text>
+  <line x1="240" y1="370" x2="240" y2="395" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Observe Results-->
+  <rect x="120" y="398" width="240" height="40" rx="10" fill="#e67e22"/>
+  <text x="240" y="423" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Observe Results</text>
+  <line x1="240" y1="438" x2="240" y2="463" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!--Adjust Plan-->
+  <rect x="120" y="466" width="240" height="40" rx="10" fill="#e67e22"/>
+  <text x="240" y="491" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Adjust Plan</text>
+  <line x1="240" y1="506" x2="240" y2="520" stroke="#2c3e50" stroke-width="2"/>
+
+  <!---->
+  <polygon points="240,522 290,542 240,562 190,542" fill="#f39c12" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="240" y="546" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Done?</text>
+
+  <!--→  Call Tool-->
+  <line x1="190" y1="542" x2="80" y2="542" stroke="#e74c3c" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="80" y1="542" x2="80" y2="345" stroke="#e74c3c" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="80" y1="345" x2="118" y2="345" stroke="#e74c3c" stroke-width="1.8" stroke-dasharray="5,3" marker-end="url(#arrow-red)"/>
+  <text x="55" y="450" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold" transform="rotate(-90, 55, 450)">No, Continue Loop</text>
+
+  <!--Yes → Validation Complete-->
+  <line x1="290" y1="542" x2="380" y2="542" stroke="#27ae60" stroke-width="1.8"/>
+  <text x="335" y="537" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">Yes</text>
+  <rect x="382" y="522" width="80" height="40" rx="8" fill="#27ae60"/>
+  <text x="422" y="540" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Validation Complete</text>
+  <text x="422" y="555" text-anchor="middle" font-size="10" fill="#d5f5e3">Run Tests</text>
+</svg>

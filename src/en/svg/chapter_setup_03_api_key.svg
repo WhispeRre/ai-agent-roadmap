@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="320" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">API Key Security Management Best Practices</text>
+
+  <!-- Three protection layers -->
+  <!-- Layer 1: Development environment -->
+  <rect x="20" y="55" width="245" height="150" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="142" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">🔒 Development Env</text>
+  <text x="35" y="100" font-size="11" fill="#444">• .env file + python-dotenv</text>
+  <text x="35" y="120" font-size="11" fill="#444">• Add .env to .gitignore</text>
+  <text x="35" y="140" font-size="11" fill="#444">• Environment vars via os.environ</text>
+  <text x="35" y="160" font-size="11" fill="#444">• Never hardcode secrets</text>
+  <rect x="35" y="172" width="215" height="22" rx="4" fill="#27ae60" opacity="0.2"/>
+  <text x="142" y="187" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold">Minimum baseline · Must follow</text>
+
+  <!-- Layer 2: Team collaboration -->
+  <rect x="278" y="55" width="245" height="150" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="400" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">👥 Team Collaboration</text>
+  <text x="293" y="100" font-size="11" fill="#444">• .env.example template file</text>
+  <text x="293" y="120" font-size="11" fill="#444">• Password manager (1Password)</text>
+  <text x="293" y="140" font-size="11" fill="#444">• Git pre-commit scanning</text>
+  <text x="293" y="160" font-size="11" fill="#444">• Separate API Key per person</text>
+  <rect x="293" y="172" width="215" height="22" rx="4" fill="#3498db" opacity="0.2"/>
+  <text x="400" y="187" text-anchor="middle" font-size="10" fill="#3498db" font-weight="bold">Team standard · Strongly recommended</text>
+
+  <!-- Layer 3: Production deployment -->
+  <rect x="536" y="55" width="244" height="150" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="658" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">🏭 Production Deployment</text>
+  <text x="549" y="100" font-size="11" fill="#444">• AWS Secrets Manager</text>
+  <text x="549" y="120" font-size="11" fill="#444">• Azure Key Vault</text>
+  <text x="549" y="140" font-size="11" fill="#444">• HashiCorp Vault</text>
+  <text x="549" y="160" font-size="11" fill="#444">• Key rotation strategy</text>
+  <rect x="549" y="172" width="215" height="22" rx="4" fill="#e74c3c" opacity="0.2"/>
+  <text x="658" y="187" text-anchor="middle" font-size="10" fill="#e74c3c" font-weight="bold">Production-grade · Required for real projects</text>
+
+  <!-- Leak response -->
+  <rect x="20" y="220" width="760" height="85" rx="8" fill="#e67e22" opacity="0.10" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="400" y="242" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">⚠️ Key Leak Emergency Response</text>
+
+  <rect x="40" y="255" width="160" height="35" rx="6" fill="#e67e22" opacity="0.2"/>
+  <text x="120" y="277" text-anchor="middle" font-size="11" fill="#444">① Revoke old Key immediately</text>
+
+  <rect x="220" y="255" width="160" height="35" rx="6" fill="#e67e22" opacity="0.2"/>
+  <text x="300" y="277" text-anchor="middle" font-size="11" fill="#444">② Generate new Key</text>
+
+  <rect x="400" y="255" width="160" height="35" rx="6" fill="#e67e22" opacity="0.2"/>
+  <text x="480" y="277" text-anchor="middle" font-size="11" fill="#444">③ Update all services</text>
+
+  <rect x="580" y="255" width="180" height="35" rx="6" fill="#e67e22" opacity="0.2"/>
+  <text x="670" y="277" text-anchor="middle" font-size="11" fill="#444">④ Audit abnormal usage</text>
+
+</svg>

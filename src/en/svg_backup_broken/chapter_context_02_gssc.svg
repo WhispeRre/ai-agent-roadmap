@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+  
+  <rect width="900" height="350" fill="url(#bgGrad)" rx="12"/>
+  
+  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1a365d">GSSC Context构建Pipeline</text>
+  
+  <!-- G: Gather -->
+  <rect x="30" y="70" width="180" height="240" rx="14" fill="white" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="60" cy="95" r="16" fill="#e74c3c"/>
+  <text x="60" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">G</text>
+  <text x="85" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">Gather</text>
+  <text x="85" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#999">Information Gathering</text>
+  
+  <text x="50" y="145" font-family="system-ui, sans-serif" font-size="10" fill="#666">📝 System Prompt</text>
+  <text x="50" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#666">💬 User Message</text>
+  <text x="50" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#666">🔄 Dialogue历史</text>
+  <text x="50" y="205" font-family="system-ui, sans-serif" font-size="10" fill="#666">🔧 Tool CallResult</text>
+  <text x="50" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#666">📚 RetrievalDocument</text>
+  <text x="50" y="245" font-family="system-ui, sans-serif" font-size="10" fill="#666">📊 TaskState</text>
+  <text x="50" y="265" font-family="system-ui, sans-serif" font-size="10" fill="#666">📓 Agent 笔记</text>
+  
+  <rect x="45" y="278" width="150" height="22" rx="4" fill="#fff5f5"/>
+  <text x="120" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#e74c3c">收集所有候选Info</text>
+  
+  <!-- Arrow G→S1 -->
+  <line x1="215" y1="190" x2="245" y2="190" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- S1: Select -->
+  <rect x="250" y="70" width="180" height="240" rx="14" fill="white" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="280" cy="95" r="16" fill="#f39c12"/>
+  <text x="280" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">S</text>
+  <text x="305" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#f39c12">Select</text>
+  <text x="305" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#999">Info筛选</text>
+  
+  <text x="270" y="145" font-family="system-ui, sans-serif" font-size="10" fill="#666">🎯 优先级Sort</text>
+  <text x="270" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#666">💰 Token Budget分配</text>
+  <text x="270" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#666">📈 相关性评分</text>
+  <text x="270" y="205" font-family="system-ui, sans-serif" font-size="10" fill="#666">⏰ 时效性判断</text>
+  <text x="270" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#666">🗑️ 淘汰低优先级</text>
+  
+  <rect x="265" y="278" width="150" height="22" rx="4" fill="#fef9e7"/>
+  <text x="340" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f39c12">按Budget筛选最优子集</text>
+  
+  <!-- Arrow S1→S2 -->
+  <line x1="435" y1="190" x2="465" y2="190" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- S2: Summarize -->
+  <rect x="470" y="70" width="180" height="240" rx="14" fill="white" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="500" cy="95" r="16" fill="#27ae60"/>
+  <text x="500" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">S</text>
+  <text x="525" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Summarize</text>
+  <text x="525" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#999">Summarization压缩</text>
+  
+  <text x="490" y="145" font-family="system-ui, sans-serif" font-size="10" fill="#666">📦 压缩超长Inner容</text>
+  <text x="490" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#666">🤖 LLM GenerationSummarization</text>
+  <text x="490" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#666">🔢 保留关键Data</text>
+  <text x="490" y="205" font-family="system-ui, sans-serif" font-size="10" fill="#666">✂️ 去除冗余格式</text>
+  <text x="490" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#666">📏 控制 token Top限</text>
+  
+  <rect x="485" y="278" width="150" height="22" rx="4" fill="#eafaf1"/>
+  <text x="560" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#27ae60">对超长项进行压缩</text>
+  
+  <!-- Arrow S2→C -->
+  <line x1="655" y1="190" x2="685" y2="190" stroke="#4a90d9" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- C: Construct -->
+  <rect x="690" y="70" width="180" height="240" rx="14" fill="white" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="720" cy="95" r="16" fill="#3498db"/>
+  <text x="720" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">C</text>
+  <text x="745" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#3498db">Construct</text>
+  <text x="745" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#999">Context构建</text>
+  
+  <text x="710" y="145" font-family="system-ui, sans-serif" font-size="10" fill="#666">🏗️ 按最优Layout组装</text>
+  <text x="710" y="165" font-family="system-ui, sans-serif" font-size="10" fill="#666">📍 开头：System指令</text>
+  <text x="710" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#666">📍 Middle：历史/Knowledge</text>
+  <text x="710" y="205" font-family="system-ui, sans-serif" font-size="10" fill="#666">📍 结尾：whenFrontMessage</text>
+  <text x="710" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#666">✅ Output messages[]</text>
+  
+  <rect x="705" y="278" width="150" height="22" rx="4" fill="#ebf8ff"/>
+  <text x="780" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#3498db">按注意力分布组装</text>
+</svg>

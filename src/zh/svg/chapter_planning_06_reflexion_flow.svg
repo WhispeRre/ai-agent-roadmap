@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" width="520" height="340">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <rect width="520" height="340" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Reflexion：语言强化学习循环</text>
+
+  <!-- Step 1: Execute -->
+  <rect x="185" y="50" width="150" height="48" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="260" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">⚡ 1. 执行任务</text>
+  <text x="260" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Agent 尝试完成任务</text>
+
+  <!-- Arrow down -->
+  <path d="M 260 100 L 260 120" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Fail -->
+  <polygon points="260,123 320,148 260,173 200,148" fill="#fff3bf" stroke="#f39c12" stroke-width="2"/>
+  <text x="260" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e67e22">成功?</text>
+  <text x="260" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e67e22">评估结果</text>
+
+  <!-- Success arrow right -->
+  <path d="M 322 148 L 400 148" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="361" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">是 ✅</text>
+  <rect x="403" y="132" width="80" height="32" rx="8" fill="#27ae60" opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="443" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">🏁 完成</text>
+
+  <!-- Fail arrow down -->
+  <path d="M 260 175 L 260 195" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="280" y="190" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">否 ❌</text>
+
+  <!-- Step 3: Reflect -->
+  <rect x="155" y="198" width="210" height="55" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="2"/>
+  <text x="260" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">🧠 2. 反思失败原因</text>
+  <text x="260" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">"我在第3步犯了错误——应该先检查…"</text>
+
+  <!-- Arrow down -->
+  <path d="M 260 255 L 260 275" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Memory -->
+  <rect x="155" y="278" width="210" height="45" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="2"/>
+  <text x="260" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">📝 3. 存入长期记忆</text>
+  <text x="260" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">反思笔记存入记忆库</text>
+
+  <!-- Loop arrow back to Execute -->
+  <line x1="153" y1="300" x2="80" y2="300" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="80" y1="300" x2="80" y2="74" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="80" y1="74" x2="183" y2="74" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-red)"/>
+  <text x="62" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c" transform="rotate(-90, 62, 190)">4. 重试（带记忆指导）</text>
+</svg>

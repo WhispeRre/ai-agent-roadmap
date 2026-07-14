@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <!-- Background -->
+  <rect width="800" height="480" fill="#f8f9fa" rx="12"/>
+  
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2c3e50">Large Language ModelHow It Works</text>
+  
+  <!-- Input Section -->
+  <rect x="30" y="70" width="160" height="80" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="110" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">UserInput</text>
+  <text x="110" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">"今dayday气怎么样？"</text>
+  <text x="110" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Prompt / Context</text>
+  
+  <!-- Arrow 1 -->
+  <path d="M 195 110 L 235 110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Tokenizer -->
+  <rect x="238" y="70" width="130" height="80" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="2"/>
+  <text x="303" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">Tokenization器</text>
+  <text x="303" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">文字 → Token</text>
+  <text x="303" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[今day][day气][怎么样]</text>
+  
+  <!-- Arrow 2 -->
+  <path d="M 372 110 L 412 110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Transformer Block -->
+  <rect x="415" y="55" width="180" height="110" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="2"/>
+  <text x="505" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">Transformer</text>
+  <text x="505" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• Attention Mechanism</text>
+  <text x="505" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• 多Layer编码</text>
+  <text x="505" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• Context理解</text>
+  <text x="505" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">• 概率Prediction</text>
+  
+  <!-- Arrow 3 -->
+  <path d="M 598 110 L 638 110" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Output -->
+  <rect x="641" y="70" width="130" height="80" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="2"/>
+  <text x="706" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">ModelOutput</text>
+  <text x="706" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Token → 文字</text>
+  <text x="706" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">"我无法获取Real-time..."</text>
+  
+  <!-- Training Stages Section -->
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#2c3e50">Training三阶段</text>
+  
+  <!-- Stage 1 -->
+  <rect x="50" y="225" width="200" height="90" rx="10" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="150" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">① Pre-training</text>
+  <text x="150" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">T Token 文本</text>
+  <text x="150" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">PredictionBottom一个Word</text>
+  <text x="150" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">→ 语言理解 + Knowledge</text>
+  
+  <!-- Arrow between stages -->
+  <path d="M 255 270 L 293 270" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 2 -->
+  <rect x="296" y="225" width="200" height="90" rx="10" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="396" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">② Instruction Fine-tuning</text>
+  <text x="396" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">人工标注指令对</text>
+  <text x="396" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Supervised Learning</text>
+  <text x="396" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">→ 遵循指令</text>
+  
+  <!-- Arrow between stages -->
+  <path d="M 500 270 L 538 270" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <!-- Stage 3 -->
+  <rect x="541" y="225" width="210" height="90" rx="10" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="646" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">③ RLHF</text>
+  <text x="646" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">人类偏好反馈</text>
+  <text x="646" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Reinforcement Learning</text>
+  <text x="646" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60">→ Security + 有用 + 无害</text>
+  
+  <!-- Limitations Section -->
+  <rect x="50" y="345" width="330" height="105" rx="10" fill="#e74c3c" opacity="0.08" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="215" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">⚠️ 核心局限性</text>
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="11" fill="#555">• Knowledge Cutoff日期：不了解TrainingBack的Event</text>
+  <text x="70" y="408" font-family="Arial, sans-serif" font-size="11" fill="#555">• 幻觉问题：自信地给出ErrorInfo</text>
+  <text x="70" y="426" font-family="Arial, sans-serif" font-size="11" fill="#555">• Context Window：有限的"Working Memory"</text>
+  <text x="70" y="444" font-family="Arial, sans-serif" font-size="11" fill="#555">• 概率性Output：相同Input不同Output</text>
+  
+  <!-- Solutions Section -->
+  <rect x="420" y="345" width="330" height="105" rx="10" fill="#27ae60" opacity="0.08" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="585" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">✅ Agent Solutions</text>
+  <text x="440" y="390" font-family="Arial, sans-serif" font-size="11" fill="#555">• Tool Call：搜Index擎获取Real-timeInfo</text>
+  <text x="440" y="408" font-family="Arial, sans-serif" font-size="11" fill="#555">• RAG：Outer挂Knowledge Base提升准确性</text>
+  <text x="440" y="426" font-family="Arial, sans-serif" font-size="11" fill="#555">• Memory管理：Dialogue历史与Summarization压缩</text>
+  <text x="440" y="444" font-family="Arial, sans-serif" font-size="11" fill="#555">• Temperature 调节：控制Output稳定性</text>
+  
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+</svg>

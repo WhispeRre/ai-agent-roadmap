@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="680" height="420" fill="#f8f9fa" rx="12"/>
+  <text x="340" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">GRPO vs GSPO：Token 级 vs 序列级重要性采样</text>
+
+  <!-- ===== 左半：GRPO（Token 级）===== -->
+  <rect x="20" y="45" width="310" height="360" rx="10" fill="#e74c3c" opacity="0.04" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="175" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">GRPO — Token 级</text>
+
+  <!-- Token 序列示意 -->
+  <text x="40" y="100" font-family="Arial, sans-serif" font-size="11" fill="#555">输出序列 y = [t₁, t₂, t₃, t₄, t₅]</text>
+
+  <!-- 每个 token 独立的 ρ -->
+  <rect x="40" y="112" width="50" height="36" rx="6" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="65" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">ρ₁=1.3</text>
+  <text x="65" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">t₁</text>
+
+  <rect x="96" y="112" width="50" height="36" rx="6" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="121" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">ρ₂=0.4</text>
+  <text x="121" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">t₂</text>
+
+  <rect x="152" y="112" width="50" height="36" rx="6" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="177" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">ρ₃=2.8</text>
+  <text x="177" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">t₃</text>
+
+  <rect x="208" y="112" width="50" height="36" rx="6" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="233" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">ρ₄=0.7</text>
+  <text x="233" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">t₄</text>
+
+  <rect x="264" y="112" width="50" height="36" rx="6" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="289" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e74c3c">ρ₅=1.9</text>
+  <text x="289" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">t₅</text>
+
+  <!-- 问题说明 -->
+  <text x="40" y="170" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c" font-weight="bold">⚠ 问题：每个 token 更新幅度不同</text>
+  <text x="40" y="186" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• ρ₃=2.8 的 token 梯度是 ρ₂=0.4 的 7 倍</text>
+  <text x="40" y="200" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• Token 间更新不一致 → 高方差噪声</text>
+  <text x="40" y="214" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• 长序列中噪声逐步累积 → 训练不稳定</text>
+  <text x="40" y="228" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• MoE 模型中容易触发灾难性坍塌</text>
+
+  <!-- 梯度方差示意（波浪线） -->
+  <text x="40" y="255" font-family="Arial, sans-serif" font-size="10" fill="#555" font-weight="bold">梯度更新幅度：</text>
+  <path d="M40,275 Q60,255 80,275 Q100,295 120,275 Q140,250 160,280 Q180,300 200,265 Q220,245 240,280 Q260,300 280,260 L300,275" fill="none" stroke="#e74c3c" stroke-width="2" opacity="0.7"/>
+  <text x="170" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">剧烈波动 — 高方差</text>
+
+  <!-- Clip 说明 -->
+  <rect x="40" y="325" width="270" height="65" rx="8" fill="#e74c3c" opacity="0.06" stroke="#e74c3c" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="175" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#e74c3c">Token 级 Clip</text>
+  <text x="175" y="358" text-anchor="middle" font-family="monospace, sans-serif" font-size="9" fill="#666">clip(ρ_{i,t}, 1-ε, 1+ε) 逐 token 裁剪</text>
+  <text x="175" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">ε ≈ 0.1 ~ 0.2，无法消除累积偏移</text>
+
+  <!-- ===== 右半：GSPO（序列级）===== -->
+  <rect x="350" y="45" width="310" height="360" rx="10" fill="#27ae60" opacity="0.04" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="505" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">GSPO — 序列级</text>
+
+  <!-- Token 序列 - 统一系数 -->
+  <text x="370" y="100" font-family="Arial, sans-serif" font-size="11" fill="#555">输出序列 y = [t₁, t₂, t₃, t₄, t₅]</text>
+
+  <!-- 统一的 ρ_seq 覆盖所有 token -->
+  <rect x="370" y="112" width="270" height="36" rx="6" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="505" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#27ae60">ρ_seq = exp(mean(log ρ₁..ρ₅)) ≈ 1.12</text>
+  <text x="505" y="144" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">所有 token 共享同一个序列级系数</text>
+
+  <!-- 优势说明 -->
+  <text x="370" y="170" font-family="Arial, sans-serif" font-size="10" fill="#27ae60" font-weight="bold">✅ 优势：统一系数，消除 token 间不一致</text>
+  <text x="370" y="186" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• 所有 token 乘以相同的 ρ_seq</text>
+  <text x="370" y="200" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• 序列级平均消除了单 token 的随机波动</text>
+  <text x="370" y="214" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• 优化单位与奖励单位对齐（均为序列级）</text>
+  <text x="370" y="228" font-family="Arial, sans-serif" font-size="9.5" fill="#777">• 从根本上稳定 MoE 模型的 RL 训练</text>
+
+  <!-- 梯度方差示意（平滑线） -->
+  <text x="370" y="255" font-family="Arial, sans-serif" font-size="10" fill="#555" font-weight="bold">梯度更新幅度：</text>
+  <path d="M370,275 Q400,270 430,275 Q460,280 490,274 Q520,268 550,276 Q580,282 610,273 L630,275" fill="none" stroke="#27ae60" stroke-width="2" opacity="0.7"/>
+  <text x="500" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">平稳一致 — 低方差</text>
+
+  <!-- Clip 说明 -->
+  <rect x="370" y="325" width="270" height="65" rx="8" fill="#27ae60" opacity="0.06" stroke="#27ae60" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="505" y="343" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#27ae60">序列级 Clip</text>
+  <text x="505" y="358" text-anchor="middle" font-family="monospace, sans-serif" font-size="9" fill="#666">clip(ρ_seq, 1-ε, 1+ε) 整序列裁剪</text>
+  <text x="505" y="373" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">ε ≈ 3e-4 ~ 4e-4，更紧凑的控制</text>
+</svg>

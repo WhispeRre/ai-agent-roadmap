@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 300" width="750" height="300">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="750" height="300" fill="#f8f9fa" rx="12"/>
+  <text x="375" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Three Policy Optimization Algorithms Architecture Comparison</text>
+
+  <!-- PPO column -->
+  <rect x="15" y="40" width="230" height="250" rx="10" fill="#3498db" opacity="0.05" stroke="#3498db" stroke-width="1.5"/>
+  <text x="130" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3498db">PPO</text>
+
+  <rect x="35" y="75" width="85" height="35" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="77" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">Policy π_θ</text>
+  <rect x="135" y="75" width="85" height="35" rx="6" fill="#9b59b6" opacity="0.15"/>
+  <text x="177" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#9b59b6">Critic V_φ</text>
+  <rect x="35" y="118" width="85" height="28" rx="6" fill="#27ae60" opacity="0.15"/>
+  <text x="77" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Ref π_ref</text>
+  <rect x="135" y="118" width="85" height="28" rx="6" fill="#f39c12" opacity="0.15"/>
+  <text x="177" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e67e22">Reward R</text>
+
+  <text x="130" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Online sampling → Reward eval</text>
+  <text x="130" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ GAE advantage estimation</text>
+  <text x="130" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ Clip policy update</text>
+
+  <text x="130" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">VRAM ≈ 3× model</text>
+  <text x="130" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">Needs Critic training</text>
+  <rect x="45" y="245" width="170" height="20" rx="4" fill="#3498db" opacity="0.1"/>
+  <text x="130" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#3498db">Versatile | Complex tuning</text>
+
+  <!-- DPO column -->
+  <rect x="260" y="40" width="230" height="250" rx="10" fill="#e67e22" opacity="0.05" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="375" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e67e22">DPO</text>
+
+  <rect x="280" y="75" width="85" height="35" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="322" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">Policy π_θ</text>
+  <rect x="380" y="75" width="85" height="35" rx="6" fill="#27ae60" opacity="0.15"/>
+  <text x="422" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Ref π_ref</text>
+
+  <rect x="300" y="118" width="150" height="28" rx="6" fill="#f39c12" opacity="0.15"/>
+  <text x="375" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e67e22">Preference pairs (y_w, y_l)</text>
+
+  <text x="375" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Offline preference data</text>
+  <text x="375" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ Compute implicit reward diff</text>
+  <text x="375" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ Bradley-Terry loss</text>
+
+  <text x="375" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">VRAM ≈ 2× model</text>
+  <text x="375" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">No Critic/Reward needed</text>
+  <rect x="290" y="245" width="170" height="20" rx="4" fill="#e67e22" opacity="0.1"/>
+  <text x="375" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#e67e22">Simplest | Needs pref. data</text>
+
+  <!-- GRPO column -->
+  <rect x="505" y="40" width="230" height="250" rx="10" fill="#9b59b6" opacity="0.05" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="620" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9b59b6">GRPO</text>
+
+  <rect x="525" y="75" width="85" height="35" rx="6" fill="#3498db" opacity="0.15"/>
+  <text x="567" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">Policy π_θ</text>
+  <rect x="625" y="75" width="85" height="35" rx="6" fill="#27ae60" opacity="0.15"/>
+  <text x="667" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Ref π_ref</text>
+
+  <rect x="545" y="118" width="150" height="28" rx="6" fill="#f39c12" opacity="0.15"/>
+  <text x="620" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e67e22">Group sampling G responses</text>
+
+  <text x="620" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Online sampling → Reward eval</text>
+  <text x="620" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ Group-normalized advantage</text>
+  <text x="620" y="191" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">→ Clip policy update</text>
+
+  <text x="620" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">VRAM ≈ 1.5× model</text>
+  <text x="620" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">No Critic needed</text>
+  <rect x="535" y="245" width="170" height="20" rx="4" fill="#9b59b6" opacity="0.1"/>
+  <text x="620" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#9b59b6">Efficient | Suited for LLMs</text>
+</svg>

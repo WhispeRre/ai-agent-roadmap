@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 360" width="550" height="360">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <rect width="550" height="360" fill="#f8f9fa" rx="12"/>
+  <text x="275" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">CRAG：RetrievalEvaluation三BranchDecision</text>
+
+  <!-- Retrieve -->
+  <rect x="185" y="42" width="180" height="38" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="275" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">🔍 RetrievaltoDocument</text>
+
+  <!-- Arrow down -->
+  <path d="M 275 82 L 275 105" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Evaluator -->
+  <rect x="155" y="108" width="240" height="38" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="2"/>
+  <text x="275" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">⚖️ RetrievalEvaluation器判断Documentation Quality</text>
+
+  <!-- Three branches -->
+  <path d="M 160 148 L 90 175" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <path d="M 275 148 L 275 175" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 390 148 L 460 175" stroke="#f39c12" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Branch 1: Correct -->
+  <rect x="15" y="178" width="150" height="130" rx="10" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="90" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">✅ 正确 Correct</text>
+  <line x1="30" y1="206" x2="150" y2="206" stroke="#27ae60" stroke-width="0.5" opacity="0.5"/>
+  <text x="90" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">usingRetrievalDocument</text>
+  <text x="90" y="238" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">· 分割为Knowledge条</text>
+  <text x="90" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">· Filter不相关条目</text>
+  <text x="90" y="266" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">· 保留最相关片段</text>
+  <text x="90" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">→ 精细化处理</text>
+
+  <!-- Branch 2: Incorrect -->
+  <rect x="200" y="178" width="150" height="130" rx="10" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="275" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">❌ 不正确 Incorrect</text>
+  <line x1="215" y1="206" x2="335" y2="206" stroke="#e74c3c" stroke-width="0.5" opacity="0.5"/>
+  <text x="275" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">丢弃RetrievalResult</text>
+  <text x="275" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">切换to Web Search</text>
+  <text x="275" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">补充Outer部Info</text>
+  <text x="275" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">→ Degradationto Web</text>
+
+  <!-- Branch 3: Ambiguous -->
+  <rect x="385" y="178" width="150" height="130" rx="10" fill="#f39c12" opacity="0.12" stroke="#f39c12" stroke-width="2"/>
+  <text x="460" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">🔶 模糊 Ambiguous</text>
+  <line x1="400" y1="206" x2="520" y2="206" stroke="#f39c12" stroke-width="0.5" opacity="0.5"/>
+  <text x="460" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">同时using</text>
+  <text x="460" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">RetrievalResult</text>
+  <text x="460" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">+ Web Search</text>
+  <text x="460" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e67e22">→ 综合两者</text>
+
+  <!-- Bottom: Generate -->
+  <path d="M 90 310 L 275 335" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M 275 310 L 275 335" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M 460 310 L 275 335" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="275" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">📋 Generation最终回答</text>
+</svg>

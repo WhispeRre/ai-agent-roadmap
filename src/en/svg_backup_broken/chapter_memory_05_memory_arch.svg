@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="600" height="200" rx="12" fill="#f8f9fa"/>
+  <!-- 根Node -->
+  <rect x="20" y="80" width="130" height="40" rx="8" fill="#2c3e50"/>
+  <text x="85" y="96" text-anchor="middle" font-size="12" font-weight="bold" fill="white">个人助理 Agent</text>
+  <text x="85" y="112" text-anchor="middle" font-size="10" fill="#bdc3c7">MemorySystemArchitecture</text>
+  <!-- 主干 -->
+  <line x1="150" y1="100" x2="190" y2="100" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="190" y1="28" x2="190" y2="172" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="190" y1="28" x2="220" y2="28" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="190" y1="76" x2="220" y2="76" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="190" y1="124" x2="220" y2="124" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="190" y1="172" x2="220" y2="172" stroke="#7f8c8d" stroke-width="2"/>
+
+  <!-- Branch1 -->
+  <rect x="220" y="12" width="360" height="32" rx="6" fill="#3498db" opacity="0.15"/>
+  <rect x="220" y="12" width="4" height="32" rx="2" fill="#3498db"/>
+  <text x="236" y="26" font-size="12" font-weight="bold" fill="#2980b9">Short-Term Memory</text>
+  <text x="296" y="26" font-size="12" fill="#555">whenFrontDialogue历史</text>
+  <text x="236" y="40" font-size="10" fill="#7f8c8d">SlidingWindowMemory · Sliding Window保留最近 N 轮</text>
+
+  <!-- Branch2 -->
+  <rect x="220" y="60" width="360" height="32" rx="6" fill="#9b59b6" opacity="0.15"/>
+  <rect x="220" y="60" width="4" height="32" rx="2" fill="#9b59b6"/>
+  <text x="236" y="74" font-size="12" font-weight="bold" fill="#8e44ad">Long-Term Memory</text>
+  <text x="296" y="74" font-size="12" fill="#555">ChromaDB Vector Store</text>
+  <text x="236" y="88" font-size="10" fill="#7f8c8d">跨会话Persistence · Semantic Search · 自动提取重要Info</text>
+
+  <!-- Branch3 -->
+  <rect x="220" y="108" width="360" height="32" rx="6" fill="#27ae60" opacity="0.15"/>
+  <rect x="220" y="108" width="4" height="32" rx="2" fill="#27ae60"/>
+  <text x="236" y="122" font-size="12" font-weight="bold" fill="#27ae60">Working Memory</text>
+  <text x="296" y="122" font-size="12" fill="#555">Scratchpad 草稿本</text>
+  <text x="236" y="136" font-size="10" fill="#7f8c8d">复杂Task时using · 临时Reasoning空间</text>
+
+  <!-- Branch4 -->
+  <rect x="220" y="156" width="360" height="32" rx="6" fill="#e67e22" opacity="0.15"/>
+  <rect x="220" y="156" width="4" height="32" rx="2" fill="#e67e22"/>
+  <text x="236" y="170" font-size="12" font-weight="bold" fill="#e67e22">Memory提取</text>
+  <text x="296" y="170" font-size="12" fill="#555">自动fromDialogueCenter提取重要Info</text>
+  <text x="236" y="184" font-size="10" fill="#7f8c8d">LLM 判断 · 结构化Storage · 定期整理</text>
+</svg>

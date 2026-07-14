@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="aEP" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+    <marker id="aEPr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9b59b6"/>
+    </marker>
+  </defs>
+
+  <rect width="760" height="360" fill="#f8f9fa" rx="14"/>
+  <text x="380" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Expert Parallelism (EP): MoE Routing + AllToAll Dynamic Dispatch</text>
+
+  <!-- ─── Left: Standard FFN vs MoE FFN ─── -->
+  <text x="175" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">Standard FFN vs MoE FFN</text>
+
+  <!-- Standard FFN -->
+  <rect x="20" y="62" width="150" height="100" rx="8" fill="#3498db" opacity="0.1" stroke="#3498db" stroke-width="1.5"/>
+  <text x="95" y="82" text-anchor="middle" font-size="10" font-weight="bold" fill="#3498db">Standard FFN</text>
+  <rect x="35" y="90" width="120" height="28" rx="5" fill="#3498db" opacity="0.5"/>
+  <text x="95" y="108" text-anchor="middle" font-size="9" fill="#fff">Single FFN Layer</text>
+  <text x="95" y="130" text-anchor="middle" font-size="8" fill="#555">Every token passes through</text>
+  <text x="95" y="143" text-anchor="middle" font-size="8" fill="#555">Active params = All params</text>
+  <text x="95" y="156" text-anchor="middle" font-size="8" fill="#e74c3c">High compute, not scalable</text>
+
+  <!-- MoE FFN -->
+  <rect x="185" y="62" width="165" height="100" rx="8" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="267" y="82" text-anchor="middle" font-size="10" font-weight="bold" fill="#9b59b6">MoE FFN (8 Experts, Top-2)</text>
+  <!-- 8 small expert boxes -->
+  <rect x="192" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="202" y="103" text-anchor="middle" font-size="7" fill="#fff">E0</text>
+  <rect x="215" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="225" y="103" text-anchor="middle" font-size="7" fill="#9b59b6">E1</text>
+  <rect x="238" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="248" y="103" text-anchor="middle" font-size="7" fill="#fff">E2</text>
+  <rect x="261" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="271" y="103" text-anchor="middle" font-size="7" fill="#9b59b6">E3</text>
+  <rect x="284" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="294" y="103" text-anchor="middle" font-size="7" fill="#9b59b6">E4</text>
+  <rect x="307" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="317" y="103" text-anchor="middle" font-size="7" fill="#fff">E5</text>
+  <rect x="330" y="90" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="340" y="103" text-anchor="middle" font-size="7" fill="#9b59b6">E6</text>
+  <rect x="192" y="112" width="20" height="18" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="202" y="125" text-anchor="middle" font-size="7" fill="#9b59b6">E7</text>
+  <text x="267" y="150" text-anchor="middle" font-size="8" fill="#555">Only 2 experts active per token</text>
+  <text x="267" y="162" text-anchor="middle" font-size="8" fill="#27ae60">Active params ≈ 25%</text>
+
+  <!-- Router -->
+  <rect x="20" y="175" width="335" height="30" rx="6" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="177" y="195" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">Router: Softmax → Top-2 Expert Selection → Weight</text>
+
+  <!-- ─── Right: EP across 4 GPUs ─── -->
+  <text x="550" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">EP: Sharding Experts across 4 GPUs</text>
+
+  <!-- GPU 0 -->
+  <rect x="385" y="62" width="70" height="100" rx="8" fill="#3498db" opacity="0.1" stroke="#3498db" stroke-width="1.5"/>
+  <text x="420" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#3498db">GPU 0</text>
+  <rect x="393" y="84" width="54" height="16" rx="3" fill="#3498db" opacity="0.5"/>
+  <text x="420" y="96" text-anchor="middle" font-size="8" fill="#fff">tokens t₀-t₃</text>
+  <rect x="393" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="405" y="128" text-anchor="middle" font-size="7" fill="#fff">E0</text>
+  <rect x="421" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="433" y="128" text-anchor="middle" font-size="7" fill="#fff">E1</text>
+  <text x="420" y="147" text-anchor="middle" font-size="7" fill="#9b59b6">Holds E0,E1</text>
+
+  <!-- GPU 1 -->
+  <rect x="460" y="62" width="70" height="100" rx="8" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="495" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#27ae60">GPU 1</text>
+  <rect x="468" y="84" width="54" height="16" rx="3" fill="#27ae60" opacity="0.5"/>
+  <text x="495" y="96" text-anchor="middle" font-size="8" fill="#fff">tokens t₄-t₇</text>
+  <rect x="468" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.5"/>
+  <text x="480" y="128" text-anchor="middle" font-size="7" fill="#fff">E2</text>
+  <rect x="496" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.5"/>
+  <text x="508" y="128" text-anchor="middle" font-size="7" fill="#fff">E3</text>
+  <text x="495" y="147" text-anchor="middle" font-size="7" fill="#9b59b6">Holds E2,E3</text>
+
+  <!-- GPU 2 -->
+  <rect x="535" y="62" width="70" height="100" rx="8" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="570" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#9b59b6">GPU 2</text>
+  <rect x="543" y="84" width="54" height="16" rx="3" fill="#9b59b6" opacity="0.5"/>
+  <text x="570" y="96" text-anchor="middle" font-size="8" fill="#fff">tokens t₈-t₁₁</text>
+  <rect x="543" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.7"/>
+  <text x="555" y="128" text-anchor="middle" font-size="7" fill="#fff">E4</text>
+  <rect x="571" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.35"/>
+  <text x="583" y="128" text-anchor="middle" font-size="7" fill="#fff">E5</text>
+  <text x="570" y="147" text-anchor="middle" font-size="7" fill="#9b59b6">Holds E4,E5</text>
+
+  <!-- GPU 3 -->
+  <rect x="610" y="62" width="70" height="100" rx="8" fill="#e74c3c" opacity="0.1" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="645" y="80" text-anchor="middle" font-size="9" font-weight="bold" fill="#e74c3c">GPU 3</text>
+  <rect x="618" y="84" width="54" height="16" rx="3" fill="#e74c3c" opacity="0.5"/>
+  <text x="645" y="96" text-anchor="middle" font-size="8" fill="#fff">tokens t₁₂-t₁₅</text>
+  <rect x="618" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.2"/>
+  <text x="630" y="128" text-anchor="middle" font-size="7" fill="#9b59b6">E6</text>
+  <rect x="646" y="116" width="24" height="16" rx="3" fill="#9b59b6" opacity="0.2"/>
+  <text x="658" y="128" text-anchor="middle" font-size="7" fill="#9b59b6">E7</text>
+  <text x="645" y="147" text-anchor="middle" font-size="7" fill="#9b59b6">Holds E6,E7</text>
+
+  <!-- AllToAll arrows -->
+  <text x="550" y="182" text-anchor="middle" font-size="10" font-weight="bold" fill="#9b59b6">AllToAll: tokens → corresponding expert GPU</text>
+  <path d="M 425 163 Q 425 180 505 190" stroke="#9b59b6" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+  <path d="M 505 163 Q 505 180 425 190" stroke="#9b59b6" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+
+  <text x="465" y="195" text-anchor="middle" font-size="8" fill="#9b59b6">Token routing (dynamic!)</text>
+
+  <!-- Step labels at bottom -->
+  <rect x="390" y="210" width="340" height="80" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="560" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#e67e22">EP Communication Pattern (4 Steps)</text>
+  <text x="400" y="246" font-size="9" fill="#555">① Router computes locally → decides which expert each token goes to</text>
+  <text x="400" y="260" font-size="9" fill="#555">② AllToAll → sends tokens to corresponding GPU (dynamic routing)</text>
+  <text x="400" y="274" font-size="9" fill="#555">③ Each GPU independently computes local expert FFN</text>
+  <text x="400" y="288" font-size="9" fill="#555">④ AllToAll → returns results to original GPU, weighted merge</text>
+
+  <!-- Bottom: 5D parallel -->
+  <rect x="10" y="310" width="740" height="40" rx="8" fill="#d5eaf4" stroke="#2980b9" stroke-width="1"/>
+  <text x="380" y="327" text-anchor="middle" font-size="10" font-weight="bold" fill="#2c3e50">5D Parallelism = TP (intra-node) × PP (inter-node) × DP (ZeRO) × SP (long seq) × EP (MoE)</text>
+  <text x="380" y="343" text-anchor="middle" font-size="9" fill="#555">Each dimension is orthogonal and composable  |  Typical 70B cluster: TP=8 × PP=8 × DP=8 = 512 GPUs</text>
+</svg>

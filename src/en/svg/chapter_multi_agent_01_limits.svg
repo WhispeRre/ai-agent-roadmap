@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Three Limitations of Single Agent vs. Multi-Agent Solutions</text>
+
+  <!-- Left: Single Agent limitations -->
+  <rect x="30" y="50" width="350" height="340" rx="10" fill="#e74c3c" opacity="0.08" stroke="#e74c3c" stroke-width="2"/>
+  <text x="205" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">🚫 Single Agent Limitations</text>
+
+  <!-- Limitation 1 -->
+  <rect x="50" y="90" width="310" height="75" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="60" y="112" font-size="12" font-weight="bold" fill="#c0392b">Limitation 1: Context Window Constraint</text>
+  <text x="60" y="130" font-size="11" fill="#555">• Cannot process all data in a single call</text>
+  <text x="60" y="148" font-size="11" fill="#555">• Batch processing disrupts context continuity</text>
+
+  <!-- Limitation 2 -->
+  <rect x="50" y="175" width="310" height="75" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="60" y="197" font-size="12" font-weight="bold" fill="#c0392b">Limitation 2: Domain Knowledge Boundary</text>
+  <text x="60" y="215" font-size="11" fill="#555">• Hard for one agent to master multiple domains</text>
+  <text x="60" y="233" font-size="11" fill="#555">• Only "average" performance across all areas</text>
+
+  <!-- Limitation 3 -->
+  <rect x="50" y="260" width="310" height="75" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="60" y="282" font-size="12" font-weight="bold" fill="#c0392b">Limitation 3: Parallelism</text>
+  <text x="60" y="300" font-size="11" fill="#555">• Inherently sequential execution</text>
+  <text x="60" y="318" font-size="11" fill="#555">• 5 tasks serially: 46 seconds ⏱</text>
+
+  <!-- Right: Multi-Agent solutions -->
+  <rect x="420" y="50" width="350" height="340" rx="10" fill="#27ae60" opacity="0.08" stroke="#27ae60" stroke-width="2"/>
+  <text x="595" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">✅ Multi-Agent Solutions</text>
+
+  <!-- Solution 1 -->
+  <rect x="440" y="90" width="310" height="75" rx="8" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="450" y="112" font-size="12" font-weight="bold" fill="#1e8449">Solution 1: Divide and Conquer</text>
+  <text x="450" y="130" font-size="11" fill="#555">• Each agent handles a portion of the data</text>
+  <text x="450" y="148" font-size="11" fill="#555">• Coordinator agent aggregates results</text>
+
+  <!-- Solution 2 -->
+  <rect x="440" y="175" width="310" height="75" rx="8" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="450" y="197" font-size="12" font-weight="bold" fill="#1e8449">Solution 2: Specialization</text>
+  <text x="450" y="215" font-size="11" fill="#555">• Frontend Agent, Backend Agent, DBA Agent…</text>
+  <text x="450" y="233" font-size="11" fill="#555">• Each agent reaches "expert" level in its domain</text>
+
+  <!-- Solution 3 -->
+  <rect x="440" y="260" width="310" height="75" rx="8" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="450" y="282" font-size="12" font-weight="bold" fill="#1e8449">Solution 3: Parallel Execution</text>
+  <text x="450" y="300" font-size="11" fill="#555">• Multiple agents work simultaneously</text>
+  <text x="450" y="318" font-size="11" fill="#555">• 5 tasks in parallel: 12 seconds 🚀 (74% faster)</text>
+
+  <!-- Center arrows -->
+  <text x="400" y="140" text-anchor="middle" font-size="20" fill="#2c3e50">→</text>
+  <text x="400" y="225" text-anchor="middle" font-size="20" fill="#2c3e50">→</text>
+  <text x="400" y="310" text-anchor="middle" font-size="20" fill="#2c3e50">→</text>
+
+  <!-- Bottom summary -->
+  <text x="400" y="405" text-anchor="middle" font-size="11" fill="#95a5a6">Multi-agent breaks single-agent bottlenecks through divide-and-conquer, specialization, and parallelism</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="a6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/></marker>
+  </defs>
+  <rect width="800" height="380" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Tools设计五维度Best Practices</text>
+
+  <!-- Center -->
+  <circle cx="400" cy="195" r="55" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="400" y="188" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">🔧 高质量</text>
+  <text x="400" y="206" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">Agent Tools</text>
+
+  <!-- 维度1：类型Annotation -->
+  <rect x="50" y="50" width="180" height="65" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="140" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#e74c3c">📝 1. 完善类型Annotation</text>
+  <text x="140" y="90" text-anchor="middle" font-size="9" fill="#555">Pydantic Model定义参数</text>
+  <text x="140" y="103" text-anchor="middle" font-size="9" fill="#555">LLM 依据Document选择Tools</text>
+  <line x1="230" y1="95" x2="350" y2="170" stroke="#e74c3c" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- 维度2：Input验证 -->
+  <rect x="570" y="50" width="180" height="65" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="660" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">✅ 2. Input验证</text>
+  <text x="660" y="90" text-anchor="middle" font-size="9" fill="#555">校验参数格式and范围</text>
+  <text x="660" y="103" text-anchor="middle" font-size="9" fill="#555">防止无效Input导致崩溃</text>
+  <line x1="570" y1="95" x2="450" y2="170" stroke="#27ae60" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- 维度3：Error Handling -->
+  <rect x="20" y="240" width="180" height="65" rx="8" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="110" y="262" text-anchor="middle" font-size="11" font-weight="bold" fill="#8e44ad">🛡️ 3. Error Handling</text>
+  <text x="110" y="280" text-anchor="middle" font-size="9" fill="#555">返回清晰的ErrorInfo</text>
+  <text x="110" y="293" text-anchor="middle" font-size="9" fill="#555">帮助Model自我纠错</text>
+  <line x1="200" y1="262" x2="350" y2="218" stroke="#8e44ad" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- 维度4：Timeout Control -->
+  <rect x="600" y="240" width="180" height="65" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="690" y="262" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">⏱️ 4. Timeout与Retry</text>
+  <text x="690" y="280" text-anchor="middle" font-size="9" fill="#555">设置合理的Timeout时间</text>
+  <text x="690" y="293" text-anchor="middle" font-size="9" fill="#555">指数退避RetryPolicy</text>
+  <line x1="600" y1="262" x2="450" y2="218" stroke="#e67e22" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- 维度5：Single Responsibility -->
+  <rect x="310" y="295" width="180" height="65" rx="8" fill="#2980b9" opacity="0.12" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="317" text-anchor="middle" font-size="11" font-weight="bold" fill="#2980b9">🎯 5. Single Responsibility</text>
+  <text x="400" y="335" text-anchor="middle" font-size="9" fill="#555">一个Tools只做一件事</text>
+  <text x="400" y="348" text-anchor="middle" font-size="9" fill="#555">Model可自由组合多个小Tools</text>
+  <line x1="400" y1="295" x2="400" y2="250" stroke="#2980b9" stroke-width="1.2" stroke-dasharray="4,3"/>
+
+  <!-- Bottom -->
+  <text x="400" y="375" text-anchor="middle" font-size="10" fill="#95a5a6">❌ 不好：search_and_analyze_and_summarize() → ✅ 好：search() + analyze() + summarize()</text>
+</svg>

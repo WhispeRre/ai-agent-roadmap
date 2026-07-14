@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 360" width="700" height="360">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <rect width="700" height="360" rx="14" fill="#f0f4f8"/>
+  <text x="350" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">串行 vs Sub-agents 并行代码审查</text>
+
+  <!-- 左侧：串行（低效） -->
+  <rect x="20" y="45" width="310" height="290" rx="10" fill="#fce8e8" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="175" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">❌ 低效方式（串行）</text>
+
+  <rect x="40" y="80" width="270" height="32" rx="6" fill="#e74c3c"/>
+  <text x="175" y="101" text-anchor="middle" font-size="11" fill="white">审查文件 1</text>
+  <line x1="175" y1="112" x2="175" y2="125" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <rect x="40" y="128" width="270" height="32" rx="6" fill="#e74c3c"/>
+  <text x="175" y="149" text-anchor="middle" font-size="11" fill="white">审查文件 2</text>
+  <line x1="175" y1="160" x2="175" y2="173" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <rect x="40" y="176" width="270" height="32" rx="6" fill="#e74c3c"/>
+  <text x="175" y="197" text-anchor="middle" font-size="11" fill="white">审查文件 3</text>
+  <line x1="175" y1="208" x2="175" y2="221" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <text x="175" y="240" text-anchor="middle" font-size="13" fill="#e74c3c">...</text>
+  <line x1="175" y1="248" x2="175" y2="261" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+
+  <rect x="40" y="264" width="270" height="44" rx="6" fill="#c0392b"/>
+  <text x="175" y="283" text-anchor="middle" font-size="11" font-weight="bold" fill="white">审查文件 20</text>
+  <text x="175" y="298" text-anchor="middle" font-size="10" fill="#fadbd8">上下文严重膨胀，质量下降</text>
+
+  <!-- 右侧：并行（高效） -->
+  <rect x="370" y="45" width="310" height="290" rx="10" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="525" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e8449">✅ 高效方式（Sub-agents 并行）</text>
+
+  <!-- 主 Agent -->
+  <rect x="430" y="80" width="190" height="36" rx="8" fill="#2c3e50"/>
+  <text x="525" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="white">主 Agent 按模块分组</text>
+  <line x1="525" y1="116" x2="525" y2="130" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="430" y1="130" x2="620" y2="130" stroke="#2c3e50" stroke-width="1.5"/>
+
+  <!-- 5个子Agent -->
+  <line x1="430" y1="130" x2="430" y2="148" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="480" y1="130" x2="480" y2="148" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="525" y1="130" x2="525" y2="148" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="570" y1="130" x2="570" y2="148" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+  <line x1="620" y1="130" x2="620" y2="148" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="385" y="150" width="80" height="52" rx="6" fill="#27ae60"/>
+  <text x="425" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="white">子 Agent 1</text>
+  <text x="425" y="184" text-anchor="middle" font-size="9" fill="#d5f5e3">auth 模块</text>
+  <text x="425" y="196" text-anchor="middle" font-size="9" fill="#d5f5e3">4个文件</text>
+
+  <rect x="455" y="150" width="80" height="52" rx="6" fill="#27ae60"/>
+  <text x="495" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="white">子 Agent 2</text>
+  <text x="495" y="184" text-anchor="middle" font-size="9" fill="#d5f5e3">payment</text>
+  <text x="495" y="196" text-anchor="middle" font-size="9" fill="#d5f5e3">5个文件</text>
+
+  <rect x="485" y="150" width="80" height="52" rx="6" fill="#27ae60"/>
+  <text x="525" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="white">子 Agent 3</text>
+  <text x="525" y="184" text-anchor="middle" font-size="9" fill="#d5f5e3">API 层</text>
+  <text x="525" y="196" text-anchor="middle" font-size="9" fill="#d5f5e3">4个文件</text>
+
+  <rect x="535" y="150" width="80" height="52" rx="6" fill="#27ae60"/>
+  <text x="575" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="white">子 Agent 4</text>
+  <text x="575" y="184" text-anchor="middle" font-size="9" fill="#d5f5e3">数据层</text>
+  <text x="575" y="196" text-anchor="middle" font-size="9" fill="#d5f5e3">4个文件</text>
+
+  <rect x="580" y="150" width="80" height="52" rx="6" fill="#27ae60"/>
+  <text x="620" y="170" text-anchor="middle" font-size="10" font-weight="bold" fill="white">子 Agent 5</text>
+  <text x="620" y="184" text-anchor="middle" font-size="9" fill="#d5f5e3">测试文件</text>
+  <text x="620" y="196" text-anchor="middle" font-size="9" fill="#d5f5e3">3个文件</text>
+
+  <!-- 汇总 -->
+  <line x1="425" y1="202" x2="425" y2="225" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="620" y1="202" x2="620" y2="225" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="425" y1="225" x2="620" y2="225" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="525" y1="225" x2="525" y2="245" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrow-green)"/>
+
+  <rect x="420" y="248" width="210" height="52" rx="8" fill="#1e8449"/>
+  <text x="525" y="268" text-anchor="middle" font-size="11" font-weight="bold" fill="white">汇总报告</text>
+  <text x="525" y="284" text-anchor="middle" font-size="10" fill="#d5f5e3">时间缩短约 60%</text>
+  <text x="525" y="298" text-anchor="middle" font-size="10" fill="#d5f5e3">每个 Agent 上下文干净</text>
+</svg>

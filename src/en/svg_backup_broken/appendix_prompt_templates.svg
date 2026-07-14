@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="340" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Prompt 模板Classification速查</text>
+
+  <!-- 6个模板Classification -->
+  <!-- 行1 -->
+  <rect x="20" y="55" width="245" height="120" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="142" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">🤖 Agent System PromptWord</text>
+  <text x="35" y="100" font-size="11" fill="#444">• 通用助手 Prompt</text>
+  <text x="35" y="118" font-size="11" fill="#444">• Tool Use型 Agent</text>
+  <text x="35" y="136" font-size="11" fill="#444">• ReAct Reasoning型 Agent</text>
+  <text x="35" y="154" font-size="11" fill="#444">• 多 Agent Coordination Prompt</text>
+  <text x="35" y="168" font-size="10" fill="#888">→ 第3、4、6章</text>
+
+  <rect x="278" y="55" width="245" height="120" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="400" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">📝 Task型 Prompt</text>
+  <text x="293" y="100" font-size="11" fill="#444">• 文本Summarization与提取</text>
+  <text x="293" y="118" font-size="11" fill="#444">• Code Review与Analysis</text>
+  <text x="293" y="136" font-size="11" fill="#444">• Structured OutputGeneration</text>
+  <text x="293" y="154" font-size="11" fill="#444">• Data AnalysisReport</text>
+  <text x="293" y="168" font-size="10" fill="#888">→ 第3、19、20章</text>
+
+  <rect x="536" y="55" width="244" height="120" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="658" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">🔍 RAG Optimization Prompt</text>
+  <text x="549" y="100" font-size="11" fill="#444">• Retrieval增强Question Answering</text>
+  <text x="549" y="118" font-size="11" fill="#444">• Query改写Extension</text>
+  <text x="549" y="136" font-size="11" fill="#444">• 多轮DialogueTrace</text>
+  <text x="549" y="154" font-size="11" fill="#444">• 事实核查 Prompt</text>
+  <text x="549" y="168" font-size="10" fill="#888">→ 第7章</text>
+
+  <!-- 行2 -->
+  <rect x="20" y="190" width="245" height="120" rx="8" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="142" y="213" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">🛡 Security & Alignment</text>
+  <text x="35" y="235" font-size="11" fill="#444">• 注入防御 Prompt</text>
+  <text x="35" y="253" font-size="11" fill="#444">• OutputReview Prompt</text>
+  <text x="35" y="271" font-size="11" fill="#444">• 边界Constraint Prompt</text>
+  <text x="35" y="289" font-size="11" fill="#444">• 幻觉检测 Prompt</text>
+  <text x="35" y="303" font-size="10" fill="#888">→ 第18章</text>
+
+  <rect x="278" y="190" width="245" height="120" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="400" y="213" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">🧪 Evaluation与调优</text>
+  <text x="293" y="235" font-size="11" fill="#444">• LLM-as-Judge Evaluation</text>
+  <text x="293" y="253" font-size="11" fill="#444">• A/B Testing对比</text>
+  <text x="293" y="271" font-size="11" fill="#444">• System PromptIteration</text>
+  <text x="293" y="289" font-size="11" fill="#444">• FailedCase StudyAnalysis</text>
+  <text x="293" y="303" font-size="10" fill="#888">→ 第16章</text>
+
+  <rect x="536" y="190" width="244" height="120" rx="8" fill="#2980b9" opacity="0.12" stroke="#2980b9" stroke-width="2"/>
+  <text x="658" y="213" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">⚙️ 高级技巧</text>
+  <text x="549" y="235" font-size="11" fill="#444">• Chain-of-Thought</text>
+  <text x="549" y="253" font-size="11" fill="#444">• Few-shot Example选择</text>
+  <text x="549" y="271" font-size="11" fill="#444">• Self-Reflection Prompt</text>
+  <text x="549" y="289" font-size="11" fill="#444">• Context Compression Prompt</text>
+  <text x="549" y="303" font-size="10" fill="#888">→ 第3、6章</text>
+</svg>

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4f8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8eef5;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90d9"/>
+    </marker>
+  </defs>
+  
+  <rect width="900" height="520" fill="url(#bgGrad)" rx="12"/>
+  
+  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1a365d">Agent Context的六大Info源</text>
+  <text x="450" y="55" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#718096">每次 LLM Reasoning调用的InfoInput = 六大来源的最优组合</text>
+  
+  <!-- Central LLM box -->
+  <rect x="350" y="200" width="200" height="100" rx="16" fill="#4a90d9" filter="url(#shadow)"/>
+  <text x="450" y="238" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="white">🧠</text>
+  <text x="450" y="260" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">LLM Reasoning调用</text>
+  <text x="450" y="280" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#bee3f8">Context Window = 有限空间</text>
+  
+  <!-- Source 1: System Instructions (top-left) -->
+  <rect x="40" y="75" width="230" height="90" rx="12" fill="white" stroke="#e74c3c" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="65" cy="100" r="14" fill="#e74c3c"/>
+  <text x="65" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">1</text>
+  <text x="85" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">System指令</text>
+  <text x="85" y="116" font-family="system-ui, sans-serif" font-size="9" fill="#999">System Instructions</text>
+  <text x="55" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#666">Role定义 · 行为规范 · Output Format</text>
+  <text x="55" y="153" font-family="system-ui, sans-serif" font-size="9" fill="#e74c3c">⚡ 静态 · 必须完整保留 · ~1K tokens</text>
+  <line x1="270" y1="130" x2="350" y2="220" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Source 2: User Input (top-right) -->
+  <rect x="630" y="75" width="230" height="90" rx="12" fill="white" stroke="#9b59b6" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="655" cy="100" r="14" fill="#9b59b6"/>
+  <text x="655" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">2</text>
+  <text x="675" y="100" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">UserInput</text>
+  <text x="675" y="116" font-family="system-ui, sans-serif" font-size="9" fill="#999">User Message</text>
+  <text x="645" y="138" font-family="system-ui, sans-serif" font-size="10" fill="#666">whenFront轮的UserRequest与指令</text>
+  <text x="645" y="153" font-family="system-ui, sans-serif" font-size="9" fill="#9b59b6">⚡ 每轮变化 · 必须保留 · 放in末尾</text>
+  <line x1="630" y1="130" x2="550" y2="220" stroke="#9b59b6" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Source 3: Conversation Memory (left) -->
+  <rect x="20" y="220" width="230" height="90" rx="12" fill="white" stroke="#f39c12" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="45" cy="245" r="14" fill="#f39c12"/>
+  <text x="45" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">3</text>
+  <text x="65" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f39c12">DialogueMemory</text>
+  <text x="65" y="261" font-family="system-ui, sans-serif" font-size="9" fill="#999">Conversation Memory</text>
+  <text x="35" y="283" font-family="system-ui, sans-serif" font-size="10" fill="#666">历史Dialogue的关键Info与Summarization</text>
+  <text x="35" y="298" font-family="system-ui, sans-serif" font-size="9" fill="#f39c12">📈 持续增长 · 需裁剪压缩 · 越新越重要</text>
+  <line x1="250" y1="260" x2="350" y2="250" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Source 4: Tool Results (right) -->
+  <rect x="650" y="220" width="230" height="90" rx="12" fill="white" stroke="#27ae60" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="675" cy="245" r="14" fill="#27ae60"/>
+  <text x="675" y="250" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">4</text>
+  <text x="695" y="245" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">ToolsState</text>
+  <text x="695" y="261" font-family="system-ui, sans-serif" font-size="9" fill="#999">Tool Results</text>
+  <text x="665" y="283" font-family="system-ui, sans-serif" font-size="10" fill="#666">API 返回 · SQL Result · SearchInner容</text>
+  <text x="665" y="298" font-family="system-ui, sans-serif" font-size="9" fill="#27ae60">📦 可能极长 · 需结构化Summarization · 只留最近</text>
+  <line x1="650" y1="260" x2="550" y2="250" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Source 5: Retrieved Knowledge (bottom-left) -->
+  <rect x="80" y="370" width="230" height="90" rx="12" fill="white" stroke="#3498db" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="105" cy="395" r="14" fill="#3498db"/>
+  <text x="105" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">5</text>
+  <text x="125" y="395" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#3498db">RetrievalKnowledge</text>
+  <text x="125" y="411" font-family="system-ui, sans-serif" font-size="9" fill="#999">Retrieved Knowledge (RAG)</text>
+  <text x="95" y="433" font-family="system-ui, sans-serif" font-size="10" fill="#666">fromVector库Retrieval的相关Document片段</text>
+  <text x="95" y="448" font-family="system-ui, sans-serif" font-size="9" fill="#3498db">🔍 按相关性筛选 · 可能含噪音 · top-k</text>
+  <line x1="250" y1="400" x2="380" y2="300" stroke="#3498db" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Source 6: Task State (bottom-right) -->
+  <rect x="590" y="370" width="230" height="90" rx="12" fill="white" stroke="#e67e22" stroke-width="2" filter="url(#shadow)"/>
+  <circle cx="615" cy="395" r="14" fill="#e67e22"/>
+  <text x="615" y="400" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">6</text>
+  <text x="635" y="395" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">TaskState</text>
+  <text x="635" y="411" font-family="system-ui, sans-serif" font-size="9" fill="#999">Task State</text>
+  <text x="605" y="433" font-family="system-ui, sans-serif" font-size="10" fill="#666">Execution进度 · MiddleResult · 笔记</text>
+  <text x="605" y="448" font-family="system-ui, sans-serif" font-size="9" fill="#e67e22">📊 结构化 · 始终保留 · 放in高注意力区</text>
+  <line x1="640" y1="370" x2="520" y2="300" stroke="#e67e22" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrow)"/>
+  
+  <!-- Bottom annotation -->
+  <rect x="200" y="480" width="500" height="30" rx="8" fill="#edf2f7"/>
+  <text x="450" y="500" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#4a5568">ContextEngineering的核心Task：in有限窗口Inner，from六大来源Center构建最优Info子集</text>
+</svg>

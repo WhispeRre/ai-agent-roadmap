@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320">
+  <rect width="760" height="320" fill="#f0f4f8" rx="14"/>
+  <text x="380" y="32" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Agent Cost OptimizationPolicy矩阵</text>
+
+  <!-- Policy1 -->
+  <rect x="40" y="55" width="330" height="115" rx="14" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="1.5"/>
+  <text x="60" y="80" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#3498db">🎯 智能ModelRouting</text>
+  <text x="60" y="102" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">简单问题 → GPT-4o-mini（$0.15/1M）</text>
+  <text x="60" y="120" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">复杂Reasoning → GPT-4o（$2.50/1M）</text>
+  <text x="60" y="140" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">💰 预估节省：40-60% Token 费用</text>
+  <text x="60" y="158" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#95a5a6">难度低 → 小Model，难度高 → LLM</text>
+
+  <!-- Policy2 -->
+  <rect x="390" y="55" width="330" height="115" rx="14" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="410" y="80" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">📦 Prompt Cache</text>
+  <text x="410" y="102" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">相似Query复用已有回复</text>
+  <text x="410" y="120" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">语义Cache（Semantic Cache）</text>
+  <text x="410" y="140" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">💰 预估节省：20-40% API Calls</text>
+  <text x="410" y="158" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#95a5a6">适用于高重复率的Customer Service/FAQ Scenario</text>
+
+  <!-- Policy3 -->
+  <rect x="40" y="185" width="330" height="115" rx="14" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="60" y="210" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">✂️ Token Optimization</text>
+  <text x="60" y="232" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">精简 System Prompt</text>
+  <text x="60" y="250" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">压缩Dialogue历史（Summarization替代全文）</text>
+  <text x="60" y="268" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">💰 预估节省：15-30% Token 消耗</text>
+  <text x="60" y="288" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#95a5a6">LimitTool Description长度 · 按需加载Context</text>
+
+  <!-- Policy4 -->
+  <rect x="390" y="185" width="330" height="115" rx="14" fill="#9b59b6" opacity="0.12" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="410" y="210" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">🔄 Loop控制</text>
+  <text x="410" y="232" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">设定最大Loop步数</text>
+  <text x="410" y="250" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">死Loop检测与提Front终止</text>
+  <text x="410" y="268" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#2c3e50">💰 预估节省：避免 10x 意Outer开销</text>
+  <text x="410" y="288" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#95a5a6">设BudgetTop限 · MonitoringException消耗 · 自动Alert</text>
+</svg>

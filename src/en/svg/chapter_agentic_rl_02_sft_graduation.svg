@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowE" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <linearGradient id="titleBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="passBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="failBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="720" rx="12" fill="#fafbff"/>
+  <rect x="0" y="0" width="960" height="56" rx="12" fill="url(#titleBg)"/>
+  <rect x="0" y="40" width="960" height="16" fill="url(#titleBg)"/>
+  <text x="480" y="36" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="system-ui">SFT Graduation Criteria: When to Transition from SFT to RL Training?</text>
+
+  <!-- ====== Column 1: Four Key Metrics ====== -->
+  <text x="30" y="88" fill="#4b5563" font-size="14" font-weight="bold" font-family="system-ui">📋 Four Key Metrics to Check</text>
+
+  <!-- Metric 1: Loss Convergence -->
+  <rect x="20" y="100" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="100" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="118" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="118" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">① Train/Val Loss Convergence</text>
+  <text x="30" y="143" fill="#374151" font-size="11" font-family="system-ui">• Val loss no longer decreasing (2-3 consecutive evals)</text>
+  <text x="30" y="160" fill="#374151" font-size="11" font-family="system-ui">• Train-Val Loss gap &lt; 0.1 (no overfitting)</text>
+  <text x="30" y="175" fill="#6b7280" font-size="10" font-family="system-ui">Typical: Loss stabilizes in 0.3–0.8 range</text>
+
+  <!-- Metric 2: Format Accuracy -->
+  <rect x="20" y="192" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="192" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="210" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="210" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">② Format Compliance Rate</text>
+  <text x="30" y="235" fill="#374151" font-size="11" font-family="system-ui">• think/tool_call/answer format correct rate &gt; 80%</text>
+  <text x="30" y="252" fill="#374151" font-size="11" font-family="system-ui">• JSON syntax error rate &lt; 5%</text>
+  <text x="30" y="267" fill="#6b7280" font-size="10" font-family="system-ui">RL cannot explore without format correctness</text>
+
+  <!-- Metric 3: Task Accuracy -->
+  <rect x="20" y="284" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="284" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="302" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="302" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">③ Task Accuracy</text>
+  <text x="30" y="327" fill="#374151" font-size="11" font-family="system-ui">• Baseline task accuracy &gt; 30-40%</text>
+  <text x="30" y="344" fill="#374151" font-size="11" font-family="system-ui">• Reward signal is non-zero (RL can update)</text>
+  <text x="30" y="359" fill="#6b7280" font-size="10" font-family="system-ui">Too low accuracy → RL has no signal to optimize</text>
+
+  <!-- Metric 4: Output Diversity -->
+  <rect x="20" y="376" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="376" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="394" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="394" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">④ Output Diversity</text>
+  <text x="30" y="419" fill="#374151" font-size="11" font-family="system-ui">• diversity@8 &gt; 0.5 (not mode collapsed)</text>
+  <text x="30" y="436" fill="#374151" font-size="11" font-family="system-ui">• Responses not all identical</text>
+  <text x="30" y="451" fill="#6b7280" font-size="10" font-family="system-ui">No diversity → RL group comparison fails</text>
+
+  <!-- ====== Column 2: Graduation Decision Tree ====== -->
+  <text x="340" y="88" fill="#4b5563" font-size="14" font-weight="bold" font-family="system-ui">🌳 Graduation Decision Tree</text>
+
+  <!-- Decision node -->
+  <rect x="390" y="100" width="280" height="50" rx="25" fill="url(#titleBg)" filter="url(#shadow)"/>
+  <text x="530" y="131" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="system-ui">SFT Graduation Check</text>
+
+  <!-- Arrow down -->
+  <line x1="530" y1="150" x2="530" y2="170" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Check box -->
+  <rect x="390" y="172" width="280" height="95" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="530" y="195" text-anchor="middle" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">All four metrics passed?</text>
+  <text x="400" y="215" fill="#374151" font-size="10.5" font-family="system-ui">□ Loss convergence ✓</text>
+  <text x="400" y="231" fill="#374151" font-size="10.5" font-family="system-ui">□ Format rate &gt; 80% ✓</text>
+  <text x="400" y="247" fill="#374151" font-size="10.5" font-family="system-ui">□ Accuracy &gt; 30% ✓</text>
+  <text x="400" y="263" fill="#374151" font-size="10.5" font-family="system-ui">□ Diversity &gt; 0.5 ✓</text>
+
+  <!-- Yes/No arrows -->
+  <line x1="530" y1="267" x2="530" y2="310" stroke="#4b5563" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Pass branch -->
+  <rect x="390" y="312" width="120" height="40" rx="8" fill="url(#passBg)" filter="url(#shadow)"/>
+  <text x="450" y="337" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="system-ui">All PASS ✅</text>
+
+  <!-- Fail branch -->
+  <rect x="530" y="312" width="120" height="40" rx="8" fill="url(#failBg)" filter="url(#shadow)"/>
+  <text x="590" y="337" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="system-ui">Any FAIL ❌</text>
+
+  <!-- Pass arrow -->
+  <line x1="450" y1="352" x2="450" y2="390" stroke="#10b981" stroke-width="2" marker-end="url(#arrowE)"/>
+
+  <!-- Enter RL -->
+  <rect x="370" y="392" width="160" height="50" rx="8" fill="#d1fae5" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="414" text-anchor="middle" fill="#065f46" font-size="12" font-weight="bold" font-family="system-ui">🚀 Enter RL Training</text>
+  <text x="450" y="432" text-anchor="middle" fill="#065f46" font-size="10" font-family="system-ui">GRPO / PPO optimization</text>
+
+  <!-- Fail arrow down -->
+  <line x1="590" y1="352" x2="590" y2="390" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)"/>
+
+  <!-- Continue SFT -->
+  <rect x="520" y="392" width="160" height="50" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="414" text-anchor="middle" fill="#991b1b" font-size="12" font-weight="bold" font-family="system-ui">🔄 Continue SFT</text>
+  <text x="600" y="432" text-anchor="middle" fill="#991b1b" font-size="10" font-family="system-ui">Check &amp; remediate issues</text>
+
+  <!-- ====== Column 3: Remediation ====== -->
+  <text x="720" y="88" fill="#4b5563" font-size="14" font-weight="bold" font-family="system-ui">🔧 Remediation Strategies</text>
+
+  <!-- Fail1 arrow -->
+  <line x1="565" y1="340" x2="790" y2="500" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowR)"/>
+  <line x1="565" y1="400" x2="790" y2="500" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowR)"/>
+
+  <!-- Remedy 1 -->
+  <rect x="50" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">Loss Not Converged / Overfitting</text>
+  <text x="60" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• Adjust learning rate (LR Finder)</text>
+  <text x="60" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• Reduce epoch count (2-3 epochs sufficient)</text>
+  <text x="60" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• Add more data / improve diversity</text>
+
+  <!-- Remedy 2 -->
+  <rect x="360" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="480" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">Format Accuracy Not Met</text>
+  <text x="370" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• Check data format consistency</text>
+  <text x="370" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• Verify special tokens config</text>
+  <text x="370" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• Increase proportion of formatted data</text>
+
+  <!-- Remedy 3 -->
+  <rect x="670" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="790" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">Low Accuracy / Mode Collapse</text>
+  <text x="680" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• Improve data quality (expert review)</text>
+  <text x="680" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• Increase hard sample ratio</text>
+  <text x="680" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• Reduce epoch / add dropout</text>
+
+  <!-- ====== Bottom: Core Principle ====== -->
+  <rect x="50" y="625" width="860" height="75" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="480" y="652" text-anchor="middle" fill="#475569" font-size="13" font-weight="bold" font-family="system-ui">💡 Core Principle: SFT's goal is not to "be the best", but to "be good enough"</text>
+  <text x="480" y="675" text-anchor="middle" fill="#64748b" font-size="11.5" font-family="system-ui">Over-training with SFT → Overfitting + Loss of diversity → RL exploration space shrinks → Final performance worse</text>
+  <text x="480" y="693" text-anchor="middle" fill="#64748b" font-size="11.5" font-family="system-ui">Optimal time = Loss stable + Format OK + Some accuracy + Still has exploration room (usually 2-3 epochs)</text>
+</svg>

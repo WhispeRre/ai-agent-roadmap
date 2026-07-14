@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arr4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Supervisor (Centralized) vs. Decentralized Mode</text>
+
+  <!-- Left: Supervisor mode -->
+  <rect x="20" y="50" width="370" height="330" rx="10" fill="#3498db" opacity="0.06" stroke="#3498db" stroke-width="2"/>
+  <text x="205" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">🏢 Supervisor (Centralized) Mode</text>
+
+  <!-- Supervisor -->
+  <rect x="145" y="90" width="120" height="45" rx="8" fill="#3498db"/>
+  <text x="205" y="110" text-anchor="middle" font-size="12" fill="white" font-weight="bold">👔 Supervisor</text>
+  <text x="205" y="126" text-anchor="middle" font-size="9" fill="#d6eaf8">Task assignment / Progress monitoring</text>
+
+  <!-- Sub-agents -->
+  <rect x="40" y="175" width="100" height="40" rx="6" fill="#2980b9"/>
+  <text x="90" y="200" text-anchor="middle" font-size="10" fill="white" font-weight="bold">🔍 Researcher</text>
+  <rect x="155" y="175" width="100" height="40" rx="6" fill="#2980b9"/>
+  <text x="205" y="200" text-anchor="middle" font-size="10" fill="white" font-weight="bold">✍️ Writer</text>
+  <rect x="270" y="175" width="100" height="40" rx="6" fill="#2980b9"/>
+  <text x="320" y="200" text-anchor="middle" font-size="10" fill="white" font-weight="bold">📝 Reviewer</text>
+
+  <!-- Connections -->
+  <line x1="175" y1="135" x2="90" y2="175" stroke="#3498db" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="205" y1="135" x2="205" y2="175" stroke="#3498db" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="235" y1="135" x2="320" y2="175" stroke="#3498db" stroke-width="1.5" marker-end="url(#arr4)"/>
+
+  <!-- Pros/Cons -->
+  <text x="60" y="245" font-size="10" fill="#27ae60">✅ Controllable flow, easy to debug</text>
+  <text x="60" y="262" font-size="10" fill="#27ae60">✅ Global view, unified coordination</text>
+  <text x="60" y="279" font-size="10" fill="#27ae60">✅ Suitable for most real projects</text>
+  <text x="60" y="300" font-size="10" fill="#e74c3c">⚠️ Supervisor is a single-point bottleneck</text>
+  <text x="60" y="317" font-size="10" fill="#e74c3c">⚠️ All communication goes through center</text>
+  <rect x="60" y="335" width="280" height="22" rx="4" fill="#3498db" opacity="0.1"/>
+  <text x="200" y="351" text-anchor="middle" font-size="10" fill="#3498db" font-weight="bold">Recommended: tasks with a defined workflow</text>
+
+  <!-- Right: Decentralized mode -->
+  <rect x="410" y="50" width="370" height="330" rx="10" fill="#8e44ad" opacity="0.06" stroke="#8e44ad" stroke-width="2"/>
+  <text x="595" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#8e44ad">🌐 Decentralized Mode</text>
+
+  <!-- Three peer agents -->
+  <rect x="535" y="90" width="100" height="40" rx="6" fill="#8e44ad"/>
+  <text x="585" y="115" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Agent A</text>
+  <rect x="440" y="170" width="100" height="40" rx="6" fill="#8e44ad"/>
+  <text x="490" y="195" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Agent B</text>
+  <rect x="640" y="170" width="100" height="40" rx="6" fill="#8e44ad"/>
+  <text x="690" y="195" text-anchor="middle" font-size="10" fill="white" font-weight="bold">Agent C</text>
+
+  <!-- Bidirectional connections -->
+  <line x1="550" y1="130" x2="510" y2="170" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="620" y1="130" x2="660" y2="170" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="540" y1="190" x2="640" y2="190" stroke="#8e44ad" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="595" y="160" text-anchor="middle" font-size="9" fill="#8e44ad">Free negotiation</text>
+
+  <!-- Pros/Cons -->
+  <text x="450" y="245" font-size="10" fill="#27ae60">✅ No single-point bottleneck</text>
+  <text x="450" y="262" font-size="10" fill="#27ae60">✅ Highly flexible, scalable</text>
+  <text x="450" y="279" font-size="10" fill="#27ae60">✅ Agents negotiate autonomously</text>
+  <text x="450" y="300" font-size="10" fill="#e74c3c">⚠️ Hard to debug and trace</text>
+  <text x="450" y="317" font-size="10" fill="#e74c3c">⚠️ May loop in endless negotiation</text>
+  <rect x="450" y="335" width="280" height="22" rx="4" fill="#8e44ad" opacity="0.1"/>
+  <text x="590" y="351" text-anchor="middle" font-size="10" fill="#8e44ad" font-weight="bold">Recommended: open-ended exploration, brainstorming</text>
+
+  <!-- Bottom -->
+  <text x="400" y="405" text-anchor="middle" font-size="11" fill="#95a5a6">💡 Most real projects choose Supervisor mode because it is easier to control and debug</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 230" width="700" height="230">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arr3r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arr3g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <rect width="700" height="230" fill="#f0f4f8" rx="14"/>
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Data AnalysisWorkflow型Skills</text>
+
+  <!-- 加载Data -->
+  <rect x="30" y="55" width="90" height="45" rx="8" fill="#3498db"/>
+  <text x="75" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="white">加载</text>
+  <text x="75" y="91" text-anchor="middle" font-size="11" fill="#d6eaf8">Data</text>
+
+  <!-- 箭头1 -->
+  <line x1="120" y1="77" x2="160" y2="77" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- 检查质量 -->
+  <rect x="162" y="55" width="90" height="45" rx="8" fill="#f39c12"/>
+  <text x="207" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="white">检查</text>
+  <text x="207" y="91" text-anchor="middle" font-size="11" fill="#fef9e7">质量</text>
+
+  <!-- Conditional Branch：质量 < 0.9 → 清洗 -->
+  <line x1="252" y1="67" x2="330" y2="67" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arr3r)"/>
+  <text x="291" y="60" text-anchor="middle" font-size="10" fill="#e74c3c">质量 &lt; 0.9</text>
+
+  <!-- 清洗Data -->
+  <rect x="332" y="45" width="90" height="45" rx="8" fill="#e74c3c"/>
+  <text x="377" y="65" text-anchor="middle" font-size="12" font-weight="bold" fill="white">清洗</text>
+  <text x="377" y="81" text-anchor="middle" font-size="11" fill="#fadbd8">Data</text>
+
+  <!-- Conditional Branch：质量 >= 0.9 → 直接Analysis -->
+  <line x1="207" y1="100" x2="207" y2="140" stroke="#27ae60" stroke-width="1.5"/>
+  <line x1="207" y1="140" x2="330" y2="140" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arr3g)"/>
+  <text x="260" y="135" text-anchor="middle" font-size="10" fill="#27ae60">质量 ≥ 0.9</text>
+
+  <!-- 清洗Back也toAnalysis -->
+  <line x1="377" y1="90" x2="377" y2="140" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="377" y1="140" x2="377" y2="155" stroke="#2c3e50" stroke-width="1.5"/>
+
+  <!-- AnalysisData -->
+  <rect x="332" y="120" width="90" height="45" rx="8" fill="#27ae60"/>
+  <text x="377" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Analysis</text>
+  <text x="377" y="156" text-anchor="middle" font-size="11" fill="#d5f5e3">Data</text>
+
+  <!-- 箭头 -->
+  <line x1="422" y1="142" x2="462" y2="142" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- Visualization -->
+  <rect x="464" y="120" width="90" height="45" rx="8" fill="#9b59b6"/>
+  <text x="509" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Visualization</text>
+
+  <!-- 箭头 -->
+  <line x1="554" y1="142" x2="594" y2="142" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- ReportGeneration -->
+  <rect x="596" y="120" width="80" height="45" rx="8" fill="#2c3e50"/>
+  <text x="636" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Report</text>
+  <text x="636" y="156" text-anchor="middle" font-size="11" fill="#bdc3c7">Generation</text>
+
+  <!-- 说明 -->
+  <rect x="30" y="190" width="640" height="28" rx="6" fill="#ecf0f1"/>
+  <text x="350" y="209" text-anchor="middle" font-size="11" fill="#555">📌 条件Routing：Data Quality不达标时自动进入清洗环节，质量合格则直接Analysis</text>
+</svg>

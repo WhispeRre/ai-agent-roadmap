@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e67e22"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" rx="14" fill="#f0f4f8"/>
+  <text x="280" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">工具调用生命周期</text>
+
+  <!-- Claude 输出工具调用请求 -->
+  <rect x="180" y="45" width="200" height="36" rx="18" fill="#2c3e50"/>
+  <text x="280" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Claude 输出工具调用请求（JSON）</text>
+  <line x1="280" y1="81" x2="280" y2="105" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Tool Registry 查找 -->
+  <rect x="130" y="108" width="300" height="36" rx="8" fill="#3498db"/>
+  <text x="280" y="131" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Tool Registry 查找对应工具</text>
+  <line x1="280" y1="144" x2="280" y2="168" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 权限系统裁决菱形 -->
+  <polygon points="280,170 350,195 280,220 210,195" fill="#f39c12" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="280" y="193" text-anchor="middle" font-size="11" font-weight="bold" fill="white">权限系统</text>
+  <text x="280" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="white">裁决</text>
+
+  <!-- Allow 分支 -->
+  <line x1="280" y1="220" x2="280" y2="250" stroke="#27ae60" stroke-width="1.8" marker-end="url(#arrow-green)"/>
+  <text x="295" y="240" font-size="11" fill="#27ae60" font-weight="bold">Allow</text>
+
+  <!-- 执行工具 -->
+  <rect x="130" y="253" width="300" height="36" rx="8" fill="#27ae60"/>
+  <text x="280" y="276" text-anchor="middle" font-size="12" font-weight="bold" fill="white">执行工具（异步，支持超时）</text>
+  <line x1="280" y1="289" x2="280" y2="313" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- 结果注入 -->
+  <rect x="180" y="316" width="200" height="36" rx="18" fill="#2c3e50"/>
+  <text x="280" y="339" text-anchor="middle" font-size="11" font-weight="bold" fill="white">结果序列化，注入对话上下文</text>
+
+  <!-- Deny 分支 -->
+  <line x1="350" y1="195" x2="480" y2="195" stroke="#e74c3c" stroke-width="1.8" marker-end="url(#arrow-red)"/>
+  <text x="415" y="188" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">Deny</text>
+  <rect x="482" y="175" width="60" height="40" rx="8" fill="#e74c3c"/>
+  <text x="512" y="193" text-anchor="middle" font-size="11" font-weight="bold" fill="white">返回</text>
+  <text x="512" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="white">拒绝信息</text>
+
+  <!-- Ask 分支 -->
+  <line x1="210" y1="195" x2="80" y2="195" stroke="#e67e22" stroke-width="1.8" marker-end="url(#arrow-orange)"/>
+  <text x="145" y="188" text-anchor="middle" font-size="11" fill="#e67e22" font-weight="bold">Ask</text>
+  <rect x="18" y="175" width="60" height="40" rx="8" fill="#e67e22"/>
+  <text x="48" y="193" text-anchor="middle" font-size="11" font-weight="bold" fill="white">弹出</text>
+  <text x="48" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="white">确认框</text>
+
+  <!-- 用户确认 → 执行 -->
+  <line x1="48" y1="215" x2="48" y2="271" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="48" y1="271" x2="128" y2="271" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-green)"/>
+  <text x="25" y="250" text-anchor="middle" font-size="10" fill="#27ae60" transform="rotate(-90, 25, 250)">用户确认</text>
+
+  <!-- 用户拒绝 → 拒绝信息 -->
+  <line x1="78" y1="195" x2="78" y2="360" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="78" y1="360" x2="512" y2="360" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="512" y1="360" x2="512" y2="217" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-red)"/>
+  <text x="295" y="373" text-anchor="middle" font-size="10" fill="#e74c3c">用户拒绝</text>
+</svg>

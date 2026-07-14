@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="680" height="400" rx="14" fill="#f0f4f8"/>
+  <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">MCP: Connecting to the External World</text>
+
+  <!-- Center node -->
+  <circle cx="340" cy="200" r="52" fill="#2c3e50"/>
+  <text x="340" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Claude</text>
+  <text x="340" y="212" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Code</text>
+
+  <!-- GitHub -->
+  <line x1="295" y1="165" x2="185" y2="100" stroke="#3498db" stroke-width="1.8"/>
+  <rect x="60" y="60" width="120" height="80" rx="10" fill="#3498db"/>
+  <text x="120" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: github</text>
+  <text x="120" y="103" text-anchor="middle" font-size="10" fill="#d6eaf8">Read PRs</text>
+  <text x="120" y="117" text-anchor="middle" font-size="10" fill="#d6eaf8">Create Issues</text>
+  <text x="120" y="131" text-anchor="middle" font-size="10" fill="#d6eaf8">Trigger CI pipelines</text>
+
+  <!-- PostgreSQL -->
+  <line x1="290" y1="200" x2="170" y2="200" stroke="#27ae60" stroke-width="1.8"/>
+  <rect x="40" y="160" width="125" height="80" rx="10" fill="#27ae60"/>
+  <text x="102" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: postgres</text>
+  <text x="102" y="203" text-anchor="middle" font-size="10" fill="#d5f5e3">Query production DB</text>
+  <text x="102" y="217" text-anchor="middle" font-size="10" fill="#d5f5e3">Analyze slow queries</text>
+  <text x="102" y="231" text-anchor="middle" font-size="10" fill="#d5f5e3">Generate ER diagrams</text>
+
+  <!-- Jira -->
+  <line x1="295" y1="235" x2="185" y2="300" stroke="#9b59b6" stroke-width="1.8"/>
+  <rect x="60" y="260" width="120" height="80" rx="10" fill="#9b59b6"/>
+  <text x="120" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: jira</text>
+  <text x="120" y="303" text-anchor="middle" font-size="10" fill="#e8daef">Create tasks</text>
+  <text x="120" y="317" text-anchor="middle" font-size="10" fill="#e8daef">Update status</text>
+  <text x="120" y="331" text-anchor="middle" font-size="10" fill="#e8daef">Link code commits</text>
+
+  <!-- Slack -->
+  <line x1="385" y1="165" x2="495" y2="100" stroke="#e67e22" stroke-width="1.8"/>
+  <rect x="500" y="60" width="120" height="80" rx="10" fill="#e67e22"/>
+  <text x="560" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: slack</text>
+  <text x="560" y="103" text-anchor="middle" font-size="10" fill="#fdebd0">Send notifications</text>
+  <text x="560" y="117" text-anchor="middle" font-size="10" fill="#fdebd0">Read channel messages</text>
+  <text x="560" y="131" text-anchor="middle" font-size="10" fill="#fdebd0">@ relevant owners</text>
+
+  <!-- your-api -->
+  <line x1="390" y1="200" x2="510" y2="200" stroke="#e74c3c" stroke-width="1.8"/>
+  <rect x="515" y="160" width="125" height="80" rx="10" fill="#e74c3c"/>
+  <text x="577" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: your-api</text>
+  <text x="577" y="203" text-anchor="middle" font-size="10" fill="#fadbd8">Call internal services</text>
+  <text x="577" y="217" text-anchor="middle" font-size="10" fill="#fadbd8">Query deployment status</text>
+
+  <!-- obsidian -->
+  <line x1="385" y1="235" x2="495" y2="300" stroke="#f39c12" stroke-width="1.8"/>
+  <rect x="500" y="260" width="120" height="80" rx="10" fill="#f39c12"/>
+  <text x="560" y="285" text-anchor="middle" font-size="12" font-weight="bold" fill="white">MCP: obsidian</text>
+  <text x="560" y="303" text-anchor="middle" font-size="10" fill="#fef9e7">Read/write knowledge base</text>
+  <text x="560" y="317" text-anchor="middle" font-size="10" fill="#fef9e7">Archive dev notes</text>
+</svg>

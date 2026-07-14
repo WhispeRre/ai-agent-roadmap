@@ -1,0 +1,1130 @@
+/* ============================================
+   AI Agent Roadmap - custom mdBook styles
+   ============================================ */
+
+/* ---------- 字体与排版 ---------- */
+:root {
+  --content-max-width: 1000px;
+  --sidebar-width: 300px;
+}
+
+.content {
+  font-size: 1.6rem;
+  line-height: 1.9;
+  letter-spacing: 0.015em;
+}
+
+/* ---------- 内容区左对齐（取消默认居中，让正文靠近 sidebar） ---------- */
+/* mdBook 默认：.content main 居中。这里改为靠左，只保留少量内边距 */
+.content main {
+  margin-left: 49px;
+  margin-right: auto;
+  max-width: var(--content-max-width);
+  transition: margin 0.25s ease, max-width 0.25s ease;
+}
+
+/* 当屏幕足够宽时，为右侧 TOC 预留空间，避免正文与 TOC 重叠 */
+@media (min-width: 1400px) {
+  .content main {
+    margin-right: 340px;
+  }
+
+  /* 右侧 TOC 收起时：正文向右扩展（不再为 TOC 预留空间） */
+  body.page-toc-collapsed .content main {
+    margin-right: auto;
+    max-width: calc(var(--content-max-width) + 200px);
+  }
+}
+
+/* 左侧 sidebar 收起时：正文整体向左靠拢（mdBook 自身会移除左边距，
+   这里额外让正文在可视区域内重新居中，避免大片空白） */
+html.sidebar-hidden .content main,
+html:not(.sidebar-visible) .content main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+  html.sidebar-hidden .content main,
+  html:not(.sidebar-visible) .content main {
+    /* 左侧折叠但右侧 TOC 仍展开：正文居中，但保留 TOC 空间 */
+    margin-left: auto;
+    margin-right: 340px;
+  }
+
+  html.sidebar-hidden body.page-toc-collapsed .content main,
+  html:not(.sidebar-visible) body.page-toc-collapsed .content main {
+    /* 两侧都折叠：正文在全宽页面中居中，并允许略宽一些 */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: calc(var(--content-max-width) + 260px);
+  }
+}
+
+/* 中文优化：段落间距 */
+.content p {
+  margin-bottom: 1.2em;
+}
+
+/* 侧边栏部分标题（分篇链接）加粗加大 */
+.sidebar .chapter > li > a {
+  font-size: 1.1rem;
+}
+
+/* ---------- 标题美化 ---------- */
+.content h1 {
+  border-bottom: 3px solid var(--links);
+  padding-bottom: 0.4em;
+  margin-top: 1.5em;
+}
+
+.content h2 {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.3em;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+.content h3 {
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+  color: var(--links);
+}
+
+/* ---------- 引用块 / Quote 美化 ---------- */
+.content blockquote {
+  border-left: 4px solid var(--links);
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.06);
+  padding: 0.8em 1.2em;
+  margin: 1.2em 0;
+  border-radius: 0 8px 8px 0;
+  font-style: normal;
+}
+
+.content blockquote p {
+  margin-bottom: 0.3em;
+}
+
+/* ---------- 代码块优化 ---------- */
+.content pre {
+  border-radius: 8px;
+  padding: 1em 1.2em;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.content code {
+  font-size: 0.95em;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+/* ---------- 表格美化 ---------- */
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 1.15rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.content table thead {
+  background: var(--links);
+  color: #fff;
+}
+
+.content table th {
+  padding: 0.7em 1em;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+}
+
+.content table td {
+  padding: 0.6em 1em;
+  border-bottom: 1px solid #eee;
+}
+
+.content table tbody tr:hover {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.04);
+}
+
+.content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ---------- 侧边栏优化 ---------- */
+.sidebar .sidebar-scrollbox {
+  padding-top: 1em;
+  font-size: 1.1rem;
+}
+
+.sidebar .chapter li a {
+  padding: 0.35em 1em;
+  border-radius: 4px;
+  transition: background 0.15s ease;
+}
+
+.sidebar .chapter li a:hover {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.08);
+}
+
+.sidebar .chapter li.active > a {
+  font-weight: 600;
+  color: var(--links);
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+  border-radius: 4px;
+}
+
+/* 左侧目录折叠 */
+.sidebar .chapter li.sidebar-collapsible {
+  position: relative;
+}
+
+.sidebar .chapter li.sidebar-collapsible > a {
+  padding-left: 2.35em;
+}
+
+.sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle {
+  position: absolute;
+  left: 0.55em;
+  top: 0.32em;
+  width: 1.35em;
+  height: 1.35em;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  opacity: 0.62;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle:hover {
+  opacity: 1;
+  color: var(--links, #3783eb);
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+}
+
+.sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+.sidebar .chapter li.sidebar-collapsible.sidebar-item-collapsed .sidebar-collapse-toggle svg {
+  transform: rotate(-90deg);
+}
+
+.sidebar .chapter li.sidebar-collapsible > ol.section,
+.sidebar .chapter li.sidebar-collapsible > ul.section,
+.sidebar .chapter li.sidebar-section-wrapper > ol.section,
+.sidebar .chapter li.sidebar-section-wrapper > ul.section {
+  overflow: hidden;
+  transition: max-height 0.22s ease, opacity 0.18s ease;
+}
+
+.sidebar .chapter li.sidebar-collapsible.sidebar-item-collapsed > ol.section,
+.sidebar .chapter li.sidebar-collapsible.sidebar-item-collapsed > ul.section,
+.sidebar .chapter li.sidebar-section-wrapper.sidebar-section-collapsed > ol.section,
+.sidebar .chapter li.sidebar-section-wrapper.sidebar-section-collapsed > ul.section {
+  display: none;
+}
+
+.navy .sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle:hover,
+.coal .sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle:hover,
+.ayu .sidebar .chapter li.sidebar-collapsible .sidebar-collapse-toggle:hover {
+  color: #5ba3f5;
+  background: rgba(91, 163, 245, 0.12);
+}
+
+/* 分篇标题样式（SUMMARY 中的 --- 分隔符） */
+.sidebar .chapter li.part-title {
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--links);
+  padding: 1em 0 0.3em 0.8em;
+  margin-top: 0.6em;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+}
+
+.sidebar .chapter li.part-title:first-child {
+  border-top: none;
+  margin-top: 0;
+}
+
+/* ---------- 复选框列表美化 ---------- */
+.content li > input[type="checkbox"] {
+  margin-right: 0.4em;
+}
+
+/* ---------- 学习目标列表 ---------- */
+.content ul li {
+  margin-bottom: 0.3em;
+}
+
+/* ---------- 分隔线 ---------- */
+.content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 2.5em 0;
+}
+
+/* ---------- 图片居中 & 阴影 ---------- */
+.content img {
+  display: block;
+  margin: 1.5em auto;
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- 链接样式 ---------- */
+.content a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--links-rgb, 55, 131, 235), 0.3);
+  transition: border-color 0.2s ease;
+}
+
+.content a:hover {
+  border-bottom-color: var(--links);
+}
+
+/* ---------- 底部导航栏优化 ---------- */
+.nav-wrapper {
+  margin-top: 3em;
+}
+
+.nav-chapters {
+  padding: 0.8em 1.2em;
+  border-radius: 8px;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.nav-chapters:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- 隐藏两侧翻页按钮（保留底部导航） ---------- */
+.nav-wide-wrapper {
+  display: none !important;
+}
+
+/* ---------- 暗色主题适配 ---------- */
+.navy .content table thead,
+.coal .content table thead,
+.ayu .content table thead {
+  background: var(--links);
+}
+
+.navy .content pre,
+.coal .content pre,
+.ayu .content pre {
+  border-color: #444;
+}
+
+.navy .content table td,
+.coal .content table td,
+.ayu .content table td {
+  border-bottom-color: #444;
+}
+
+.navy .content blockquote,
+.coal .content blockquote,
+.ayu .content blockquote {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navy .content h2,
+.coal .content h2,
+.ayu .content h2 {
+  border-bottom-color: #555;
+}
+
+/* 暗色主题下 SVG/图片：保持浅色背景，添加圆角和柔和边框 */
+.navy .content img,
+.coal .content img,
+.ayu .content img {
+  background: #f8f9fa;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 暗色主题下分隔线颜色适配 */
+.navy .content hr,
+.coal .content hr,
+.ayu .content hr {
+  background: linear-gradient(to right, transparent, #555, transparent);
+}
+
+/* ---------- Mermaid 图表美化 ---------- */
+.content .mermaid {
+  text-align: center;
+  margin: 1.5em 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.navy .content .mermaid,
+.coal .content .mermaid,
+.ayu .content .mermaid {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* ---------- 内联代码优化（区别于代码块） ---------- */
+.content p > code,
+.content li > code,
+.content td > code,
+.content h2 > code,
+.content h3 > code {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.08);
+  color: #d63384;
+  font-weight: 500;
+  border: 1px solid rgba(var(--links-rgb, 55, 131, 235), 0.12);
+}
+
+.navy .content p > code,
+.navy .content li > code,
+.navy .content td > code,
+.coal .content p > code,
+.coal .content li > code,
+.coal .content td > code,
+.ayu .content p > code,
+.ayu .content li > code,
+.ayu .content td > code {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ff79c6;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- 有序列表美化 ---------- */
+.content ol {
+  counter-reset: custom-counter;
+  list-style: none;
+  padding-left: 0;
+}
+
+.content ol > li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 2.2em;
+  margin-bottom: 0.6em;
+}
+
+.content ol > li::before {
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: var(--links, #3783eb);
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* 嵌套有序列表（二级）：使用方形浅色背景 + 序号 */
+.content ol ol {
+  counter-reset: nested-counter;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
+}
+
+.content ol ol > li {
+  counter-increment: nested-counter;
+  padding-left: 2em;
+  margin-bottom: 0.3em;
+}
+
+.content ol ol > li::before {
+  content: counter(nested-counter, lower-alpha) ")";
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+  color: var(--links, #3783eb);
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 0.1em 0.4em;
+}
+
+/* 嵌套有序列表（三级）：使用罗马数字 */
+.content ol ol ol {
+  counter-reset: deep-counter;
+}
+
+.content ol ol ol > li {
+  counter-increment: deep-counter;
+  padding-left: 1.8em;
+}
+
+.content ol ol ol > li::before {
+  content: counter(deep-counter, lower-roman) ".";
+  background: none;
+  color: var(--fg);
+  font-size: 0.8em;
+  font-weight: 500;
+  padding: 0;
+  opacity: 0.7;
+}
+
+/* ---------- 关键词高亮 ---------- */
+.content strong {
+  color: var(--links, #3783eb);
+  font-weight: 700;
+}
+
+.navy .content strong,
+.coal .content strong,
+.ayu .content strong {
+  color: #5ba3f5;
+}
+
+/* ---------- 脚注样式 ---------- */
+.content .footnote-definition {
+  font-size: 0.9em;
+  padding: 0.5em 0;
+  border-top: 1px dashed #e0e0e0;
+  margin-top: 0.5em;
+}
+
+/* ---------- 章节标题装饰 ---------- */
+.content h1::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 1em;
+  background: var(--links, #3783eb);
+  margin-right: 0.5em;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+/* ---------- 页面容器过渡动画 ---------- */
+.content {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- 底部导航栏增强 ---------- */
+.nav-chapters {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 1px solid rgba(var(--links-rgb, 55, 131, 235), 0.15);
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.03);
+}
+
+.nav-chapters:hover {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.08);
+  border-color: rgba(var(--links-rgb, 55, 131, 235), 0.3);
+}
+
+/* ---------- 选中文本高亮 ---------- */
+::selection {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.25);
+  color: inherit;
+}
+
+/* ---------- 表格偶数行斑马纹 ---------- */
+.content table tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.navy .content table tbody tr:nth-child(even),
+.coal .content table tbody tr:nth-child(even),
+.ayu .content table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ---------- 侧边栏书名 ---------- */
+.sidebar .sidebar-scrollbox .chapter:first-child {
+  margin-top: 0.5em;
+}
+
+/* ---------- 滚动条美化 ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+/* ---------- 右侧页内目录（TOC） ---------- */
+#page-toc {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 300px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 16px 18px 20px 18px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+#page-toc.toc-visible {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+#page-toc .toc-title {
+  font-size: 1.0rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--links, #3783eb);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(var(--links-rgb, 55, 131, 235), 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+#page-toc .toc-title-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 折叠按钮 */
+#page-toc .toc-collapse-btn {
+  background: transparent;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--fg);
+  opacity: 0.55;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+#page-toc .toc-collapse-btn:hover {
+  opacity: 1;
+  color: var(--links, #3783eb);
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+}
+
+/* 折叠态：隐藏 TOC 本体 */
+#page-toc.toc-collapsed {
+  opacity: 0 !important;
+  transform: translateX(20px) !important;
+  pointer-events: none !important;
+}
+
+/* 展开按钮（悬浮在右上角） */
+#page-toc-open {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(var(--links-rgb, 55, 131, 235), 0.25);
+  background: var(--bg, #fff);
+  color: var(--links, #3783eb);
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+#page-toc-open.toc-open-visible {
+  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#page-toc-open:hover {
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.navy #page-toc-open,
+.coal #page-toc-open,
+.ayu #page-toc-open {
+  background: var(--sidebar-bg, #1f2937);
+  color: #5ba3f5;
+  border-color: rgba(91, 163, 245, 0.3);
+}
+
+#page-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: none;
+}
+
+#page-toc ul li {
+  padding: 0;
+  margin: 0;
+  counter-increment: none;
+}
+
+#page-toc ul li::before {
+  display: none !important;
+  content: none !important;
+}
+
+#page-toc a {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: var(--fg);
+  text-decoration: none;
+  border-bottom: none;
+  opacity: 0.8;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#page-toc a:hover {
+  opacity: 1;
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.08);
+  color: var(--links, #3783eb);
+  border-bottom: none;
+}
+
+#page-toc a.toc-active {
+  opacity: 1;
+  color: var(--links, #3783eb);
+  font-weight: 600;
+  background: rgba(var(--links-rgb, 55, 131, 235), 0.1);
+}
+
+#page-toc .toc-h2 {
+  padding-left: 0;
+  font-size: 1.1rem;
+}
+
+#page-toc .toc-h3 {
+  padding-left: 18px;
+  font-size: 1.0rem;
+}
+
+/* 暗色主题适配 */
+.navy #page-toc a,
+.coal #page-toc a,
+.ayu #page-toc a {
+  color: var(--fg);
+}
+
+.navy #page-toc a.toc-active,
+.coal #page-toc a.toc-active,
+.ayu #page-toc a.toc-active {
+  color: #5ba3f5;
+  background: rgba(91, 163, 245, 0.12);
+}
+
+.navy #page-toc a:hover,
+.coal #page-toc a:hover,
+.ayu #page-toc a:hover {
+  color: #5ba3f5;
+  background: rgba(91, 163, 245, 0.08);
+}
+
+/* 滚动条 */
+#page-toc::-webkit-scrollbar {
+  width: 3px;
+}
+#page-toc::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.25);
+  border-radius: 2px;
+}
+
+/* ---------- 打印优化 ---------- */
+@media print {
+  .sidebar,
+  .nav-wrapper,
+  .menu-bar {
+    display: none !important;
+  }
+
+  .content {
+    max-width: 100% !important;
+  }
+
+  #page-toc {
+    display: none !important;
+  }
+
+  #page-toc-open {
+    display: none !important;
+  }
+}
+
+/* TOC 在小屏隐藏（小于 1400px 不显示，避免与正文挤占） */
+@media (max-width: 1400px) {
+  #page-toc,
+  #page-toc-open {
+    display: none !important;
+  }
+}
+
+/* ---------- 移动端响应式 ---------- */
+@media (max-width: 768px) {
+  .content {
+    font-size: 1.4rem;
+    line-height: 1.75;
+  }
+
+  .content h1 {
+    font-size: 1.6rem;
+  }
+
+  .content h2 {
+    font-size: 1.35rem;
+  }
+
+  .content h3 {
+    font-size: 1.15rem;
+  }
+
+  /* 表格在小屏可横向滚动 */
+  .content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.95rem;
+  }
+
+  /* 代码块字体缩小，防止横向溢出 */
+  .content pre {
+    font-size: 0.82em;
+    padding: 0.8em;
+  }
+
+  .content code {
+    font-size: 0.88em;
+  }
+
+  /* 图片移动端占满宽度 */
+  .content img {
+    margin: 1em auto;
+    border-radius: 4px;
+  }
+
+  /* 引用块紧凑化 */
+  .content blockquote {
+    padding: 0.5em 0.8em;
+    margin: 0.8em 0;
+  }
+
+  /* 有序列表移动端缩进 */
+  .content ol > li {
+    padding-left: 2em;
+  }
+
+  .content ol > li::before {
+    width: 1.4em;
+    height: 1.4em;
+    font-size: 0.75em;
+  }
+
+  /* 回到顶部按钮移动端调整 */
+  #back-to-top {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  /* 移动端正文也无需额外左边距 */
+  .content main {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+/* ============================================
+   AI Agent Roadmap - reading system refresh
+   Kept at the end so it overrides the legacy book theme.
+   ============================================ */
+
+:root {
+  --content-max-width: 940px;
+  --sidebar-width: 310px;
+  --roadmap-bg: #f7f7f2;
+  --roadmap-surface: #ffffff;
+  --roadmap-ink: #18201d;
+  --roadmap-muted: #53605b;
+  --roadmap-line: #d9ddd2;
+  --roadmap-green: #2f6f73;
+  --roadmap-blue: #4460aa;
+  --roadmap-gold: #a36c18;
+  --links: var(--roadmap-green);
+}
+
+html.light,
+html.rust {
+  --bg: var(--roadmap-bg);
+  --fg: var(--roadmap-ink);
+  --sidebar-bg: #edefe8;
+  --sidebar-fg: #25302b;
+  --sidebar-active: var(--roadmap-green);
+  --icons: #53605b;
+  --icons-hover: var(--roadmap-blue);
+  --theme-popup-bg: var(--roadmap-surface);
+  --theme-popup-border: var(--roadmap-line);
+  --quote-bg: rgba(47, 111, 115, 0.08);
+  --quote-border: var(--roadmap-green);
+  --table-border-color: var(--roadmap-line);
+}
+
+body {
+  background:
+    linear-gradient(120deg, rgba(47, 111, 115, 0.09), transparent 32%),
+    linear-gradient(220deg, rgba(68, 96, 170, 0.08), transparent 36%),
+    var(--bg);
+}
+
+.content {
+  color: var(--roadmap-ink);
+  font-size: 1.42rem;
+  line-height: 1.86;
+  letter-spacing: 0;
+}
+
+.content main {
+  padding: 34px min(5vw, 56px) 64px;
+  background: rgba(255, 255, 255, 0.72);
+  border-left: 1px solid rgba(217, 221, 210, 0.8);
+  border-right: 1px solid rgba(217, 221, 210, 0.55);
+}
+
+.content p,
+.content li {
+  text-wrap: pretty;
+}
+
+.content h1,
+.content h2,
+.content h3 {
+  color: var(--roadmap-ink);
+  text-wrap: balance;
+  letter-spacing: 0;
+}
+
+.content h1 {
+  position: relative;
+  border-bottom: none;
+  padding-bottom: 0.52em;
+  margin-top: 0.6em;
+  margin-bottom: 0.8em;
+  font-size: clamp(2.1rem, 4vw, 3.45rem);
+  line-height: 1.08;
+}
+
+.content h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(240px, 42%);
+  height: 4px;
+  background: linear-gradient(90deg, var(--roadmap-green), var(--roadmap-blue), var(--roadmap-gold));
+}
+
+.content h2 {
+  border-bottom: 1px solid var(--roadmap-line);
+  padding-bottom: 0.32em;
+  margin-top: 2.25em;
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+}
+
+.content h3 {
+  color: var(--roadmap-green);
+  margin-top: 1.65em;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+}
+
+.content a {
+  color: var(--roadmap-blue);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
+.content blockquote {
+  border-left: 0;
+  border-top: 2px solid var(--roadmap-green);
+  background: rgba(47, 111, 115, 0.08);
+  color: #24332f;
+  padding: 0.95em 1.15em;
+  border-radius: 8px;
+}
+
+.content pre {
+  border: 1px solid #cfd6ca;
+  border-radius: 8px;
+  box-shadow: none;
+  background: #111b20;
+}
+
+.content code {
+  border-radius: 5px;
+}
+
+.content :not(pre) > code {
+  color: #173f45;
+  background: rgba(47, 111, 115, 0.1);
+  border: 1px solid rgba(47, 111, 115, 0.16);
+}
+
+.content table {
+  border: 1px solid var(--roadmap-line);
+  border-radius: 8px;
+  box-shadow: none;
+  background: var(--roadmap-surface);
+}
+
+.content table thead {
+  background: #24332f;
+}
+
+.content table tbody tr:hover {
+  background: rgba(163, 108, 24, 0.08);
+}
+
+.sidebar {
+  background: #edefe8;
+  border-right: 1px solid var(--roadmap-line);
+}
+
+.sidebar .chapter li a {
+  border-radius: 6px;
+}
+
+.sidebar .chapter li a:hover {
+  background: rgba(68, 96, 170, 0.08);
+}
+
+.sidebar .chapter li.active > a {
+  color: var(--roadmap-green);
+  background: rgba(47, 111, 115, 0.12);
+}
+
+.sidebar .chapter li.part-title {
+  color: var(--roadmap-gold);
+  letter-spacing: 0.03em;
+  border-top-color: rgba(83, 96, 91, 0.18);
+}
+
+#reading-progress {
+  height: 4px;
+  background: linear-gradient(90deg, var(--roadmap-green), var(--roadmap-blue), var(--roadmap-gold));
+  box-shadow: none;
+}
+
+#back-to-top,
+#page-toc-open {
+  background: var(--roadmap-ink);
+  box-shadow: 0 4px 12px rgba(24, 32, 29, 0.18);
+}
+
+#back-to-top:hover,
+#page-toc-open:hover {
+  background: var(--roadmap-green);
+}
+
+#page-toc {
+  border: 1px solid var(--roadmap-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: none;
+}
+
+#page-toc .toc-title {
+  color: var(--roadmap-ink);
+}
+
+#page-toc a.toc-active {
+  color: var(--roadmap-green);
+  background: rgba(47, 111, 115, 0.1);
+}
+
+.reading-time {
+  color: var(--roadmap-muted);
+  background: rgba(47, 111, 115, 0.08);
+  border: 1px solid rgba(47, 111, 115, 0.12);
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    font-size: 1.12rem;
+    line-height: 1.78;
+  }
+
+  .content h1 {
+    font-size: clamp(1.8rem, 9vw, 2.35rem);
+  }
+
+  .content main {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 24px 18px 48px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content main,
+  .sidebar .chapter li a,
+  #back-to-top,
+  #page-toc-open {
+    transition: none;
+  }
+}

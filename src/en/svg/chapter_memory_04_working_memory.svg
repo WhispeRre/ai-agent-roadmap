@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="800" height="360">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="wm" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#e67e22"/>
+    </marker>
+  </defs>
+  <rect width="800" height="360" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Working Memory: Scratchpad Pattern</text>
+
+  <!-- Without vs With working memory -->
+  <!-- Left: Without -->
+  <rect x="20" y="55" width="370" height="140" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="205" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#e74c3c">❌ Without Working Memory</text>
+  <text x="35" y="100" font-size="11" fill="#444">Step 1: Compute total revenue → got ¥5.2M</text>
+  <text x="35" y="120" font-size="11" fill="#444">Step 2: Analyze product lines → forgot total revenue</text>
+  <text x="35" y="140" font-size="11" fill="#888">Step 3: Identify anomalies → forgot prior results</text>
+  <text x="35" y="160" font-size="11" fill="#ccc">Step 4: Write report → data is confused</text>
+  <rect x="35" y="170" width="340" height="18" rx="4" fill="#e74c3c" opacity="0.15"/>
+  <text x="205" y="183" text-anchor="middle" font-size="10" fill="#e74c3c" font-weight="bold">Intermediate results lost → final output unreliable</text>
+
+  <!-- Right: With -->
+  <rect x="410" y="55" width="370" height="140" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="595" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">✅ With Working Memory (Scratchpad)</text>
+  <text x="425" y="100" font-size="11" fill="#444">Step 1: Compute total revenue → write to scratchpad</text>
+  <text x="425" y="120" font-size="11" fill="#444">Step 2: Analyze product lines → refer to scratchpad</text>
+  <text x="425" y="140" font-size="11" fill="#444">Step 3: Identify anomalies → read previous results</text>
+  <text x="425" y="160" font-size="11" fill="#444">Step 4: Write report → consolidate all intermediates</text>
+  <rect x="425" y="170" width="340" height="18" rx="4" fill="#27ae60" opacity="0.15"/>
+  <text x="595" y="183" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold">Fully traceable → complete and reliable output</text>
+
+  <!-- Scratchpad structure -->
+  <text x="400" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Scratchpad Data Structure</text>
+
+  <rect x="20" y="235" width="185" height="110" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="112" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">Task State</text>
+  <text x="32" y="278" font-size="11" fill="#444">• current_step</text>
+  <text x="32" y="296" font-size="11" fill="#444">• completed_steps</text>
+  <text x="32" y="314" font-size="11" fill="#444">• remaining_tasks</text>
+  <text x="32" y="332" font-size="11" fill="#444">• error_log</text>
+
+  <rect x="215" y="235" width="185" height="110" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="307" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">Intermediate Results</text>
+  <text x="227" y="278" font-size="11" fill="#444">• key-value store</text>
+  <text x="227" y="296" font-size="11" fill="#444">• computation cache</text>
+  <text x="227" y="314" font-size="11" fill="#444">• API response data</text>
+  <text x="227" y="332" font-size="11" fill="#444">• query result sets</text>
+
+  <rect x="410" y="235" width="185" height="110" rx="8" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="502" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">Reasoning Chain</text>
+  <text x="422" y="278" font-size="11" fill="#444">• decision log</text>
+  <text x="422" y="296" font-size="11" fill="#444">• hypotheses and validations</text>
+  <text x="422" y="314" font-size="11" fill="#444">• tool call records</text>
+  <text x="422" y="332" font-size="11" fill="#444">• backtracking markers</text>
+
+  <rect x="605" y="235" width="175" height="110" rx="8" fill="#2980b9" opacity="0.12" stroke="#2980b9" stroke-width="2"/>
+  <text x="692" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#2980b9">Attention Hints</text>
+  <text x="617" y="278" font-size="11" fill="#444">• key findings flagged</text>
+  <text x="617" y="296" font-size="11" fill="#444">• items to verify</text>
+  <text x="617" y="314" font-size="11" fill="#444">• priority ranking</text>
+  <text x="617" y="332" font-size="11" fill="#444">• time constraints</text>
+
+</svg>

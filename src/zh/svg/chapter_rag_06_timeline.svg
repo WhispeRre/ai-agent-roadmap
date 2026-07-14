@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" width="560" height="320">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="560" height="320" fill="#f8f9fa" rx="12"/>
+  <text x="280" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">RAG 发展脉络（2020-2025）</text>
+
+  <!-- 2020 -->
+  <text x="40" y="65" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#888">2020</text>
+  <rect x="90" y="48" width="200" height="35" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="190" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">RAG 基础范式（Lewis et al.）</text>
+
+  <path d="M 190 85 L 190 105" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 2023 -->
+  <text x="40" y="125" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#888">2023</text>
+  <rect x="90" y="108" width="200" height="35" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="190" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">Self-RAG 自适应检索决策</text>
+
+  <path d="M 190 145 L 190 165" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- 2024 left -->
+  <text x="40" y="185" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#888">2024</text>
+  <rect x="90" y="168" width="180" height="35" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="180" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">CRAG 检索质量纠错</text>
+
+  <!-- 2024 right -->
+  <rect x="310" y="168" width="210" height="35" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="415" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">GraphRAG 结构化知识</text>
+
+  <!-- Connection -->
+  <path d="M 292 130 L 415 166" stroke="#7f8c8d" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <path d="M 180 205 L 180 225" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 415 205 L 415 225" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Modular RAG & LightRAG -->
+  <rect x="90" y="228" width="180" height="35" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="180" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">Modular RAG 模块化</text>
+
+  <rect x="310" y="228" width="210" height="35" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="415" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">LightRAG 轻量级图 RAG</text>
+
+  <!-- Converge to Agentic RAG -->
+  <path d="M 180 265 L 280 285" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M 415 265 L 315 285" stroke="#7f8c8d" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 2025 -->
+  <text x="40" y="302" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#888">2025</text>
+  <rect x="180" y="285" width="240" height="28" rx="8" fill="#9b59b6" opacity="0.2" stroke="#9b59b6" stroke-width="2"/>
+  <text x="300" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9b59b6">🚀 Agentic RAG — Agent 主导智能检索</text>
+</svg>

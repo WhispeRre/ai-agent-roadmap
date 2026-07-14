@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Agent Roadmap: a personal learning handbook for LLM agents, RAG, memory, tool use, LangGraph, MCP, evaluation, deployment, and Agentic RL.">
+  <meta name="keywords" content="AI Agent Roadmap, AI Agent, LLM Agent, RAG, Agent memory, tool use, LangGraph, MCP, Agentic RL, 智能体开发, Agent 学习路线图">
+  <link rel="canonical" href="https://liuzeyu03.github.io/ai-agent-roadmap/">
+  <title>AI Agent Roadmap | 个人 Agent 学习手册</title>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=./zh/">
+  </noscript>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f2;
+      --ink: #18201d;
+      --muted: #53605b;
+      --line: #d9ddd2;
+      --green: #2f6f73;
+      --blue: #4460aa;
+      --gold: #a36c18;
+      --panel: rgba(255, 255, 255, 0.82);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(120deg, rgba(47, 111, 115, 0.16), transparent 38%),
+        linear-gradient(220deg, rgba(68, 96, 170, 0.14), transparent 42%),
+        var(--bg);
+      display: grid;
+      place-items: center;
+      padding: clamp(20px, 5vw, 64px);
+    }
+
+    main {
+      width: min(1040px, 100%);
+      min-height: min(720px, calc(100vh - 40px));
+      display: grid;
+      align-content: center;
+      gap: 34px;
+    }
+
+    .cover {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: 0 8px 24px rgba(30, 40, 36, 0.08);
+      padding: clamp(28px, 6vw, 76px);
+    }
+
+    .cover::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("./readme_img.png");
+      background-position: center;
+      background-size: cover;
+      opacity: 0.08;
+      filter: saturate(0.8);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      max-width: 720px;
+    }
+
+    .kicker {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--green);
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      max-width: 11ch;
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.94;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      max-width: 62ch;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2vw, 1.22rem);
+      line-height: 1.75;
+      text-wrap: pretty;
+      margin-bottom: 34px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      color: #fff;
+      background: var(--ink);
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .lang-btn:hover {
+      transform: translateY(-1px);
+      background: var(--green);
+    }
+
+    .lang-btn.secondary {
+      color: var(--ink);
+      background: transparent;
+      border-color: var(--line);
+    }
+
+    .lang-btn.secondary:hover {
+      color: #fff;
+      border-color: var(--blue);
+      background: var(--blue);
+    }
+
+    .status {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 16px;
+      }
+
+      .cover {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        max-width: 8ch;
+      }
+
+      .actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .lang-btn {
+        width: 100%;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lang-btn {
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    (function() {
+      var lang = navigator.language || navigator.userLanguage || "";
+      var target = lang.toLowerCase().startsWith("zh") ? "./zh/" : "./en/";
+      window.setTimeout(function() {
+        window.location.replace(target);
+      }, 900);
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <section class="cover" aria-labelledby="title">
+      <div class="content">
+        <p class="kicker">Personal learning handbook</p>
+        <h1 id="title">AI Agent Roadmap</h1>
+        <p class="subtitle">
+          一份围绕 LLM Agent、RAG、记忆、工具调用、LangGraph、MCP、评估、安全和部署的个人学习路线图。系统会根据浏览器语言自动进入对应版本。
+        </p>
+        <div class="actions" aria-label="Language links">
+          <a class="lang-btn" href="./zh/">进入中文版</a>
+          <a class="lang-btn secondary" href="./en/">Read English</a>
+        </div>
+      </div>
+    </section>
+    <p class="status">Redirecting shortly. If nothing happens, choose a language above.</p>
+  </main>
+</body>
+</html>

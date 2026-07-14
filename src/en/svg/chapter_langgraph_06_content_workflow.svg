@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <rect width="700" height="200" rx="14" fill="#f0f4f8"/>
+  <text x="350" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Content Creation Workflow (LangGraph)</text>
+
+  <!-- Node -->
+  <rect x="20" y="60" width="90" height="44" rx="8" fill="#3498db"/>
+  <text x="65" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">User Requirements</text>
+  <text x="65" y="94" text-anchor="middle" font-size="10" fill="#d6eaf8">Topic/Audience/Word count</text>
+
+  <rect x="130" y="60" width="90" height="44" rx="8" fill="#27ae60"/>
+  <text x="175" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Topic Analysis</text>
+  <text x="175" y="94" text-anchor="middle" font-size="10" fill="#d5f5e3">Extract key elements</text>
+
+  <rect x="240" y="60" width="90" height="44" rx="8" fill="#8e44ad"/>
+  <text x="285" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Outline Generation</text>
+  <text x="285" y="94" text-anchor="middle" font-size="10" fill="#e8daef">5-section structure</text>
+
+  <rect x="350" y="60" width="90" height="44" rx="8" fill="#e67e22"/>
+  <text x="395" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Content Writing</text>
+  <text x="395" y="94" text-anchor="middle" font-size="10" fill="#fdebd0">Generate per outline</text>
+
+  <rect x="460" y="60" width="90" height="44" rx="8" fill="#e74c3c"/>
+  <text x="505" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Quality Review</text>
+  <text x="505" y="94" text-anchor="middle" font-size="10" fill="#fadbd8">Score 1-10</text>
+
+  <rect x="590" y="60" width="90" height="44" rx="8" fill="#2ecc71"/>
+  <text x="635" y="78" text-anchor="middle" font-size="11" font-weight="bold" fill="white">Publication Prep</text>
+  <text x="635" y="94" text-anchor="middle" font-size="10" fill="#d5f5e3">Final output</text>
+
+  <!-- [CN] Arrow-->
+  <line x1="110" y1="82" x2="128" y2="82" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="220" y1="82" x2="238" y2="82" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="330" y1="82" x2="348" y2="82" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="82" x2="458" y2="82" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="82" x2="588" y2="82" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- [CN] -->
+  <text x="569" y="75" text-anchor="middle" font-size="10" fill="#27ae60">≥8 score</text>
+
+  <!-- [CN] -->
+  <line x1="505" y1="104" x2="505" y2="140" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="505" y1="140" x2="395" y2="140" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="395" y1="140" x2="395" y2="106" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow-red)"/>
+  <text x="450" y="158" text-anchor="middle" font-size="11" fill="#e74c3c"><8 score → Needs revision → Rewrite</text>
+
+  <!-- BottomDescription -->
+  <text x="350" y="185" text-anchor="middle" font-size="11" fill="#95a5a6">Max 2 revisions, then proceed to publication prep regardless of score</text>
+</svg>

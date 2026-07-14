@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 260" width="580" height="260">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="580" height="260" rx="14" fill="#f0f4f8"/>
+  <text x="290" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Prompt Caching Mechanism</text>
+
+  <!-- System Prompt static zone -->
+  <rect x="30" y="48" width="520" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="290" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">🟢 System Prompt (Static Zone)</text>
+  <text x="290" y="86" text-anchor="middle" font-size="11" fill="#15803d">Reused across sessions, 90%+ cache hit rate · Saves significant API cost</text>
+
+  <!-- User message -->
+  <rect x="30" y="110" width="520" height="130" rx="8" fill="#f8f9fa" stroke="#6c757d" stroke-width="1.5"/>
+  <text x="290" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">User Message (Dynamic Zone)</text>
+
+  <!-- CLAUDE.md content -->
+  <rect x="50" y="140" width="480" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="290" y="159" text-anchor="middle" font-size="11" fill="#856404">🟡 CLAUDE.md content · Can be cached when content is unchanged</text>
+
+  <!-- Current task description -->
+  <rect x="50" y="174" width="480" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="290" y="193" text-anchor="middle" font-size="11" fill="#dc2626">🔴 Current task description · Changes each time, not cached</text>
+
+  <!-- Conversation history -->
+  <rect x="50" y="208" width="480" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="290" y="227" text-anchor="middle" font-size="11" fill="#dc2626">🔴 Conversation history · Grows over time, cache invalidation</text>
+
+  <!-- Note -->
+  <rect x="30" y="245" width="520" height="10" rx="4" fill="#e8f4fd"/>
+  <text x="290" y="253" text-anchor="middle" font-size="10" fill="#2980b9">💡 Keep CLAUDE.md content stable, avoid frequent changes, to save costs</text>
+</svg>

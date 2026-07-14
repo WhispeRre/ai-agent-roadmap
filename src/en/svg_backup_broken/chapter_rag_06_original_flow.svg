@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="520" height="300" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">RAG 原始Architecture：Retrieval → 增强 → Generation</text>
+
+  <!-- Query -->
+  <rect x="195" y="48" width="130" height="40" rx="10" fill="#4dabf7" opacity="0.2" stroke="#4dabf7" stroke-width="2"/>
+  <text x="260" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2980b9">📝 InputQuery q</text>
+
+  <!-- Arrow down -->
+  <path d="M 260 90 L 260 115" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Retriever -->
+  <rect x="140" y="118" width="240" height="55" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="260" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">🔍 RetrievalModel（DPR）</text>
+  <text x="260" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">fromKnowledge BaseRetrieval top-k 相关Document {z₁, z₂, …, zₖ}</text>
+
+  <!-- Knowledge base on the right -->
+  <rect x="410" y="118" width="90" height="55" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="455" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e67e22">📚 Knowledge Base</text>
+  <text x="455" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Document集合</text>
+  <path d="M 382 145 L 408 145" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow down -->
+  <path d="M 260 175 L 260 200" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Generator -->
+  <rect x="140" y="203" width="240" height="55" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="2"/>
+  <text x="260" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">🧠 GenerationModel（BART）</text>
+  <text x="260" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">based onQuery q + RetrievalDocument Generation回答</text>
+
+  <!-- Variants -->
+  <text x="90" y="218" font-family="Arial, sans-serif" font-size="9" fill="#9b59b6">RAG-Sequence：</text>
+  <text x="90" y="230" font-family="Arial, sans-serif" font-size="8" fill="#888">每个Document独立Generation</text>
+  <text x="90" y="242" font-family="Arial, sans-serif" font-size="8" fill="#888">然Back加权汇总</text>
+
+  <!-- Arrow down to answer -->
+  <path d="M 260 260 L 260 278" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="260" y="296" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">📋 Generation回答</text>
+</svg>

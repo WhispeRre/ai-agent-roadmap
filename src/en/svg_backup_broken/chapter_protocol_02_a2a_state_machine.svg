@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="520" height="260">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#27ae60"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f39c12"/>
+    </marker>
+  </defs>
+  <rect width="520" height="260" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">A2A TaskState机</text>
+
+  <!-- submitted -->
+  <rect x="30" y="80" width="100" height="36" rx="10" fill="#4dabf7" opacity="0.2" stroke="#4dabf7" stroke-width="2"/>
+  <text x="80" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2980b9">submitted</text>
+
+  <!-- Arrow to working -->
+  <path d="M 132 98 L 168 98" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- working -->
+  <rect x="170" y="80" width="100" height="36" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="2"/>
+  <text x="220" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">working</text>
+
+  <!-- Arrow to completed -->
+  <path d="M 272 98 L 308 98" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- completed -->
+  <rect x="310" y="80" width="100" height="36" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="2"/>
+  <text x="360" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">completed</text>
+
+  <!-- input-required -->
+  <path d="M 220 118 L 220 148" stroke="#9b59b6" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="145" y="150" width="150" height="36" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="2"/>
+  <text x="220" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#9b59b6">input-required</text>
+  
+  <!-- input-required back to working -->
+  <path d="M 297 168 L 340 168 L 340 118 L 272 118" stroke="#9b59b6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <text x="358" y="145" font-family="Arial, sans-serif" font-size="8" fill="#9b59b6">补充InfoBack</text>
+
+  <!-- failed -->
+  <path d="M 195 188 L 195 210" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrow-red)"/>
+  <rect x="155" y="213" width="80" height="28" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="195" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#e74c3c">failed</text>
+
+  <!-- canceled -->
+  <rect x="260" y="213" width="80" height="28" rx="8" fill="#7f8c8d" opacity="0.15" stroke="#7f8c8d" stroke-width="1.5"/>
+  <text x="300" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7f8c8d">canceled</text>
+  <path d="M 247 188 L 280 211" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Key design notes -->
+  <text x="420" y="148" font-family="Arial, sans-serif" font-size="9" fill="#888">关键设计：</text>
+  <text x="420" y="164" font-family="Arial, sans-serif" font-size="9" fill="#555">· input-required：</text>
+  <text x="425" y="178" font-family="Arial, sans-serif" font-size="8" fill="#888">Agent 可主动RequestInfo</text>
+  <text x="420" y="196" font-family="Arial, sans-serif" font-size="9" fill="#555">· working：</text>
+  <text x="425" y="210" font-family="Arial, sans-serif" font-size="8" fill="#888">支持长TaskStream式Update</text>
+  <text x="420" y="230" font-family="Arial, sans-serif" font-size="9" fill="#555">· State转换带时间戳</text>
+</svg>

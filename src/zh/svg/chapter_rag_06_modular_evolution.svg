@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="600" height="340">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="600" height="340" fill="#f8f9fa" rx="12"/>
+  <text x="300" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Modular RAG：三代演进</text>
+
+  <!-- Gen 1: Naive RAG -->
+  <rect x="20" y="48" width="170" height="170" rx="10" fill="#e74c3c" opacity="0.1" stroke="#e74c3c" stroke-width="2"/>
+  <text x="105" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">🔴 第一代</text>
+  <text x="105" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e74c3c">Naive RAG</text>
+  <line x1="35" y1="94" x2="175" y2="94" stroke="#e74c3c" stroke-width="0.5" opacity="0.4"/>
+  <text x="105" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">检索 → 生成</text>
+  <text x="105" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">简单直接</text>
+  <line x1="35" y1="144" x2="175" y2="144" stroke="#e74c3c" stroke-width="0.5" opacity="0.3"/>
+  <text x="105" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 检索质量差</text>
+  <text x="105" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 噪音多</text>
+  <text x="105" y="194" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 无法处理复杂问题</text>
+
+  <!-- Arrow -->
+  <path d="M 192 133 L 215 133" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Gen 2: Advanced RAG -->
+  <rect x="218" y="48" width="170" height="170" rx="10" fill="#f39c12" opacity="0.1" stroke="#f39c12" stroke-width="2"/>
+  <text x="303" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e67e22">🟡 第二代</text>
+  <text x="303" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e67e22">Advanced RAG</text>
+  <line x1="233" y1="94" x2="373" y2="94" stroke="#f39c12" stroke-width="0.5" opacity="0.4"/>
+  <text x="303" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">+ 检索前优化（查询改写）</text>
+  <text x="303" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">+ 检索后优化（重排序）</text>
+  <text x="303" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">+ 生成优化（上下文压缩）</text>
+  <line x1="233" y1="156" x2="373" y2="156" stroke="#f39c12" stroke-width="0.5" opacity="0.3"/>
+  <text x="303" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 流程仍是线性的</text>
+  <text x="303" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 缺乏灵活性</text>
+
+  <!-- Arrow -->
+  <path d="M 390 133 L 413 133" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Gen 3: Modular RAG -->
+  <rect x="416" y="48" width="170" height="170" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="501" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">🟢 第三代</text>
+  <text x="501" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#27ae60">Modular RAG</text>
+  <line x1="431" y1="94" x2="571" y2="94" stroke="#27ae60" stroke-width="0.5" opacity="0.4"/>
+  <text x="501" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 查询模块（改写/分解/路由）</text>
+  <text x="501" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 检索模块（稠密/稀疏/混合）</text>
+  <text x="501" y="144" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 重排序模块</text>
+  <text x="501" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 生成模块</text>
+  <text x="501" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 验证模块</text>
+  <line x1="431" y1="186" x2="571" y2="186" stroke="#27ae60" stroke-width="0.5" opacity="0.3"/>
+  <text x="501" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">🧱 像乐高积木自由组合</text>
+
+  <!-- Bottom summary -->
+  <rect x="60" y="240" width="480" height="85" rx="10" fill="#4dabf7" opacity="0.08" stroke="#4dabf7" stroke-width="1"/>
+  <text x="300" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">演进趋势</text>
+  <text x="300" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">简单管道 → 优化管道 → 可插拔模块化 → Agent 主导（Agentic RAG）</text>
+  <text x="300" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">从"固定流水线"到"智能决策"，RAG 越来越接近真正的 Agent 行为</text>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#9b59b6">代表工作：原始 RAG (2020) → Self-RAG (2023) → CRAG (2024) → Agentic RAG (2025)</text>
+</svg>

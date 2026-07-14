@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 260" width="700" height="260">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="700" height="260" fill="#f0f4f8" rx="14"/>
+  <text x="350" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">SKILL.md Design Philosophy</text>
+
+  <!-- 1. Declarative -->
+  <rect x="20" y="48" width="320" height="90" rx="10" fill="#3498db" opacity="0.1" stroke="#3498db" stroke-width="1.5"/>
+  <text x="180" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#3498db">1. 📝 Declarative</text>
+  <text x="40" y="92" font-size="11" fill="#555">Define skills in Markdown instead of code</text>
+  <text x="40" y="112" font-size="11" fill="#555">→ Lower barrier; non-programmers can create skills</text>
+  <text x="40" y="130" font-size="10" fill="#888">Format: standard Markdown + YAML frontmatter</text>
+
+  <!-- 2. Hierarchical -->
+  <rect x="360" y="48" width="320" height="90" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="520" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">2. 🏗 Hierarchical</text>
+  <text x="380" y="92" font-size="11" fill="#555">Skills can be nested</text>
+  <text x="380" y="112" font-size="11" fill="#555">skills/ → writing/ → technical/</text>
+  <text x="380" y="130" font-size="10" fill="#888">→ Skill levels from general to specialized</text>
+
+  <!-- 3. Context-aware -->
+  <rect x="20" y="150" width="320" height="90" rx="10" fill="#e67e22" opacity="0.1" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="180" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">3. 🎯 Context-Aware</text>
+  <text x="40" y="194" font-size="11" fill="#555">Load on demand, not all skills active at once</text>
+  <text x="40" y="214" font-size="11" fill="#555">→ Dynamically activate skills relevant to task</text>
+  <text x="40" y="232" font-size="10" fill="#888">Optimize token usage and reduce cost</text>
+
+  <!-- 4. Portable -->
+  <rect x="360" y="150" width="320" height="90" rx="10" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="520" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#9b59b6">4. 🔄 Portable</text>
+  <text x="380" y="194" font-size="11" fill="#555">Not tied to a specific model</text>
+  <text x="380" y="214" font-size="11" fill="#555">→ Same SKILL.md works with Claude/GPT/open-source</text>
+  <text x="380" y="232" font-size="10" fill="#888">Skills as docs = natural version management</text>
+</svg>

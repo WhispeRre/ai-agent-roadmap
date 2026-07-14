@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" width="520" height="300">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="520" height="300" fill="#f8f9fa" rx="12"/>
+  <text x="260" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Magentic-One：指挥官 + Expert团Architecture</text>
+
+  <!-- Orchestrator -->
+  <rect x="110" y="45" width="300" height="75" rx="10" fill="#9b59b6" opacity="0.15" stroke="#9b59b6" stroke-width="2"/>
+  <text x="260" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#9b59b6">🎯 Orchestrator（指挥官）</text>
+  <text x="150" y="90" font-family="Arial, sans-serif" font-size="10" fill="#555">· Task Decomposition与Planning</text>
+  <text x="150" y="106" font-family="Arial, sans-serif" font-size="10" fill="#555">· Subtask分配</text>
+  <text x="310" y="90" font-family="Arial, sans-serif" font-size="10" fill="#555">· 进度Tracing与重Planning</text>
+  <text x="310" y="106" font-family="Arial, sans-serif" font-size="10" fill="#555">· Error检测与Resume</text>
+
+  <!-- Arrows down to experts -->
+  <path d="M 145 122 L 95 150" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 210 122 L 210 150" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 310 122 L 330 150" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M 375 122 L 440 150" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Expert 1: WebSurfer -->
+  <rect x="30" y="153" width="110" height="55" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="1.5"/>
+  <text x="85" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">🌐 WebSurfer</text>
+  <text x="85" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">浏览网页</text>
+
+  <!-- Expert 2: FileSurfer -->
+  <rect x="155" y="153" width="110" height="55" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="210" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">📁 FileSurfer</text>
+  <text x="210" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Read文件</text>
+
+  <!-- Expert 3: Coder -->
+  <rect x="280" y="153" width="110" height="55" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="335" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">💻 Coder</text>
+  <text x="335" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">写Code</text>
+
+  <!-- Expert 4: Terminal -->
+  <rect x="405" y="153" width="95" height="55" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="452" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">⚡ Terminal</text>
+  <text x="452" y="196" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Execution命令</text>
+
+  <!-- Key features -->
+  <rect x="50" y="225" width="420" height="65" rx="8" fill="#4dabf7" opacity="0.08" stroke="#4dabf7" stroke-width="1"/>
+  <text x="260" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2c3e50">Key Features</text>
+  <text x="140" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🧩 Module化设计</text>
+  <text x="260" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">🔄 Model无关</text>
+  <text x="380" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">📐 动态重Planning</text>
+  <text x="260" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">based on AutoGen 0.4 Event-DrivenArchitecture构建</text>
+</svg>

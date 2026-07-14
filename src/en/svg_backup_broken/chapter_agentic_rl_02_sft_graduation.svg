@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720">
+  <defs>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+    <marker id="arrowE" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <linearGradient id="titleBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="passBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="failBg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="960" height="720" rx="12" fill="#fafbff"/>
+  <rect x="0" y="0" width="960" height="56" rx="12" fill="url(#titleBg)"/>
+  <rect x="0" y="40" width="960" height="16" fill="url(#titleBg)"/>
+  <text x="480" y="36" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="system-ui">SFT Graduation标准：何时from SFT 转入 RL Training？</text>
+
+  <!-- ====== 第一列：四大必检Metric ====== -->
+  <text x="30" y="88" fill="#4b5563" font-size="14" font-weight="bold" font-family="system-ui">📋 四大必检Metric</text>
+
+  <!-- Metric1: Loss 收敛 -->
+  <rect x="20" y="100" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="100" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="118" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="118" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">① Training/验证 Loss 收敛</text>
+  <text x="30" y="143" fill="#374151" font-size="11" font-family="system-ui">• 验证 Loss 不再Bottom降（连续 2-3 个 eval）</text>
+  <text x="30" y="160" fill="#374151" font-size="11" font-family="system-ui">• Train-Val Loss 差距 &lt; 0.1（未Overfitting）</text>
+  <text x="30" y="175" fill="#6b7280" font-size="10" font-family="system-ui">典型值：Loss in 0.3–0.8 区间趋于稳定</text>
+
+  <!-- Metric2: 格式正确率 -->
+  <rect x="20" y="192" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="192" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="210" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="210" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">② 格式正确率 ≥ 90%</text>
+  <text x="30" y="235" fill="#374151" font-size="11" font-family="system-ui">• &lt;think&gt;/&lt;tool_call&gt; Label配对完整</text>
+  <text x="30" y="252" fill="#374151" font-size="11" font-family="system-ui">• JSON 参数格式可解析</text>
+  <text x="30" y="267" fill="#6b7280" font-size="10" font-family="system-ui">格式不达标 → RL 阶段将大量浪费探索</text>
+
+  <!-- Metric3: TaskAccuracy -->
+  <rect x="20" y="284" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="284" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="302" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="302" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">③ Task基准Accuracy > 随机Horizontal</text>
+  <text x="30" y="327" fill="#374151" font-size="11" font-family="system-ui">• Validation SetAccuracy达to合理Horizontal</text>
+  <text x="30" y="344" fill="#374151" font-size="11" font-family="system-ui">• 至少 &gt; 基座Model zero-shot 表现</text>
+  <text x="30" y="359" fill="#6b7280" font-size="10" font-family="system-ui">例：GSM8K SFT Back 30-50%，RL Goal 60-80%</text>
+
+  <!-- Metric4: 多样性 -->
+  <rect x="20" y="376" width="280" height="80" rx="8" fill="white" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="20" y="376" width="280" height="26" rx="8" fill="#eef2ff"/>
+  <rect x="20" y="394" width="280" height="8" fill="#eef2ff"/>
+  <text x="30" y="394" fill="#4338ca" font-size="12" font-weight="bold" font-family="system-ui">④ Output多样性仍存in</text>
+  <text x="30" y="419" fill="#374151" font-size="11" font-family="system-ui">• Temperature=0.7 Bottom多次采样有差异</text>
+  <text x="30" y="436" fill="#374151" font-size="11" font-family="system-ui">• 未出现模式坍缩（所有Output雷同）</text>
+  <text x="30" y="451" fill="#6b7280" font-size="10" font-family="system-ui">多样性 → RL 探索的Prerequisites</text>
+
+  <!-- ====== Middle：Decision菱形 ====== -->
+  <polygon points="480,180 580,240 480,300 380,240" fill="#fef3c7" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="234" text-anchor="middle" fill="#92400e" font-size="13" font-weight="bold" font-family="system-ui">四项Metric</text>
+  <text x="480" y="252" text-anchor="middle" fill="#92400e" font-size="13" font-weight="bold" font-family="system-ui">全部达标？</text>
+
+  <!-- 箭头：Metric → Decision -->
+  <line x1="300" y1="240" x2="375" y2="240" stroke="#6366f1" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- ====== RightTop：via → 进入 RL ====== -->
+  <line x1="580" y1="240" x2="680" y2="240" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowE)"/>
+  <text x="630" y="233" fill="#10b981" font-size="12" font-weight="bold" font-family="system-ui">✅ 是</text>
+
+  <rect x="685" y="196" width="250" height="88" rx="10" fill="url(#passBg)" filter="url(#shadow)"/>
+  <text x="810" y="224" text-anchor="middle" fill="white" font-size="15" font-weight="bold" font-family="system-ui">🎓 SFT Graduation！</text>
+  <text x="810" y="245" text-anchor="middle" fill="white" font-size="12" font-family="system-ui">保存检查点作为 π_ref</text>
+  <text x="810" y="264" text-anchor="middle" fill="white" font-size="12" font-family="system-ui">进入 RL（PPO / DPO / GRPO）</text>
+
+  <!-- ====== RightBottom：未via → 诊断 ====== -->
+  <line x1="480" y1="300" x2="480" y2="355" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrowR)"/>
+  <text x="492" y="332" fill="#ef4444" font-size="12" font-weight="bold" font-family="system-ui">❌ 否</text>
+
+  <rect x="340" y="360" width="280" height="40" rx="8" fill="url(#failBg)" filter="url(#shadow)"/>
+  <text x="480" y="385" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="system-ui">🔍 诊断未达标项，继续 SFT</text>
+
+  <!-- ====== Bottom：三种常见补救路径 ====== -->
+  <line x1="395" y1="400" x2="170" y2="500" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowR)"/>
+  <line x1="480" y1="400" x2="480" y2="500" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowR)"/>
+  <line x1="565" y1="400" x2="790" y2="500" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowR)"/>
+
+  <!-- 补救1 -->
+  <rect x="50" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="170" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">Loss 未收敛 / Overfitting</text>
+  <text x="60" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• 调整Learning Rate（LR Finder）</text>
+  <text x="60" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• 减少 epoch 数（2-3 epoch 足够）</text>
+  <text x="60" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• 增加Data量 / 提升Data多样性</text>
+
+  <!-- 补救2 -->
+  <rect x="360" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="480" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">格式正确率不达标</text>
+  <text x="370" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• 检查Data格式Consistency</text>
+  <text x="370" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• 验证 special tokens 设置</text>
+  <text x="370" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• 增加格式化Data比例</text>
+
+  <!-- 补救3 -->
+  <rect x="670" y="505" width="240" height="90" rx="8" fill="white" stroke="#f87171" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="790" y="527" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold" font-family="system-ui">Accuracy低 / 多样性坍缩</text>
+  <text x="680" y="547" fill="#374151" font-size="10.5" font-family="system-ui">• 提升Data Quality（Expert审核）</text>
+  <text x="680" y="563" fill="#374151" font-size="10.5" font-family="system-ui">• 增加困难Sample比例</text>
+  <text x="680" y="579" fill="#374151" font-size="10.5" font-family="system-ui">• 降低 epoch / 增加 dropout</text>
+
+  <!-- ====== Bottom：核心原则 ====== -->
+  <rect x="50" y="625" width="860" height="75" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="6,3"/>
+  <text x="480" y="652" text-anchor="middle" fill="#475569" font-size="13" font-weight="bold" font-family="system-ui">💡 核心原则：SFT 的Goal不是"做to最好"，while是"做to足够好"</text>
+  <text x="480" y="675" text-anchor="middle" fill="#64748b" font-size="11.5" font-family="system-ui">SFT 过度Training → Overfitting + 多样性丧失 → RL 探索空间被压缩 → 最终Performance反while更差</text>
+  <text x="480" y="693" text-anchor="middle" fill="#64748b" font-size="11.5" font-family="system-ui">最佳时机 = Loss 企稳 + 格式达标 + 有一定Accuracy + 仍有探索空间（通常 2-3 epoch）</text>
+</svg>

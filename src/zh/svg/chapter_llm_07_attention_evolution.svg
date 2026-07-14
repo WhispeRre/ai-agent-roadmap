@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 220" width="520" height="220" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif">
+  <rect width="520" height="220" rx="12" fill="#f8fafc"/>
+  <text x="260" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e293b">注意力机制演进：MHA → GQA → MLA</text>
+
+  <!-- MHA -->
+  <rect x="16" y="44" width="148" height="130" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="90" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#b91c1c">MHA（2017）</text>
+  <text x="90" y="78" text-anchor="middle" font-size="10" fill="#ef4444">每个 Q 头独立 KV</text>
+  <rect x="28" y="84" width="112" height="52" rx="4" fill="#fca5a5" stroke="#f87171" stroke-width="1"/>
+  <text x="84" y="100" text-anchor="middle" font-size="9" fill="#7f1d1d">32 组 Q</text>
+  <text x="84" y="114" text-anchor="middle" font-size="9" fill="#7f1d1d">32 组 K</text>
+  <text x="84" y="128" text-anchor="middle" font-size="9" fill="#7f1d1d">32 组 V</text>
+  <text x="90" y="152" text-anchor="middle" font-size="10" fill="#b91c1c">KV Cache 最大</text>
+  <text x="90" y="166" text-anchor="middle" font-size="9" fill="#ef4444">~2.5 GB / 1K Token</text>
+
+  <!-- GQA -->
+  <rect x="186" y="44" width="148" height="130" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.5"/>
+  <text x="260" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#a16207">GQA（2023）</text>
+  <text x="260" y="78" text-anchor="middle" font-size="10" fill="#a16207">多 Q 共享一组 KV</text>
+  <rect x="198" y="84" width="112" height="52" rx="4" fill="#fef08a" stroke="#facc15" stroke-width="1"/>
+  <text x="254" y="100" text-anchor="middle" font-size="9" fill="#a16207">32 组 Q</text>
+  <text x="254" y="114" text-anchor="middle" font-size="9" fill="#a16207">8 组 K（共享）</text>
+  <text x="254" y="128" text-anchor="middle" font-size="9" fill="#a16207">8 组 V（共享）</text>
+  <text x="260" y="152" text-anchor="middle" font-size="10" fill="#a16207">KV Cache 缩小 4x</text>
+  <text x="260" y="166" text-anchor="middle" font-size="9" fill="#a16207">~0.32 GB / 1K Token</text>
+
+  <!-- MLA -->
+  <rect x="356" y="44" width="148" height="130" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="430" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#15803d">MLA（2024）</text>
+  <text x="430" y="78" text-anchor="middle" font-size="10" fill="#22c55e">KV 压缩到低维向量</text>
+  <rect x="368" y="84" width="112" height="52" rx="4" fill="#bbf7d0" stroke="#4ade80" stroke-width="1"/>
+  <text x="424" y="100" text-anchor="middle" font-size="9" fill="#166534">128 组 Q</text>
+  <text x="424" y="114" text-anchor="middle" font-size="9" fill="#166534">512 维压缩向量</text>
+  <text x="424" y="128" text-anchor="middle" font-size="9" fill="#166534">（实时解压 K/V）</text>
+  <text x="430" y="152" text-anchor="middle" font-size="10" fill="#15803d">KV Cache 缩小 70x</text>
+  <text x="430" y="166" text-anchor="middle" font-size="9" fill="#22c55e">~0.04 GB / 1K Token</text>
+
+  <!-- 演进箭头 -->
+  <text x="172" y="112" text-anchor="middle" font-size="18" fill="#6366f1">→</text>
+  <text x="342" y="112" text-anchor="middle" font-size="18" fill="#6366f1">→</text>
+
+  <!-- 底部说明 -->
+  <rect x="16" y="186" width="488" height="28" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="260" y="205" text-anchor="middle" font-size="11" fill="#3730a3">驱动力：KV Cache 显存压力 → 推理效率 → 支持更长上下文</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" width="480" height="240">
+  <rect width="480" height="240" fill="#f8f9fa" rx="12"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Four Core Components of LLM Agent Frameworks</text>
+
+  <!-- Root -->
+  <rect x="170" y="48" width="140" height="35" rx="10" fill="#9b59b6" opacity="0.2" stroke="#9b59b6" stroke-width="2"/>
+  <text x="240" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">🤖 Agent</text>
+
+  <!-- Lines to children -->
+  <line x1="140" y1="85" x2="75" y2="110" stroke="#7f8c8d" stroke-width="1.5"/>
+  <line x1="200" y1="85" x2="195" y2="110" stroke="#7f8c8d" stroke-width="1.5"/>
+  <line x1="280" y1="85" x2="310" y2="110" stroke="#7f8c8d" stroke-width="1.5"/>
+  <line x1="340" y1="85" x2="420" y2="110" stroke="#7f8c8d" stroke-width="1.5"/>
+
+  <!-- Profile -->
+  <rect x="20" y="110" width="110" height="55" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="1.5"/>
+  <text x="75" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#3498db">🎭 Profile</text>
+  <text x="75" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Role description · Expertise</text>
+  <text x="75" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Behavioral constraints</text>
+
+  <!-- Memory -->
+  <rect x="145" y="110" width="100" height="55" rx="10" fill="#27ae60" opacity="0.15" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="195" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">🧠 Memory</text>
+  <text x="195" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Short-term · Long-term</text>
+  <text x="195" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Hybrid memory</text>
+
+  <!-- Planning -->
+  <rect x="260" y="110" width="100" height="55" rx="10" fill="#f39c12" opacity="0.15" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="310" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e67e22">📋 Planning</text>
+  <text x="310" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Task decomposition · Reflection</text>
+  <text x="310" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">External planner</text>
+
+  <!-- Action -->
+  <rect x="375" y="110" width="90" height="55" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="420" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">⚡ Action</text>
+  <text x="420" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">Tool use</text>
+  <text x="420" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">API · Environment interaction</text>
+
+  <!-- Source -->
+  <text x="240" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Source: Wang et al., 2023 "A Survey on LLM based Autonomous Agents"</text>
+  <text x="240" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#9b59b6">📖 Highly recommended as companion reading for this book</text>
+</svg>

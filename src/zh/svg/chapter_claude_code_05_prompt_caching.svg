@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 260" width="580" height="260">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="580" height="260" rx="14" fill="#f0f4f8"/>
+  <text x="290" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">Prompt Caching 缓存机制</text>
+
+  <!-- System Prompt 静态区 -->
+  <rect x="30" y="48" width="520" height="52" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="290" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803d">🟢 System Prompt（静态区）</text>
+  <text x="290" y="86" text-anchor="middle" font-size="11" fill="#15803d">跨会话复用，缓存命中率 90%+ · 节省大量 API 成本</text>
+
+  <!-- 用户消息 -->
+  <rect x="30" y="110" width="520" height="130" rx="8" fill="#f8f9fa" stroke="#6c757d" stroke-width="1.5"/>
+  <text x="290" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="#2c3e50">用户消息（动态区）</text>
+
+  <!-- CLAUDE.md 内容 -->
+  <rect x="50" y="140" width="480" height="28" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+  <text x="290" y="159" text-anchor="middle" font-size="11" fill="#856404">🟡 CLAUDE.md 内容 · 内容不变时可被缓存</text>
+
+  <!-- 当前任务描述 -->
+  <rect x="50" y="174" width="480" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="290" y="193" text-anchor="middle" font-size="11" fill="#dc2626">🔴 当前任务描述 · 每次变化，不缓存</text>
+
+  <!-- 对话历史 -->
+  <rect x="50" y="208" width="480" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="290" y="227" text-anchor="middle" font-size="11" fill="#dc2626">🔴 对话历史 · 逐渐增长，缓存失效</text>
+
+  <!-- 说明 -->
+  <rect x="30" y="245" width="520" height="10" rx="4" fill="#e8f4fd"/>
+  <text x="290" y="253" text-anchor="middle" font-size="10" fill="#2980b9">💡 保持 CLAUDE.md 内容稳定，避免频繁修改，可节省大量费用</text>
+</svg>

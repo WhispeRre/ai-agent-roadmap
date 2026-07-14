@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="700" height="200" rx="14" fill="#f8f9fa"/>
+  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">Agent Application Maturity Spectrum (2024-2025)</text>
+
+  <!-- [CN] -->
+  <defs>
+    <linearGradient id="maturity" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#f39c12;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="55" width="620" height="16" rx="8" fill="url(#maturity)"/>
+  <text x="40" y="90" text-anchor="start" font-size="11" fill="#27ae60" font-weight="bold">Mature</text>
+  <text x="660" y="90" text-anchor="end" font-size="11" fill="#e74c3c" font-weight="bold">Exploring</text>
+
+  <!--5 [CN] Stage-->
+  <circle cx="90" cy="63" r="6" fill="white" stroke="#2ecc71" stroke-width="2"/>
+  <circle cx="230" cy="63" r="6" fill="white" stroke="#27ae60" stroke-width="2"/>
+  <circle cx="370" cy="63" r="6" fill="white" stroke="#f39c12" stroke-width="2"/>
+  <circle cx="510" cy="63" r="6" fill="white" stroke="#e67e22" stroke-width="2"/>
+  <circle cx="620" cy="63" r="6" fill="white" stroke="#e74c3c" stroke-width="2"/>
+
+  <!-- [CN] -->
+  <text x="90" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">🟢 Coding Assistance</text>
+  <text x="90" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">Code generation</text>
+  <text x="90" y="136" text-anchor="middle" font-size="10" fill="#7f8c8d">Code review</text>
+
+  <text x="230" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#27ae60">🟢 Customer Service Chat</text>
+  <text x="230" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">Smart customer service</text>
+  <text x="230" y="136" text-anchor="middle" font-size="10" fill="#7f8c8d">Copywriting</text>
+
+  <text x="370" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#f39c12">🟡 Data Analysis</text>
+  <text x="370" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">Office automation</text>
+  <text x="370" y="136" text-anchor="middle" font-size="10" fill="#7f8c8d">Actively developing</text>
+
+  <text x="510" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">🟡 Research Assistant</text>
+  <text x="510" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">Medical diagnosis</text>
+  <text x="510" y="136" text-anchor="middle" font-size="10" fill="#7f8c8d">Partially deployed</text>
+
+  <text x="620" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#e74c3c">🔴 Fully Autonomous</text>
+  <text x="620" y="122" text-anchor="middle" font-size="10" fill="#7f8c8d">Decision systems</text>
+  <text x="620" y="136" text-anchor="middle" font-size="10" fill="#7f8c8d">Early exploration</text>
+
+  <!--Diagram [CN] -->
+  <circle cx="200" cy="175" r="6" fill="#2ecc71"/>
+  <text x="212" y="179" font-size="11" fill="#555">Widely used in production</text>
+  <circle cx="390" cy="175" r="6" fill="#f39c12"/>
+  <text x="402" y="179" font-size="11" fill="#555">Actively developing，Partially deployed</text>
+  <circle cx="560" cy="175" r="6" fill="#e74c3c"/>
+  <text x="572" y="179" font-size="11" fill="#555">Early exploration phase</text>
+</svg>

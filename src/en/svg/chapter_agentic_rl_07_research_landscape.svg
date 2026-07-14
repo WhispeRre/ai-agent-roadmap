@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="420" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Agentic-RL Research Landscape (2024—2026)</text>
+
+  <!-- Timeline axis -->
+  <line x1="60" y1="65" x2="740" y2="65" stroke="#bdc3c8" stroke-width="2"/>
+  <circle cx="120" cy="65" r="5" fill="#e74c3c"/>
+  <text x="120" y="58" text-anchor="middle" font-size="10" fill="#666">2024.09</text>
+  <text x="120" y="82" text-anchor="middle" font-size="9" fill="#e74c3c" font-weight="bold">OpenAI o1</text>
+
+  <circle cx="260" cy="65" r="5" fill="#3498db"/>
+  <text x="260" y="58" text-anchor="middle" font-size="10" fill="#666">2025.01</text>
+  <text x="260" y="82" text-anchor="middle" font-size="9" fill="#3498db" font-weight="bold">DeepSeek-R1</text>
+
+  <circle cx="400" cy="65" r="5" fill="#27ae60"/>
+  <text x="400" y="58" text-anchor="middle" font-size="10" fill="#666">2025.03</text>
+  <text x="400" y="82" text-anchor="middle" font-size="9" fill="#27ae60" font-weight="bold">DAPO</text>
+
+  <circle cx="540" cy="65" r="5" fill="#8e44ad"/>
+  <text x="540" y="58" text-anchor="middle" font-size="10" fill="#666">2025.04</text>
+  <text x="540" y="82" text-anchor="middle" font-size="9" fill="#8e44ad" font-weight="bold">VAPO</text>
+
+  <circle cx="680" cy="65" r="5" fill="#e67e22"/>
+  <text x="680" y="58" text-anchor="middle" font-size="10" fill="#666">2025-26</text>
+  <text x="680" y="82" text-anchor="middle" font-size="9" fill="#e67e22" font-weight="bold">Multimodal RL</text>
+
+  <!-- Four directions -->
+  <!-- Direction 1: Pure RL Training -->
+  <rect x="20" y="100" width="185" height="140" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="112" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">Pure RL Training</text>
+  <text x="32" y="140" font-size="11" fill="#444">• DeepSeek-R1: Pure RL</text>
+  <text x="32" y="157" font-size="11" fill="#444">  elicits autonomous reasoning</text>
+  <text x="32" y="177" font-size="11" fill="#444">• Zero SFT cold start</text>
+  <text x="32" y="197" font-size="11" fill="#444">• Aha Moment emergence</text>
+  <text x="32" y="217" font-size="11" fill="#444">• Core GRPO algorithm</text>
+
+  <!-- Direction 2: Training Stability -->
+  <rect x="215" y="100" width="185" height="140" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="307" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">Training Stability</text>
+  <text x="227" y="140" font-size="11" fill="#444">• DAPO: Remove KL constraint</text>
+  <text x="227" y="157" font-size="11" fill="#444">• Dynamic sampling (Clip-Higher)</text>
+  <text x="227" y="177" font-size="11" fill="#444">• VAPO: Value-Augmented PPO</text>
+  <text x="227" y="197" font-size="11" fill="#444">• Token-level value estimation</text>
+  <text x="227" y="217" font-size="11" fill="#444">• AIME 60.4 score</text>
+
+  <!-- Direction 3: Distillation & Compression -->
+  <rect x="410" y="100" width="185" height="140" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="502" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">Distillation &amp; Compression</text>
+  <text x="422" y="140" font-size="11" fill="#444">• Long2Short distillation</text>
+  <text x="422" y="157" font-size="11" fill="#444">• Kimi k1.5 128K RL</text>
+  <text x="422" y="177" font-size="11" fill="#444">• Small model reasoning RL</text>
+  <text x="422" y="197" font-size="11" fill="#444">• QwQ-32B / R1-Distill</text>
+  <text x="422" y="217" font-size="11" fill="#444">• Thriving open-source ecosystem</text>
+
+  <!-- Direction 4: Future Trends -->
+  <rect x="605" y="100" width="175" height="140" rx="8" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="692" y="120" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">Future Trends</text>
+  <text x="617" y="140" font-size="11" fill="#444">• Multimodal reasoning RL</text>
+  <text x="617" y="157" font-size="11" fill="#444">• Vision + code + tools</text>
+  <text x="617" y="177" font-size="11" fill="#444">• End-to-end Agent RL</text>
+  <text x="617" y="197" font-size="11" fill="#444">• Automated curriculum learning</text>
+  <text x="617" y="217" font-size="11" fill="#444">• Safety alignment integration</text>
+
+  <!-- Core insight -->
+  <rect x="20" y="255" width="760" height="55" rx="8" fill="#e67e22" opacity="0.10" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="400" y="275" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">Core Paradigm Shift</text>
+  <text x="400" y="297" text-anchor="middle" font-size="12" fill="#555">RLHF (alignment) → Reasoning RL (elicit reasoning) → Agentic-RL (Agent training) → General Agent RL</text>
+
+  <!-- Key data cards -->
+  <rect x="20" y="325" width="245" height="80" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="142" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">DeepSeek-R1</text>
+  <text x="142" y="368" text-anchor="middle" font-size="11" fill="#666">Pure RL training → autonomous reasoning emerged</text>
+  <text x="142" y="388" text-anchor="middle" font-size="11" fill="#666">AIME 2024: 79.8 | Nature cover</text>
+
+  <rect x="278" y="325" width="245" height="80" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">DAPO / VAPO</text>
+  <text x="400" y="368" text-anchor="middle" font-size="11" fill="#666">Reproducible large-scale RL training</text>
+  <text x="400" y="388" text-anchor="middle" font-size="11" fill="#666">Clip-Higher + Token-level Value</text>
+
+  <rect x="536" y="325" width="244" height="80" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="658" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">Open Source Ecosystem</text>
+  <text x="658" y="368" text-anchor="middle" font-size="11" fill="#666">OpenRLHF / veRL / TRL</text>
+  <text x="658" y="388" text-anchor="middle" font-size="11" fill="#666">Enabling individual devs to reproduce RL</text>
+
+</svg>

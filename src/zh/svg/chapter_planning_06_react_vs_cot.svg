@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="600" height="380">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="600" height="380" fill="#f8f9fa" rx="12"/>
+  <text x="300" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">ReAct vs CoT vs Action-only 三种模式对比</text>
+
+  <!-- CoT -->
+  <text x="300" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#9b59b6">传统 CoT（只想不做）</text>
+  <rect x="50" y="72" width="500" height="40" rx="10" fill="#9b59b6" opacity="0.1" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="80" y="92" font-family="Arial, sans-serif" font-size="11" fill="#555">问题</text>
+  <path d="M 108 92 L 138 92" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="148" y="92" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">🧠 思考1</text>
+  <path d="M 210 92 L 240 92" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="250" y="92" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">🧠 思考2</text>
+  <path d="M 312 92 L 342 92" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="352" y="92" font-family="Arial, sans-serif" font-size="11" fill="#9b59b6">🧠 思考3</text>
+  <path d="M 414 92 L 444 92" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="458" y="92" font-family="Arial, sans-serif" font-size="11" fill="#555">答案</text>
+  <text x="300" y="126" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 全程只在"想"，没有获取新信息的能力</text>
+
+  <!-- Action-only -->
+  <text x="300" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">传统 Action-only（只做不想）</text>
+  <rect x="50" y="166" width="500" height="40" rx="10" fill="#e74c3c" opacity="0.1" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="80" y="186" font-family="Arial, sans-serif" font-size="11" fill="#555">问题</text>
+  <path d="M 108 186 L 138 186" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="148" y="186" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">⚡ 行动1</text>
+  <path d="M 210 186 L 240 186" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="250" y="186" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">⚡ 行动2</text>
+  <path d="M 312 186 L 342 186" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="352" y="186" font-family="Arial, sans-serif" font-size="11" fill="#e74c3c">⚡ 行动3</text>
+  <path d="M 414 186 L 444 186" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="458" y="186" font-family="Arial, sans-serif" font-size="11" fill="#555">答案</text>
+  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">⚠️ 全程只在"做"，没有推理和规划</text>
+
+  <!-- ReAct -->
+  <text x="300" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#27ae60">ReAct（想一步做一步）✅</text>
+  <rect x="30" y="260" width="540" height="40" rx="10" fill="#27ae60" opacity="0.1" stroke="#27ae60" stroke-width="2"/>
+  <text x="46" y="280" font-family="Arial, sans-serif" font-size="10" fill="#555">问题</text>
+  <path d="M 70 280 L 88 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="94" y="280" font-family="Arial, sans-serif" font-size="10" fill="#9b59b6">🧠思考</text>
+  <path d="M 136 280 L 150 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="156" y="280" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">⚡行动</text>
+  <path d="M 198 280 L 212 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="218" y="280" font-family="Arial, sans-serif" font-size="10" fill="#3498db">👁观察</text>
+  <path d="M 260 280 L 274 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="280" y="280" font-family="Arial, sans-serif" font-size="10" fill="#9b59b6">🧠思考</text>
+  <path d="M 322 280 L 336 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="342" y="280" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">⚡行动</text>
+  <path d="M 384 280 L 398 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="404" y="280" font-family="Arial, sans-serif" font-size="10" fill="#3498db">👁观察</text>
+  <path d="M 446 280 L 460 280" stroke="#7f8c8d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="474" y="280" font-family="Arial, sans-serif" font-size="10" fill="#555">答案</text>
+  <text x="300" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">✅ 每次行动都有理由，每次推理都有新信息</text>
+
+  <!-- Legend -->
+  <rect x="130" y="335" width="12" height="12" rx="3" fill="#9b59b6" opacity="0.3"/>
+  <text x="148" y="345" font-family="Arial, sans-serif" font-size="10" fill="#555">推理 (Thought)</text>
+  <rect x="240" y="335" width="12" height="12" rx="3" fill="#e74c3c" opacity="0.3"/>
+  <text x="258" y="345" font-family="Arial, sans-serif" font-size="10" fill="#555">行动 (Action)</text>
+  <rect x="350" y="335" width="12" height="12" rx="3" fill="#3498db" opacity="0.3"/>
+  <text x="368" y="345" font-family="Arial, sans-serif" font-size="10" fill="#555">观察 (Observation)</text>
+</svg>

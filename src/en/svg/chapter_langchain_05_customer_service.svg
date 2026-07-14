@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="800" height="350">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+    <marker id="cs" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#e67e22"/>
+    </marker>
+  </defs>
+  <rect width="800" height="350" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Multi-Function Customer Service Agent Architecture</text>
+
+  <!-- [CN] Input-->
+  <rect x="300" y="52" width="200" height="35" rx="8" fill="#2980b9" opacity="0.25" stroke="#2980b9" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#2980b9">👤 User Question</text>
+
+  <line x1="400" y1="87" x2="400" y2="107" stroke="#e67e22" stroke-width="1.5" marker-end="url(#cs)"/>
+
+  <!-- CoreAgent -->
+  <rect x="200" y="110" width="400" height="50" rx="8" fill="#e67e22" opacity="0.15" stroke="#e67e22" stroke-width="2"/>
+  <text x="400" y="133" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">🤖 Customer Service Agent (LangChain AgentExecutor)</text>
+  <text x="400" y="150" text-anchor="middle" font-size="10" fill="#888">System Prompt + Conversation history + Tool selection</text>
+
+  <!-- [CN] -->
+  <line x1="150" y1="140" x2="150" y2="185" stroke="#888" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="330" y1="160" x2="330" y2="185" stroke="#888" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="470" y1="160" x2="470" y2="185" stroke="#888" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="650" y1="140" x2="650" y2="185" stroke="#888" stroke-width="1" stroke-dasharray="4"/>
+
+  <!-- [CN] Module-->
+  <rect x="20" y="185" width="175" height="100" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="107" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">📋 Order Query</text>
+  <text x="32" y="228" font-size="11" fill="#444">• Order status query</text>
+  <text x="32" y="246" font-size="11" fill="#444">• Logistics tracking</text>
+  <text x="32" y="264" font-size="11" fill="#444">• Refund progress</text>
+
+  <rect x="210" y="185" width="175" height="100" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="297" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">📚 Knowledge Base RAG</text>
+  <text x="222" y="228" font-size="11" fill="#444">• FAQ vector search</text>
+  <text x="222" y="246" font-size="11" fill="#444">• Product manual search</text>
+  <text x="222" y="264" font-size="11" fill="#444">• Policy rules matching</text>
+
+  <rect x="400" y="185" width="175" height="100" rx="8" fill="#8e44ad" opacity="0.12" stroke="#8e44ad" stroke-width="2"/>
+  <text x="487" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">🔧 Ticket Operations</text>
+  <text x="412" y="228" font-size="11" fill="#444">• Create ticket</text>
+  <text x="412" y="246" font-size="11" fill="#444">• Escalate priority</text>
+  <text x="412" y="264" font-size="11" fill="#444">• Transfer to human</text>
+
+  <rect x="590" y="185" width="190" height="100" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="685" y="208" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">💬 Dialog Management</text>
+  <text x="602" y="228" font-size="11" fill="#444">• Multi-turn history memory</text>
+  <text x="602" y="246" font-size="11" fill="#444">• User profile linking</text>
+  <text x="602" y="264" font-size="11" fill="#444">• Sentiment routing</text>
+
+  <!--LangChain [CN] -->
+  <rect x="20" y="300" width="760" height="38" rx="8" fill="#e67e22" opacity="0.10" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="100" y="324" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">ChatOpenAI</text>
+  <text x="240" y="324" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">@tool decorator</text>
+  <text x="400" y="324" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">ChatPromptTemplate</text>
+  <text x="560" y="324" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">ChatMessageHistory</text>
+  <text x="710" y="324" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">AgentExecutor</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" width="500" height="280">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="500" height="280" fill="#f8f9fa" rx="12"/>
+  <text x="250" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Self-Refine：Iteration自我改进</text>
+
+  <!-- Generator -->
+  <rect x="165" y="50" width="170" height="48" rx="10" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="250" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3498db">📝 Role1：Generation者</text>
+  <text x="250" y="89" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Generation初始Output</text>
+
+  <!-- Arrow down -->
+  <path d="M 250 100 L 250 122" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Critic -->
+  <rect x="165" y="125" width="170" height="48" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="2"/>
+  <text x="250" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e74c3c">🔍 Role2：批评者</text>
+  <text x="250" y="164" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Evaluation质量，指出问题</text>
+
+  <!-- Decision -->
+  <path d="M 250 175 L 250 192" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
+  <polygon points="250,195 310,218 250,241 190,218" fill="#fff3bf" stroke="#f39c12" stroke-width="2"/>
+  <text x="250" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#e67e22">满意?</text>
+  <text x="250" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e67e22">批评者判断</text>
+
+  <!-- Yes arrow right -->
+  <path d="M 312 218 L 390 218" stroke="#27ae60" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="351" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">是 ✅</text>
+  <rect x="393" y="203" width="80" height="30" rx="8" fill="#27ae60" opacity="0.2" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="433" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#27ae60">🏁 Output</text>
+
+  <!-- No arrow loop back -->
+  <line x1="188" y1="218" x2="110" y2="218" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="110" y1="218" x2="110" y2="74" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+  <line x1="110" y1="74" x2="163" y2="74" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="148" y="210" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">否</text>
+  <text x="93" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c" transform="rotate(-90, 93, 150)">修改Back重新Generation</text>
+
+  <!-- Note -->
+  <text x="250" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">💡 同一个 LLM 扮演Generation者and批评者两个Role，无需Outer部反馈</text>
+</svg>

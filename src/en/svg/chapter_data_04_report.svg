@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="rp" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#27ae60"/>
+    </marker>
+  </defs>
+  <rect width="800" height="320" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="35" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Automated Report Generation Pipeline</text>
+
+  <!-- Workflow -->
+  <rect x="30" y="65" width="120" height="50" rx="8" fill="#3498db" opacity="0.9"/>
+  <text x="90" y="88" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Analysis results</text>
+  <text x="90" y="104" text-anchor="middle" font-size="9" fill="#d4e6f1">Data + charts</text>
+
+  <line x1="150" y1="90" x2="180" y2="90" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#rp)"/>
+
+  <rect x="182" y="60" width="150" height="60" rx="8" fill="white" stroke="#8e44ad" stroke-width="2"/>
+  <text x="257" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">LLM insights</text>
+  <text x="257" y="103" text-anchor="middle" font-size="10" fill="#555">Extract key findings</text>
+
+  <line x1="332" y1="90" x2="362" y2="90" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#rp)"/>
+
+  <rect x="364" y="60" width="150" height="60" rx="8" fill="white" stroke="#e67e22" stroke-width="2"/>
+  <text x="439" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">Template rendering</text>
+  <text x="439" y="103" text-anchor="middle" font-size="10" fill="#555">Markdown structuring</text>
+
+  <line x1="514" y1="90" x2="544" y2="90" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#rp)"/>
+
+  <rect x="546" y="60" width="150" height="60" rx="8" fill="white" stroke="#27ae60" stroke-width="2"/>
+  <text x="621" y="83" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">Quality review</text>
+  <text x="621" y="103" text-anchor="middle" font-size="10" fill="#555">Completeness + consistency</text>
+
+  <line x1="696" y1="90" x2="726" y2="90" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#rp)"/>
+
+  <rect x="728" y="65" width="50" height="50" rx="25" fill="#27ae60" opacity="0.9"/>
+  <text x="753" y="94" text-anchor="middle" font-size="12" fill="white" font-weight="bold">📄</text>
+
+  <!--Report [CN] -->
+  <text x="400" y="152" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">Auto-generated Report Structure</text>
+
+  <rect x="30" y="168" width="145" height="130" rx="8" fill="white" stroke="#3498db" stroke-width="1.5"/>
+  <text x="102" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">📋 Summary</text>
+  <text x="102" y="210" text-anchor="middle" font-size="10" fill="#555">Core findings</text>
+  <text x="102" y="228" text-anchor="middle" font-size="10" fill="#555">Key metrics</text>
+  <text x="102" y="246" text-anchor="middle" font-size="10" fill="#555">Conclusion overview</text>
+  <rect x="40" y="260" width="125" height="25" rx="4" fill="#e8f4fd"/>
+  <text x="102" y="278" text-anchor="middle" font-size="9" fill="#3498db">LLM auto-written</text>
+
+  <rect x="190" y="168" width="145" height="130" rx="8" fill="white" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="262" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#8e44ad">📊 Data Details</text>
+  <text x="262" y="210" text-anchor="middle" font-size="10" fill="#555">Statistical tables</text>
+  <text x="262" y="228" text-anchor="middle" font-size="10" fill="#555">Trend charts</text>
+  <text x="262" y="246" text-anchor="middle" font-size="10" fill="#555">Comparative analysis</text>
+  <rect x="200" y="260" width="125" height="25" rx="4" fill="#f0e6f6"/>
+  <text x="262" y="278" text-anchor="middle" font-size="9" fill="#8e44ad">Auto-generated</text>
+
+  <rect x="350" y="168" width="145" height="130" rx="8" fill="white" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="422" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">💡 Insights</text>
+  <text x="422" y="210" text-anchor="middle" font-size="10" fill="#555">Anomaly analysis</text>
+  <text x="422" y="228" text-anchor="middle" font-size="10" fill="#555">Root cause inference</text>
+  <text x="422" y="246" text-anchor="middle" font-size="10" fill="#555">Impact assessment</text>
+  <rect x="360" y="260" width="125" height="25" rx="4" fill="#fdf2e9"/>
+  <text x="422" y="278" text-anchor="middle" font-size="9" fill="#e67e22">LLM deep analysis</text>
+
+  <rect x="510" y="168" width="145" height="130" rx="8" fill="white" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="582" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">📝 Recommendations</text>
+  <text x="582" y="210" text-anchor="middle" font-size="10" fill="#555">Action recommendations</text>
+  <text x="582" y="228" text-anchor="middle" font-size="10" fill="#555">Priority ranking</text>
+  <text x="582" y="246" text-anchor="middle" font-size="10" fill="#555">Expected outcomes</text>
+  <rect x="520" y="260" width="125" height="25" rx="4" fill="#e8f8e8"/>
+  <text x="582" y="278" text-anchor="middle" font-size="9" fill="#27ae60">LLM strategic suggestions</text>
+
+  <rect x="670" y="168" width="105" height="130" rx="8" fill="white" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="722" y="190" text-anchor="middle" font-size="12" font-weight="bold" fill="#e74c3c">📎 Appendix</text>
+  <text x="722" y="210" text-anchor="middle" font-size="10" fill="#555">Raw SQL</text>
+  <text x="722" y="228" text-anchor="middle" font-size="10" fill="#555">Data sources</text>
+  <text x="722" y="246" text-anchor="middle" font-size="10" fill="#555">Methodology notes</text>
+  <rect x="680" y="260" width="85" height="25" rx="4" fill="#fce4e4"/>
+  <text x="722" y="278" text-anchor="middle" font-size="9" fill="#e74c3c">Auto-tracing</text>
+</svg>

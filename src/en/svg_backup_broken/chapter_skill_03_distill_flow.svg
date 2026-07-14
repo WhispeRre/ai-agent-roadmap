@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" height="200">
+  <defs>
+    <style>text { font-family: Arial, sans-serif; }</style>
+    <marker id="arr8" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="700" height="200" fill="#f0f4f8" rx="14"/>
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">SkillsDistillation Flow</text>
+
+  <!-- 步骤 -->
+  <rect x="30" y="48" width="140" height="60" rx="10" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="1.5"/>
+  <text x="100" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#3498db">1. LLMExecution</text>
+  <text x="100" y="88" text-anchor="middle" font-size="10" fill="#555">GPT-4 Execution</text>
+  <text x="100" y="102" text-anchor="middle" font-size="10" fill="#555">大量Task</text>
+  <line x1="170" y1="78" x2="198" y2="78" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr8)"/>
+
+  <rect x="200" y="48" width="140" height="60" rx="10" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="270" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#e67e22">2. 记录过程</text>
+  <text x="270" y="88" text-anchor="middle" font-size="10" fill="#555">Think过程 +</text>
+  <text x="270" y="102" text-anchor="middle" font-size="10" fill="#555">Act序列</text>
+  <line x1="340" y1="78" x2="368" y2="78" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr8)"/>
+
+  <rect x="370" y="48" width="140" height="60" rx="10" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="440" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">3. Fine-tuning小Model</text>
+  <text x="440" y="88" text-anchor="middle" font-size="10" fill="#555">用DataFine-tuning</text>
+  <text x="440" y="102" text-anchor="middle" font-size="10" fill="#555">Qwen-7B</text>
+  <line x1="510" y1="78" x2="538" y2="78" stroke="#2c3e50" stroke-width="1.5" marker-end="url(#arr8)"/>
+
+  <rect x="540" y="48" width="140" height="60" rx="10" fill="#9b59b6" opacity="0.12" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="610" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#9b59b6">4. 获得Skills</text>
+  <text x="610" y="88" text-anchor="middle" font-size="10" fill="#555">小Model获得</text>
+  <text x="610" y="102" text-anchor="middle" font-size="10" fill="#555">特定领域Skills</text>
+
+  <!-- 类比 -->
+  <rect x="30" y="130" width="640" height="58" rx="10" fill="#f39c12" opacity="0.06" stroke="#f39c12" stroke-width="1"/>
+  <text x="350" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#f39c12">📖 类比</text>
+  <text x="140" y="173" text-anchor="middle" font-size="11" fill="#555">LLM = 经验丰富的师傅</text>
+  <text x="340" y="173" text-anchor="middle" font-size="11" fill="#555">Execution记录 = Manipulation录像</text>
+  <text x="530" y="173" text-anchor="middle" font-size="11" fill="#555">小Model = 学会技艺的学徒</text>
+</svg>

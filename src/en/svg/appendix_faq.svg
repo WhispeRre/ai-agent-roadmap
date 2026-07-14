@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <style>text { font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif; }</style>
+  </defs>
+  <rect width="800" height="300" rx="12" fill="#f8f9fa"/>
+  <text x="400" y="32" text-anchor="middle" font-size="17" font-weight="bold" fill="#2c3e50">Agent Development FAQ Categories</text>
+
+  <!-- Four categories -->
+  <rect x="20" y="55" width="185" height="115" rx="8" fill="#3498db" opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="112" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#3498db">🌱 Basics</text>
+  <text x="32" y="100" font-size="11" fill="#444">• Agent vs ChatGPT</text>
+  <text x="32" y="118" font-size="11" fill="#444">• OpenAI vs Open Source</text>
+  <text x="32" y="136" font-size="11" fill="#444">• GPU Requirements</text>
+  <text x="32" y="154" font-size="11" fill="#444">• Learning Path Planning</text>
+
+  <rect x="215" y="55" width="185" height="115" rx="8" fill="#e67e22" opacity="0.12" stroke="#e67e22" stroke-width="2"/>
+  <text x="307" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">🔧 Technical Issues</text>
+  <text x="227" y="100" font-size="11" fill="#444">• API Timeout Handling</text>
+  <text x="227" y="118" font-size="11" fill="#444">• Token Limit Optimization</text>
+  <text x="227" y="136" font-size="11" fill="#444">• Multi-turn Conversation Mgmt</text>
+  <text x="227" y="154" font-size="11" fill="#444">• Tool Call Failures</text>
+
+  <rect x="410" y="55" width="185" height="115" rx="8" fill="#27ae60" opacity="0.12" stroke="#27ae60" stroke-width="2"/>
+  <text x="502" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">🏗 Architecture</text>
+  <text x="422" y="100" font-size="11" fill="#444">• Framework Selection</text>
+  <text x="422" y="118" font-size="11" fill="#444">• Single vs Multi-Agent</text>
+  <text x="422" y="136" font-size="11" fill="#444">• RAG vs Fine-tuning</text>
+  <text x="422" y="154" font-size="11" fill="#444">• Deployment Strategy</text>
+
+  <rect x="605" y="55" width="175" height="115" rx="8" fill="#e74c3c" opacity="0.12" stroke="#e74c3c" stroke-width="2"/>
+  <text x="692" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">🚀 Advanced</text>
+  <text x="617" y="100" font-size="11" fill="#444">• Production Reliability</text>
+  <text x="617" y="118" font-size="11" fill="#444">• Cost Optimization</text>
+  <text x="617" y="136" font-size="11" fill="#444">• Security &amp; Compliance</text>
+  <text x="617" y="154" font-size="11" fill="#444">• Evaluation Framework</text>
+
+  <!-- Top 5 Common Mistakes -->
+  <rect x="20" y="185" width="760" height="100" rx="8" fill="#8e44ad" opacity="0.08" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="400" y="210" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e44ad">⚠️ Top 5 Beginner Mistakes</text>
+
+  <text x="100" y="238" text-anchor="middle" font-size="11" fill="#555">① Hardcoding</text>
+  <text x="100" y="256" text-anchor="middle" font-size="11" fill="#555">API Keys</text>
+
+  <text x="260" y="238" text-anchor="middle" font-size="11" fill="#555">② Ignoring</text>
+  <text x="260" y="256" text-anchor="middle" font-size="11" fill="#555">Error Handling</text>
+
+  <text x="400" y="238" text-anchor="middle" font-size="11" fill="#555">③ Overly Complex</text>
+  <text x="400" y="256" text-anchor="middle" font-size="11" fill="#555">Prompts</text>
+
+  <text x="540" y="238" text-anchor="middle" font-size="11" fill="#555">④ No Limits on</text>
+  <text x="540" y="256" text-anchor="middle" font-size="11" fill="#555">Agent Behavior</text>
+
+  <text x="680" y="238" text-anchor="middle" font-size="11" fill="#555">⑤ Skipping</text>
+  <text x="680" y="256" text-anchor="middle" font-size="11" fill="#555">Evaluation</text>
+
+</svg>
