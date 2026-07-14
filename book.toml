@@ -1,5 +1,5 @@
 [book]
-authors = ["liuzeyu03"]
+authors = ["whisperre"]
 language = "zh-CN"
 src = "src/zh"
 title = "AI Agent Roadmap"
@@ -17,7 +17,7 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 additional-css = ["theme/custom.css"]
 no-section-label = true
-git-repository-url = "https://github.com/liuzeyu03/ai-agent-roadmap"
+git-repository-url = "https://github.com/whisperre/ai-agent-roadmap"
 git-repository-icon = "fa-github"
 
 [output.html.print]

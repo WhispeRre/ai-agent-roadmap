@@ -8,10 +8,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built with mdBook](https://img.shields.io/badge/built%20with-mdBook-2f6f73)](https://rust-lang.github.io/mdBook/)
-[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-4460aa)](https://liuzeyu03.github.io/ai-agent-roadmap/)
+[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-4460aa)](https://whisperre.github.io/ai-agent-roadmap/)
 
-[Read Chinese](https://liuzeyu03.github.io/ai-agent-roadmap/zh/) ·
-[Read English](https://liuzeyu03.github.io/ai-agent-roadmap/en/) ·
+[Read Chinese](https://whisperre.github.io/ai-agent-roadmap/zh/) ·
+[Read English](https://whisperre.github.io/ai-agent-roadmap/en/) ·
 [中文 README](README_ZH.md)
 
 </div>
@@ -68,7 +68,7 @@ This repository includes a GitHub Actions workflow at `.github/workflows/deploy.
 Expected public URL:
 
 ```text
-https://liuzeyu03.github.io/ai-agent-roadmap/
+https://whisperre.github.io/ai-agent-roadmap/
 ```
 
 If your GitHub username is different, update the links in `README.md`, `README_ZH.md`, `book.toml`, `book-en.toml`, and `root-index.html`.

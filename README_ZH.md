@@ -8,10 +8,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built with mdBook](https://img.shields.io/badge/built%20with-mdBook-2f6f73)](https://rust-lang.github.io/mdBook/)
-[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-4460aa)](https://liuzeyu03.github.io/ai-agent-roadmap/)
+[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-4460aa)](https://whisperre.github.io/ai-agent-roadmap/)
 
-[在线阅读（中文）](https://liuzeyu03.github.io/ai-agent-roadmap/zh/) ·
-[Read English](https://liuzeyu03.github.io/ai-agent-roadmap/en/) ·
+[在线阅读（中文）](https://whisperre.github.io/ai-agent-roadmap/zh/) ·
+[Read English](https://whisperre.github.io/ai-agent-roadmap/en/) ·
 [English README](README.md)
 
 </div>
@@ -68,10 +68,10 @@ cp root-index.html ./book/index.html
 预期访问地址：
 
 ```text
-https://liuzeyu03.github.io/ai-agent-roadmap/
+https://whisperre.github.io/ai-agent-roadmap/
 ```
 
-如果你的 GitHub 用户名不是 `liuzeyu03`，请同步修改 `README.md`、`README_ZH.md`、`book.toml`、`book-en.toml` 和 `root-index.html` 中的链接。
+如果你的 GitHub 用户名不是 `whisperre`，请同步修改 `README.md`、`README_ZH.md`、`book.toml`、`book-en.toml` 和 `root-index.html` 中的链接。
 
 ## 项目说明
 
