@@ -233,3 +233,8 @@
   - [F.2 关键库安装](./chapter_setup/02_install_libs.md)
   - [F.3 API Key 管理与安全最佳实践](./chapter_setup/03_api_key_management.md)
   - [F.4 第一个 Agent：Hello Agent！](./chapter_setup/04_hello_agent.md)
+
+---
+
+- [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-07-22：安全、工作流与垂直 Agent 进展](./chapter_agent_news/2026-07-22.md)
