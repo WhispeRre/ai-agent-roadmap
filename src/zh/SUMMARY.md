@@ -237,4 +237,5 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-07-23：生产级 Agent、算力扩张与行业平台](./chapter_agent_news/2026-07-23.md)
   - [2026-07-22：安全、工作流与垂直 Agent 进展](./chapter_agent_news/2026-07-22.md)
