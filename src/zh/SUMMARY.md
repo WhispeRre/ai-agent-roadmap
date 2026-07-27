@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-07-27：Agent 运行时可观测性、云端模型接入与生产化入口](./chapter_agent_news/2026-07-27.md)
   - [2026-07-25：长时程 Agent、模型分层与云端推理](./chapter_agent_news/2026-07-25.md)
   - [2026-07-24：健康数据、经济指数与内容行业 AI](./chapter_agent_news/2026-07-24.md)
   - [2026-07-23：生产级 Agent、算力扩张与行业平台](./chapter_agent_news/2026-07-23.md)
