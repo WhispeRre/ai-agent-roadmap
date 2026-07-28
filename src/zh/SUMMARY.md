@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-07-29：托管 Agent 的运行时约束与安全调查 MCP](./chapter_agent_news/2026-07-29.md)
   - [2026-07-28：工作边界、企业采用与 Agent 评测](./chapter_agent_news/2026-07-28.md)
   - [2026-07-27：Agent 运行时可观测性、云端模型接入与生产化入口](./chapter_agent_news/2026-07-27.md)
   - [2026-07-25：长时程 Agent、模型分层与云端推理](./chapter_agent_news/2026-07-25.md)
