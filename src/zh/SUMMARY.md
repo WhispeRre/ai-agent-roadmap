@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-01：截至今天最新可核验的 AI 治理与 Agent 安全动态](./chapter_agent_news/2026-08-01.md)
   - [2026-07-31：截至今天最新可核验的 Agent 运行时治理动态](./chapter_agent_news/2026-07-31.md)
   - [2026-07-29：托管 Agent 的运行时约束与安全调查 MCP](./chapter_agent_news/2026-07-29.md)
   - [2026-07-28：工作边界、企业采用与 Agent 评测](./chapter_agent_news/2026-07-28.md)
