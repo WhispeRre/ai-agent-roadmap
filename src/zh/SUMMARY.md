@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-05：截至今天最新可核验的 AI/Agent 动态](./chapter_agent_news/2026-08-05.md)
   - [2026-08-04：截至今天最新可核验的 AI/Agent 动态](./chapter_agent_news/2026-08-04.md)
   - [2026-08-03：截至今天最新可核验的 AI/Agent 动态](./chapter_agent_news/2026-08-03.md)
   - [2026-08-02：截至今天最新可核验的 AI/Agent 动态](./chapter_agent_news/2026-08-02.md)
