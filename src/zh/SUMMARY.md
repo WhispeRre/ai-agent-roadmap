@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-09：生物安全路由、网络能力评估与官方源复验](./chapter_agent_news/2026-08-09.md)
   - [2026-08-08：高风险能力评估与生物安全边界](./chapter_agent_news/2026-08-08.md)
   - [2026-08-07：模型更新、青少年心理健康与访问边界](./chapter_agent_news/2026-08-07.md)
   - [2026-08-06：网络安全评测、月度回顾与治理任命](./chapter_agent_news/2026-08-06.md)
