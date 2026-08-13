@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-14：持久推理、多 Agent 编排与成本效率](./chapter_agent_news/2026-08-14.md)
   - [2026-08-13：企业执行、插件技能与治理复核](./chapter_agent_news/2026-08-13.md)
   - [2026-08-12：官方源受限、托管控制与生物安全复核](./chapter_agent_news/2026-08-12.md)
   - [2026-08-11：生物路由、生产化训练与公告可核验性](./chapter_agent_news/2026-08-11.md)
