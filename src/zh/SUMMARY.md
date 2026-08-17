@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-17：应用接入、内容溯源与长程执行](./chapter_agent_news/2026-08-17.md)
   - [2026-08-16：文本水印、超快推理与 Agent 连接](./chapter_agent_news/2026-08-16.md)
   - [2026-08-14：持久推理、多 Agent 编排与成本效率](./chapter_agent_news/2026-08-14.md)
   - [2026-08-13：企业执行、插件技能与治理复核](./chapter_agent_news/2026-08-13.md)
