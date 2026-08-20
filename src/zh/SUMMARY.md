@@ -237,6 +237,8 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-21：隐私安全、沙盒治理与可验证输出](./chapter_agent_news/2026-08-21.md)
+  - [2026-08-20：学生学习中枢、异步深度研究与车载 Gemini](./chapter_agent_news/2026-08-20.md)
   - [2026-08-19：开发节奏、青少年保护与 AI 素养](./chapter_agent_news/2026-08-19.md)
   - [2026-08-17：应用接入、内容溯源与长程执行](./chapter_agent_news/2026-08-17.md)
   - [2026-08-16：文本水印、超快推理与 Agent 连接](./chapter_agent_news/2026-08-16.md)
