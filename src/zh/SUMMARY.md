@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-24：未来治理、表格画布与长时程 Agent](./chapter_agent_news/2026-08-24.md)
   - [2026-08-23：Claude Opus 5、AI 学习工具与隐私安全](./chapter_agent_news/2026-08-23.md)
   - [2026-08-21：隐私安全、沙盒治理与可验证输出](./chapter_agent_news/2026-08-21.md)
   - [2026-08-20：学生学习中枢、异步深度研究与车载 Gemini](./chapter_agent_news/2026-08-20.md)
