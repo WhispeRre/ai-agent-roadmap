@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-23：数据驻留、工具边界与内容溯源的复核](./chapter_agent_news/2026-08-23.md)
   - [2026-08-21：隐私安全、沙盒治理与可验证输出](./chapter_agent_news/2026-08-21.md)
   - [2026-08-20：学生学习中枢、异步深度研究与车载 Gemini](./chapter_agent_news/2026-08-20.md)
   - [2026-08-19：开发节奏、青少年保护与 AI 素养](./chapter_agent_news/2026-08-19.md)
