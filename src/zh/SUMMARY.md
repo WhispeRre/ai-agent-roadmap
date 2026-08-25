@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-26：Jalapeño 芯片、工作区插件与福祉评测](./chapter_agent_news/2026-08-26.md)
   - [2026-08-25：开发执行、学习型搜索与权限自动化](./chapter_agent_news/2026-08-25.md)
   - [2026-08-24：未来治理、表格画布与长时程 Agent](./chapter_agent_news/2026-08-24.md)
   - [2026-08-23：Claude Opus 5、AI 学习工具与隐私安全](./chapter_agent_news/2026-08-23.md)
