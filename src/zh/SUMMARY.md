@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-08-28：实体设备 Agent、批判性思维与巴西生态](./chapter_agent_news/2026-08-28.md)
   - [2026-08-27：Agent 安全事件、教育规模化与持续学习](./chapter_agent_news/2026-08-27.md)
   - [2026-08-26：Jalapeño 芯片、工作区插件与福祉评测](./chapter_agent_news/2026-08-26.md)
   - [2026-08-25：开发执行、学习型搜索与权限自动化](./chapter_agent_news/2026-08-25.md)
