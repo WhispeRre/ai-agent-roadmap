@@ -237,7 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
-  - [2026-08-30：设备标准、科研支持与福祉评测](./chapter_agent_news/2026-08-30.md)
+  - [2026-08-30：模型供应边界、科学资助与区域 Agent 落地](./chapter_agent_news/2026-08-30.md)
   - [2026-08-28：实体设备 Agent、批判性思维与巴西生态](./chapter_agent_news/2026-08-28.md)
   - [2026-08-27：Agent 安全事件、教育规模化与持续学习](./chapter_agent_news/2026-08-27.md)
   - [2026-08-26：Jalapeño 芯片、工作区插件与福祉评测](./chapter_agent_news/2026-08-26.md)
