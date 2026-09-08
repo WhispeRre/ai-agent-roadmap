@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-09：可达成工作边界与研究加速](./chapter_agent_news/2026-09-09.md)
   - [2026-09-08：前沿模型、企业防护与递归改进监控](./chapter_agent_news/2026-09-08.md)
   - [2026-08-31：依赖可迁移、实体标准与地区验证](./chapter_agent_news/2026-08-31.md)
   - [2026-08-30：模型供应边界、科学资助与区域 Agent 落地](./chapter_agent_news/2026-08-30.md)
