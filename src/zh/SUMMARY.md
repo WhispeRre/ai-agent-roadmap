@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-16：官方来源不可达，暂停新增断言](./chapter_agent_news/2026-09-16.md)
   - [2026-09-15：真实越界事故暴露 Agent 评测盲区](./chapter_agent_news/2026-09-15.md)
   - [2026-09-14：托管 Agent、实时语音与自主攻击防线](./chapter_agent_news/2026-09-14.md)
   - [2026-09-13：官方源仍不可达，暂停新增断言](./chapter_agent_news/2026-09-13.md)
