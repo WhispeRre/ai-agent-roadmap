@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-19：DNS 阻断、浏览器认证与事实冻结](./chapter_agent_news/2026-09-19.md)
   - [2026-09-18：证据可达性、发布边界与回补条件](./chapter_agent_news/2026-09-18.md)
   - [2026-09-17：来源复核、时间边界与增量门禁](./chapter_agent_news/2026-09-17.md)
   - [2026-09-16：官方来源不可达，暂停新增断言](./chapter_agent_news/2026-09-16.md)
