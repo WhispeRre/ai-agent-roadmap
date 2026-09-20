@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-21：证据窗口、来源韧性与回补优先级](./chapter_agent_news/2026-09-21.md)
   - [2026-09-20：四源失联、双通道复核与回补纪律](./chapter_agent_news/2026-09-20.md)
   - [2026-09-19：DNS 阻断、浏览器认证与事实冻结](./chapter_agent_news/2026-09-19.md)
   - [2026-09-18：证据可达性、发布边界与回补条件](./chapter_agent_news/2026-09-18.md)
