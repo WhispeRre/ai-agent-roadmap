@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-23：来源熔断、时间双标与增量判定](./chapter_agent_news/2026-09-23.md)
   - [2026-09-22：核验断点、事实保鲜与恢复扫描](./chapter_agent_news/2026-09-22.md)
   - [2026-09-21：证据窗口、来源韧性与回补优先级](./chapter_agent_news/2026-09-21.md)
   - [2026-09-20：四源失联、双通道复核与回补纪律](./chapter_agent_news/2026-09-20.md)
