@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-09-29：来源可用性、发布时间账本与回补优先级](./chapter_agent_news/2026-09-29.md)
   - [2026-09-28：DNS 断点、发布时间核对与恢复扫描](./chapter_agent_news/2026-09-28.md)
   - [2026-09-24：可达性哨兵、证据账本与回补窗口](./chapter_agent_news/2026-09-24.md)
   - [2026-09-23：来源熔断、时间双标与增量判定](./chapter_agent_news/2026-09-23.md)
