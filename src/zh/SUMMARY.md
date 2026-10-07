@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-10-07：八源探测、双通道失效与事实续冻](./chapter_agent_news/2026-10-07.md)
   - [2026-10-06：双入口失联、证据断档与十月回扫](./chapter_agent_news/2026-10-06.md)
   - [2026-09-29：来源可用性、发布时间账本与回补优先级](./chapter_agent_news/2026-09-29.md)
   - [2026-09-28：DNS 断点、发布时间核对与恢复扫描](./chapter_agent_news/2026-09-28.md)
