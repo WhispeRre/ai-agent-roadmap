@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-10-12：发布窗口、证据冻结与回扫队列](./chapter_agent_news/2026-10-12.md)
   - [2026-10-10：九源探测、双时钟与回补门槛](./chapter_agent_news/2026-10-10.md)
   - [2026-10-09：时间账本、来源熔断与十月回补](./chapter_agent_news/2026-10-09.md)
   - [2026-10-07：八源探测、双通道失效与事实续冻](./chapter_agent_news/2026-10-07.md)
