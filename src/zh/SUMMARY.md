@@ -237,6 +237,7 @@
 ---
 
 - [Agent 最新信息](./chapter_agent_news/README.md)
+  - [2026-10-15：长时协作、轻量子 Agent 与浏览器执行](./chapter_agent_news/2026-10-15.md)
   - [2026-10-14：来源熔断、双时钟记账与回补优先级](./chapter_agent_news/2026-10-14.md)
   - [2026-10-12：发布窗口、证据冻结与回扫队列](./chapter_agent_news/2026-10-12.md)
   - [2026-10-10：九源探测、双时钟与回补门槛](./chapter_agent_news/2026-10-10.md)
